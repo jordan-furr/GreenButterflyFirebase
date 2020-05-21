@@ -24,6 +24,7 @@
 		C5E09AA3247711BB0073069A /* Leaderboards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA2247711BB0073069A /* Leaderboards.storyboard */; };
 		C5E09AA5247711F20073069A /* Goals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA4247711F20073069A /* Goals.storyboard */; };
 		C5E09AA7247712030073069A /* HabitTracking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA6247712030073069A /* HabitTracking.storyboard */; };
+		C5E09AAA247719CA0073069A /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		C5E09AA2247711BB0073069A /* Leaderboards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leaderboards.storyboard; sourceTree = "<group>"; };
 		C5E09AA4247711F20073069A /* Goals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Goals.storyboard; sourceTree = "<group>"; };
 		C5E09AA6247712030073069A /* HabitTracking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitTracking.storyboard; sourceTree = "<group>"; };
+		C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,7 @@
 		C5E09A7A24770B030073069A /* GreenButterflyFirebase */ = {
 			isa = PBXGroup;
 			children = (
-				C5E09A8124770B030073069A /* Main.storyboard */,
-				C5E09AA024770F170073069A /* Insights.storyboard */,
-				C5E09AA2247711BB0073069A /* Leaderboards.storyboard */,
-				C5E09AA4247711F20073069A /* Goals.storyboard */,
-				C5E09AA6247712030073069A /* HabitTracking.storyboard */,
+				C5E09AA8247717090073069A /* Views */,
 				C5E09A9024770E770073069A /* Habit.swift */,
 				C5E09A9224770E930073069A /* User.swift */,
 				C5E09A9424770E9E0073069A /* HabitController.swift */,
@@ -91,6 +89,7 @@
 				C5E09A9A24770ECD0073069A /* ChartsViewController.swift */,
 				C5E09A9C24770EE90073069A /* AddHabitsTableViewController.swift */,
 				C5E09A9E24770F000073069A /* LaunchViewController.swift */,
+				C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */,
 				C5E09A8F24770E6A0073069A /* Resources */,
 			);
 			path = GreenButterflyFirebase;
@@ -106,6 +105,18 @@
 				C5E09A8924770B0A0073069A /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5E09AA8247717090073069A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09A8124770B030073069A /* Main.storyboard */,
+				C5E09AA024770F170073069A /* Insights.storyboard */,
+				C5E09AA2247711BB0073069A /* Leaderboards.storyboard */,
+				C5E09AA4247711F20073069A /* Goals.storyboard */,
+				C5E09AA6247712030073069A /* HabitTracking.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 				C5E09A9324770E930073069A /* User.swift in Sources */,
 				C5E09A9124770E770073069A /* Habit.swift in Sources */,
 				C5E09A9524770E9E0073069A /* HabitController.swift in Sources */,
+				C5E09AAA247719CA0073069A /* AuthentificationViewController.swift in Sources */,
 				C5E09A9D24770EE90073069A /* AddHabitsTableViewController.swift in Sources */,
 				C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */,
 				C5E09A9924770EBF0073069A /* HabitDetailViewController.swift in Sources */,
@@ -338,7 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V2Q4X6DAJ;
-				INFOPLIST_FILE = GreenButterflyFirebase/Info.plist;
+				INFOPLIST_FILE = GreenButterflyFirebase/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +368,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V2Q4X6DAJ;
-				INFOPLIST_FILE = GreenButterflyFirebase/Info.plist;
+				INFOPLIST_FILE = GreenButterflyFirebase/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
