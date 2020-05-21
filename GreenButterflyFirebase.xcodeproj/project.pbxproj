@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5115813735B135C7FCFF9BDC /* Pods_GreenButterflyFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */; };
 		C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7B24770B030073069A /* AppDelegate.swift */; };
 		C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7D24770B030073069A /* SceneDelegate.swift */; };
 		C5E09A8324770B030073069A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09A8124770B030073069A /* Main.storyboard */; };
@@ -25,9 +26,14 @@
 		C5E09AA5247711F20073069A /* Goals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA4247711F20073069A /* Goals.storyboard */; };
 		C5E09AA7247712030073069A /* HabitTracking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA6247712030073069A /* HabitTracking.storyboard */; };
 		C5E09AAA247719CA0073069A /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */; };
+		C5E09AB024772AD70073069A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AAF24772AD70073069A /* UserController.swift */; };
+		C5E09AB524772C5B0073069A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AB424772C5B0073069A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenButterflyFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FEDA1A425F93C6F8C7777A1 /* Pods-GreenButterflyFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.release.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.release.xcconfig"; sourceTree = "<group>"; };
+		9D91479F8F24C6D275872187 /* Pods-GreenButterflyFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.debug.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		C5E09A7824770B030073069A /* GreenButterflyFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenButterflyFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E09A7B24770B030073069A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E09A7D24770B030073069A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +54,8 @@
 		C5E09AA4247711F20073069A /* Goals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Goals.storyboard; sourceTree = "<group>"; };
 		C5E09AA6247712030073069A /* HabitTracking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitTracking.storyboard; sourceTree = "<group>"; };
 		C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationViewController.swift; sourceTree = "<group>"; };
+		C5E09AAF24772AD70073069A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		C5E09AB424772C5B0073069A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +63,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5115813735B135C7FCFF9BDC /* Pods_GreenButterflyFirebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0211642EDAA86EE3471D1CBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51B0D75F96AD2AE42AE2845E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D91479F8F24C6D275872187 /* Pods-GreenButterflyFirebase.debug.xcconfig */,
+				7FEDA1A425F93C6F8C7777A1 /* Pods-GreenButterflyFirebase.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C5E09A6F24770B020073069A = {
 			isa = PBXGroup;
 			children = (
 				C5E09A7A24770B030073069A /* GreenButterflyFirebase */,
 				C5E09A7924770B030073069A /* Products */,
+				51B0D75F96AD2AE42AE2845E /* Pods */,
+				0211642EDAA86EE3471D1CBF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +125,7 @@
 				C5E09A8424770B0A0073069A /* Assets.xcassets */,
 				C5E09A8624770B0A0073069A /* LaunchScreen.storyboard */,
 				C5E09A8924770B0A0073069A /* Info.plist */,
+				C5E09AB424772C5B0073069A /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -125,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				C5E09A9424770E9E0073069A /* HabitController.swift */,
+				C5E09AAF24772AD70073069A /* UserController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -132,12 +163,9 @@
 		C5E09AAD24771DA80073069A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C5E09A9624770EAE0073069A /* HabitListTableViewController.swift */,
-				C5E09A9824770EBF0073069A /* HabitDetailViewController.swift */,
-				C5E09A9A24770ECD0073069A /* ChartsViewController.swift */,
-				C5E09A9C24770EE90073069A /* AddHabitsTableViewController.swift */,
-				C5E09A9E24770F000073069A /* LaunchViewController.swift */,
-				C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */,
+				C5E09AB324772AFD0073069A /* Leaderboards */,
+				C5E09AB224772AF50073069A /* HabitTracking */,
+				C5E09AB124772AEB0073069A /* Main */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -151,6 +179,33 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		C5E09AB124772AEB0073069A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09A9E24770F000073069A /* LaunchViewController.swift */,
+				C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C5E09AB224772AF50073069A /* HabitTracking */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09A9824770EBF0073069A /* HabitDetailViewController.swift */,
+				C5E09A9624770EAE0073069A /* HabitListTableViewController.swift */,
+				C5E09A9C24770EE90073069A /* AddHabitsTableViewController.swift */,
+			);
+			path = HabitTracking;
+			sourceTree = "<group>";
+		};
+		C5E09AB324772AFD0073069A /* Leaderboards */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09A9A24770ECD0073069A /* ChartsViewController.swift */,
+			);
+			path = Leaderboards;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5E09A8C24770B0A0073069A /* Build configuration list for PBXNativeTarget "GreenButterflyFirebase" */;
 			buildPhases = (
+				29779006B5CBF74975CF2406 /* [CP] Check Pods Manifest.lock */,
 				C5E09A7424770B030073069A /* Sources */,
 				C5E09A7524770B030073069A /* Frameworks */,
 				C5E09A7624770B030073069A /* Resources */,
+				8E74716BA91EB7F2900EC4D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5E09AA3247711BB0073069A /* Leaderboards.storyboard in Resources */,
+				C5E09AB524772C5B0073069A /* GoogleService-Info.plist in Resources */,
 				C5E09A8824770B0A0073069A /* LaunchScreen.storyboard in Resources */,
 				C5E09A8524770B0A0073069A /* Assets.xcassets in Resources */,
 				C5E09A8324770B030073069A /* Main.storyboard in Resources */,
@@ -220,6 +278,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29779006B5CBF74975CF2406 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreenButterflyFirebase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E74716BA91EB7F2900EC4D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C5E09A7424770B030073069A /* Sources */ = {
@@ -232,6 +332,7 @@
 				C5E09A9324770E930073069A /* User.swift in Sources */,
 				C5E09A9124770E770073069A /* Habit.swift in Sources */,
 				C5E09A9524770E9E0073069A /* HabitController.swift in Sources */,
+				C5E09AB024772AD70073069A /* UserController.swift in Sources */,
 				C5E09AAA247719CA0073069A /* AuthentificationViewController.swift in Sources */,
 				C5E09A9D24770EE90073069A /* AddHabitsTableViewController.swift in Sources */,
 				C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */,
@@ -378,6 +479,7 @@
 		};
 		C5E09A8D24770B0A0073069A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D91479F8F24C6D275872187 /* Pods-GreenButterflyFirebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +498,7 @@
 		};
 		C5E09A8E24770B0A0073069A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FEDA1A425F93C6F8C7777A1 /* Pods-GreenButterflyFirebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
