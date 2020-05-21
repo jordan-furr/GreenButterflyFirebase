@@ -25,6 +25,7 @@
 		C5E09AA5247711F20073069A /* Goals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA4247711F20073069A /* Goals.storyboard */; };
 		C5E09AA7247712030073069A /* HabitTracking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA6247712030073069A /* HabitTracking.storyboard */; };
 		C5E09AAA247719CA0073069A /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */; };
+		C5E09AB024772AD70073069A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AAF24772AD70073069A /* UserController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		C5E09AA4247711F20073069A /* Goals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Goals.storyboard; sourceTree = "<group>"; };
 		C5E09AA6247712030073069A /* HabitTracking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitTracking.storyboard; sourceTree = "<group>"; };
 		C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationViewController.swift; sourceTree = "<group>"; };
+		C5E09AAF24772AD70073069A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				C5E09A9424770E9E0073069A /* HabitController.swift */,
+				C5E09AAF24772AD70073069A /* UserController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -132,12 +135,9 @@
 		C5E09AAD24771DA80073069A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C5E09A9624770EAE0073069A /* HabitListTableViewController.swift */,
-				C5E09A9824770EBF0073069A /* HabitDetailViewController.swift */,
-				C5E09A9A24770ECD0073069A /* ChartsViewController.swift */,
-				C5E09A9C24770EE90073069A /* AddHabitsTableViewController.swift */,
-				C5E09A9E24770F000073069A /* LaunchViewController.swift */,
-				C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */,
+				C5E09AB324772AFD0073069A /* Leaderboards */,
+				C5E09AB224772AF50073069A /* HabitTracking */,
+				C5E09AB124772AEB0073069A /* Main */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -149,6 +149,33 @@
 				C5E09AAD24771DA80073069A /* View Controllers */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C5E09AB124772AEB0073069A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09A9E24770F000073069A /* LaunchViewController.swift */,
+				C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C5E09AB224772AF50073069A /* HabitTracking */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09A9824770EBF0073069A /* HabitDetailViewController.swift */,
+				C5E09A9624770EAE0073069A /* HabitListTableViewController.swift */,
+				C5E09A9C24770EE90073069A /* AddHabitsTableViewController.swift */,
+			);
+			path = HabitTracking;
+			sourceTree = "<group>";
+		};
+		C5E09AB324772AFD0073069A /* Leaderboards */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09A9A24770ECD0073069A /* ChartsViewController.swift */,
+			);
+			path = Leaderboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +259,7 @@
 				C5E09A9324770E930073069A /* User.swift in Sources */,
 				C5E09A9124770E770073069A /* Habit.swift in Sources */,
 				C5E09A9524770E9E0073069A /* HabitController.swift in Sources */,
+				C5E09AB024772AD70073069A /* UserController.swift in Sources */,
 				C5E09AAA247719CA0073069A /* AuthentificationViewController.swift in Sources */,
 				C5E09A9D24770EE90073069A /* AddHabitsTableViewController.swift in Sources */,
 				C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */,
