@@ -81,15 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				C5E09AA8247717090073069A /* Views */,
-				C5E09A9024770E770073069A /* Habit.swift */,
-				C5E09A9224770E930073069A /* User.swift */,
-				C5E09A9424770E9E0073069A /* HabitController.swift */,
-				C5E09A9624770EAE0073069A /* HabitListTableViewController.swift */,
-				C5E09A9824770EBF0073069A /* HabitDetailViewController.swift */,
-				C5E09A9A24770ECD0073069A /* ChartsViewController.swift */,
-				C5E09A9C24770EE90073069A /* AddHabitsTableViewController.swift */,
-				C5E09A9E24770F000073069A /* LaunchViewController.swift */,
-				C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */,
+				C5E09AAB24771D900073069A /* Model */,
+				C5E09AAE24771DB10073069A /* Controllers */,
 				C5E09A8F24770E6A0073069A /* Resources */,
 			);
 			path = GreenButterflyFirebase;
@@ -117,6 +110,45 @@
 				C5E09AA6247712030073069A /* HabitTracking.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C5E09AAB24771D900073069A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09A9024770E770073069A /* Habit.swift */,
+				C5E09A9224770E930073069A /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5E09AAC24771D990073069A /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09A9424770E9E0073069A /* HabitController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		C5E09AAD24771DA80073069A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09A9624770EAE0073069A /* HabitListTableViewController.swift */,
+				C5E09A9824770EBF0073069A /* HabitDetailViewController.swift */,
+				C5E09A9A24770ECD0073069A /* ChartsViewController.swift */,
+				C5E09A9C24770EE90073069A /* AddHabitsTableViewController.swift */,
+				C5E09A9E24770F000073069A /* LaunchViewController.swift */,
+				C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C5E09AAE24771DB10073069A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09AAC24771D990073069A /* Model Controllers */,
+				C5E09AAD24771DA80073069A /* View Controllers */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
