@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,10 @@
 		C5E09AAA247719CA0073069A /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */; };
 		C5E09AB024772AD70073069A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AAF24772AD70073069A /* UserController.swift */; };
 		C5E09AB524772C5B0073069A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AB424772C5B0073069A /* GoogleService-Info.plist */; };
+		C5E09AB7247737280073069A /* ButterflyGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AB6247737280073069A /* ButterflyGradient.swift */; };
+		C5E09ABA24773C9F0073069A /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AB924773C9F0073069A /* StyleGuide.swift */; };
+		C5E09ABC247741930073069A /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09ABB247741930073069A /* FirebaseController.swift */; };
+		C5E09ABE2477459E0073069A /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09ABD2477459E0073069A /* TextField+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationViewController.swift; sourceTree = "<group>"; };
 		C5E09AAF24772AD70073069A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		C5E09AB424772C5B0073069A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C5E09AB6247737280073069A /* ButterflyGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButterflyGradient.swift; sourceTree = "<group>"; };
+		C5E09AB924773C9F0073069A /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
+		C5E09ABB247741930073069A /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
+		C5E09ABD2477459E0073069A /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +92,6 @@
 				9D91479F8F24C6D275872187 /* Pods-GreenButterflyFirebase.debug.xcconfig */,
 				7FEDA1A425F93C6F8C7777A1 /* Pods-GreenButterflyFirebase.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -109,6 +116,7 @@
 		C5E09A7A24770B030073069A /* GreenButterflyFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				C5E09AB82477373E0073069A /* Helpers + Extensions */,
 				C5E09AA8247717090073069A /* Views */,
 				C5E09AAB24771D900073069A /* Model */,
 				C5E09AAE24771DB10073069A /* Controllers */,
@@ -156,6 +164,7 @@
 			children = (
 				C5E09A9424770E9E0073069A /* HabitController.swift */,
 				C5E09AAF24772AD70073069A /* UserController.swift */,
+				C5E09ABB247741930073069A /* FirebaseController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -204,6 +213,16 @@
 				C5E09A9A24770ECD0073069A /* ChartsViewController.swift */,
 			);
 			path = Leaderboards;
+			sourceTree = "<group>";
+		};
+		C5E09AB82477373E0073069A /* Helpers + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C5E09AB6247737280073069A /* ButterflyGradient.swift */,
+				C5E09AB924773C9F0073069A /* StyleGuide.swift */,
+				C5E09ABD2477459E0073069A /* TextField+Extensions.swift */,
+			);
+			path = "Helpers + Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +345,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5E09ABC247741930073069A /* FirebaseController.swift in Sources */,
+				C5E09ABA24773C9F0073069A /* StyleGuide.swift in Sources */,
 				C5E09A9724770EAE0073069A /* HabitListTableViewController.swift in Sources */,
 				C5E09A9F24770F000073069A /* LaunchViewController.swift in Sources */,
 				C5E09A9B24770ECD0073069A /* ChartsViewController.swift in Sources */,
@@ -333,9 +354,11 @@
 				C5E09A9124770E770073069A /* Habit.swift in Sources */,
 				C5E09A9524770E9E0073069A /* HabitController.swift in Sources */,
 				C5E09AB024772AD70073069A /* UserController.swift in Sources */,
+				C5E09ABE2477459E0073069A /* TextField+Extensions.swift in Sources */,
 				C5E09AAA247719CA0073069A /* AuthentificationViewController.swift in Sources */,
 				C5E09A9D24770EE90073069A /* AddHabitsTableViewController.swift in Sources */,
 				C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */,
+				C5E09AB7247737280073069A /* ButterflyGradient.swift in Sources */,
 				C5E09A9924770EBF0073069A /* HabitDetailViewController.swift in Sources */,
 				C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */,
 			);

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Charts-->
         <scene sceneID="aqa-SJ-9OL">
             <objects>
                 <viewController id="AtC-6D-0Ze" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KWW-ei-aiC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="leaderboard" selectedImage="leaderboard" id="Phc-x0-F51"/>
+                    <tabBarItem key="tabBarItem" title="Charts" image="leaderboard" selectedImage="leaderboard" id="Phc-x0-F51"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1i-j5-QX7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

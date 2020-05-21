@@ -10,33 +10,75 @@ import UIKit
 
 class AuthentificationViewController: UIViewController {
     
+    //MARK: IB OUTLETS
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var actionButton: UIButton!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmTextField: UITextField!
+    
+    
+    //MARK: PROPERTIES
+    var loginMode = false
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        let image = #imageLiteral(resourceName: "butterfly")
-        let mask = CALayer()
-        mask.contents = image.cgImage
-        mask.frame.size = image.size
-        let gradient = CAGradientLayer()
-        gradient.frame.size = image.size
+          super.viewDidLoad()
+          setupViews()
+      }
+    
+    //MARK: IB ACTIONS
+    @IBAction func actionTapped(_ sender: Any) {
         
-        gradient.colors = [
-            UIColor(red: 0.04, green: 0.13, blue: 0.59, alpha: 1).cgColor,
-            UIColor(red: 0.08, green: 1, blue: 0.3, alpha: 1).cgColor,
-            UIColor(red: 0.85, green: 0.25, blue: 0.25, alpha: 1).cgColor
-        ]
-        gradient.mask = mask
-        gradient.frame.origin = CGPoint(x: (view.center.x - 80), y: 70)
-        view.layer.addSublayer(gradient)
+        guard let email = emailTextField.text, let password = passwordTextField.text, let confirm = confirmTextField.text else {return}
+        
+        if loginMode {
+            //LOGGING IN
+            if email != "" {
+                FirebaseController.shared.login(email: email, password: password) { (success) in
+                    if success {
+                        self.performSegue(withIdentifier: "loggedin", sender: self)
+                        print("logging user in")
+                    } else {
+                        print("error logging in")
+                    }
+                }
+            }
+        } else {
+            //SIGNING UP
+            if email != "" && password == confirm && password.count >= 5 {
+                FirebaseController.shared.signup(email: email, password: password) { (success, error) in
+                    if success {
+                        self.performSegue(withIdentifier: "onboarding", sender: self)
+                        print("signing user up")
+                    } else {
+                        print("error signing up")
+                    }
+                }
+            }
+        }
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    @IBAction func signupTapped(_ sender: Any) {
+        loginMode = false
+        confirmTextField.isHidden = false
+        actionButton.setTitle("SIGN UP", for: .normal)
+    }
+    @IBAction func loginTapped(_ sender: Any) {
+        loginMode = true
+        confirmTextField.isHidden = true
+        actionButton.setTitle("LOGIN", for: .normal)
+    }
+    
+    //MARK: HELPERS
+    func setupViews(){
+        ButterflyGradient.setUpButterflyView(view: view)
+        actionButton.addCornerRadius()
+        loginTapped(self)
+        emailTextField.addDoneButtonOnKeyboard()
+        passwordTextField.addDoneButtonOnKeyboard()
+        confirmTextField.addDoneButtonOnKeyboard()
+    }
 }
