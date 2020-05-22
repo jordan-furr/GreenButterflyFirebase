@@ -32,11 +32,12 @@ class HabitListTableViewController: UITableViewController {
        }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "habitCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "habitCell", for: indexPath) as? HabitTableViewCell else {return UITableViewCell()}
+        
         let habit = habits[indexPath.row]
         let count = HabitController.shared.enabledCounts[indexPath.row]
-        cell.textLabel?.text = habit.title
-        cell.detailTextLabel?.text = "\(count)"
+        cell.setHabitAndCount(habit: habit, count: count)
+        cell.delegate = self
         return cell
     }
 
@@ -53,5 +54,15 @@ class HabitListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
+    }
+}
+
+extension HabitListTableViewController: HabitTableViewCellDelegate{
+    func tappedButton(for cell: HabitTableViewCell) {
+        guard let habit = cell.habit else {return}
+        let newCount = HabitController.shared.incrementHabitCounter(habit: habit)
+        cell.setHabitAndCount(habit: habit, count: newCount)
+        print("tapped")
+        HabitController.shared.fetchUserHabits()
     }
 }

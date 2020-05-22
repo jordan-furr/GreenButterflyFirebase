@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5115813735B135C7FCFF9BDC /* Pods_GreenButterflyFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */; };
+		C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5880E812478800B001038AC /* HabitTableViewCell.swift */; };
 		C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7B24770B030073069A /* AppDelegate.swift */; };
 		C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7D24770B030073069A /* SceneDelegate.swift */; };
 		C5E09A8324770B030073069A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09A8124770B030073069A /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenButterflyFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FEDA1A425F93C6F8C7777A1 /* Pods-GreenButterflyFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.release.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		9D91479F8F24C6D275872187 /* Pods-GreenButterflyFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.debug.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.debug.xcconfig"; sourceTree = "<group>"; };
+		C5880E812478800B001038AC /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		C5E09A7824770B030073069A /* GreenButterflyFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenButterflyFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E09A7B24770B030073069A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E09A7D24770B030073069A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				C5E09A9224770E930073069A /* User.swift */,
 				C5E09A9024770E770073069A /* Habit.swift */,
+				C5880E812478800B001038AC /* HabitTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				C5E09ABA24773C9F0073069A /* StyleGuide.swift in Sources */,
 				C5E09A9724770EAE0073069A /* HabitListTableViewController.swift in Sources */,
 				C5E09A9F24770F000073069A /* LaunchViewController.swift in Sources */,
+				C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */,
 				C5E09A9B24770ECD0073069A /* ChartsViewController.swift in Sources */,
 				C5E09A9324770E930073069A /* User.swift in Sources */,
 				C5E09A9124770E770073069A /* Habit.swift in Sources */,

@@ -13,9 +13,9 @@ class HabitController {
     static let shared = HabitController()
     
     var defaultHabits: [Habit] = [
-        Habit(title: "Refill Waterbottle", iconUID: "", energyValue: 10),
-        Habit(title: "Vegetarian Day", iconUID: "", energyValue: 8),
-        Habit(title: "Washed laundry with cold water", iconUID: "", energyValue: 4)
+        Habit(title: "Refill Waterbottle", iconUID: "starADD", energyValue: 10),
+        Habit(title: "Vegetarian Day", iconUID: "starADD", energyValue: 8),
+        Habit(title: "Laundry w/ cold water", iconUID: "starADD", energyValue: 4)
     ]
     
     var enabledHabits: [Habit] = []
@@ -28,6 +28,7 @@ class HabitController {
         guard let user = UserController.shared.currentUser else {return}
         enabledHabits = []
         disabledHabits = []
+        enabledCounts = []
         
         let allHabits = defaultHabits
         for i in 0..<allHabits.count {
@@ -50,13 +51,14 @@ class HabitController {
         fetchUserHabits()
     }
     
-    func incrementHabitCounter(habit: Habit){
+    func incrementHabitCounter(habit: Habit) -> Int{
         guard let user = UserController.shared.currentUser,
-            let index = defaultHabits.firstIndex(of: habit) else {return}
+            let index = defaultHabits.firstIndex(of: habit) else {return 0}
         
         user.counts[index] = user.counts[index] + 1
         let data = ["counts" : user.counts]
         UserController.shared.updateUserData(userID: user.id, data: data)
         fetchUserHabits()
+        return user.counts[index]
     }
 }
