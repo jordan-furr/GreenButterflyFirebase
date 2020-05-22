@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AuthentificationViewController: UIViewController {
     
@@ -50,8 +51,16 @@ class AuthentificationViewController: UIViewController {
             if email != "" && password == confirm && password.count >= 5 {
                 FirebaseController.shared.signup(email: email, password: password) { (success, error) in
                     if success {
-                        self.performSegue(withIdentifier: "onboarding", sender: self)
                         print("signing user up")
+                        UserController.shared.updateUserInfo(email: email, id: Auth.auth().currentUser!.uid, habits: HabitController.defaultHabits) { (result) in
+                            if let error = error {
+                                print(error)
+                            } else {
+                                print("user updated with empty habits")
+                                UserController.shared.updatedUser()
+                                self.performSegue(withIdentifier: "onboarding", sender: self)
+                            }
+                        }
                     } else {
                         print("error signing up")
                     }

@@ -15,7 +15,6 @@
 		C5E09A8824770B0A0073069A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09A8624770B0A0073069A /* LaunchScreen.storyboard */; };
 		C5E09A9124770E770073069A /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9024770E770073069A /* Habit.swift */; };
 		C5E09A9324770E930073069A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9224770E930073069A /* User.swift */; };
-		C5E09A9524770E9E0073069A /* HabitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9424770E9E0073069A /* HabitController.swift */; };
 		C5E09A9724770EAE0073069A /* HabitListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9624770EAE0073069A /* HabitListTableViewController.swift */; };
 		C5E09A9924770EBF0073069A /* HabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9824770EBF0073069A /* HabitDetailViewController.swift */; };
 		C5E09A9B24770ECD0073069A /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9A24770ECD0073069A /* ChartsViewController.swift */; };
@@ -32,6 +31,8 @@
 		C5E09ABA24773C9F0073069A /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AB924773C9F0073069A /* StyleGuide.swift */; };
 		C5E09ABC247741930073069A /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09ABB247741930073069A /* FirebaseController.swift */; };
 		C5E09ABE2477459E0073069A /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09ABD2477459E0073069A /* TextField+Extensions.swift */; };
+		C5E09AC024776F580073069A /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09ABF24776F580073069A /* UserError.swift */; };
+		C5E09AC2247774B10073069A /* HabitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AC1247774B10073069A /* HabitController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +48,6 @@
 		C5E09A8924770B0A0073069A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5E09A9024770E770073069A /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		C5E09A9224770E930073069A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C5E09A9424770E9E0073069A /* HabitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitController.swift; sourceTree = "<group>"; };
 		C5E09A9624770EAE0073069A /* HabitListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListTableViewController.swift; sourceTree = "<group>"; };
 		C5E09A9824770EBF0073069A /* HabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewController.swift; sourceTree = "<group>"; };
 		C5E09A9A24770ECD0073069A /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +64,8 @@
 		C5E09AB924773C9F0073069A /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 		C5E09ABB247741930073069A /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		C5E09ABD2477459E0073069A /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
+		C5E09ABF24776F580073069A /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
+		C5E09AC1247774B10073069A /* HabitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +118,10 @@
 		C5E09A7A24770B030073069A /* GreenButterflyFirebase */ = {
 			isa = PBXGroup;
 			children = (
-				C5E09AB82477373E0073069A /* Helpers + Extensions */,
-				C5E09AA8247717090073069A /* Views */,
-				C5E09AAB24771D900073069A /* Model */,
 				C5E09AAE24771DB10073069A /* Controllers */,
+				C5E09AAB24771D900073069A /* Model */,
+				C5E09AA8247717090073069A /* Views */,
+				C5E09AB82477373E0073069A /* Helpers + Extensions */,
 				C5E09A8F24770E6A0073069A /* Resources */,
 			);
 			path = GreenButterflyFirebase;
@@ -153,8 +155,8 @@
 		C5E09AAB24771D900073069A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C5E09A9024770E770073069A /* Habit.swift */,
 				C5E09A9224770E930073069A /* User.swift */,
+				C5E09A9024770E770073069A /* Habit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,8 +164,8 @@
 		C5E09AAC24771D990073069A /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C5E09A9424770E9E0073069A /* HabitController.swift */,
 				C5E09AAF24772AD70073069A /* UserController.swift */,
+				C5E09AC1247774B10073069A /* HabitController.swift */,
 				C5E09ABB247741930073069A /* FirebaseController.swift */,
 			);
 			path = "Model Controllers";
@@ -221,6 +223,7 @@
 				C5E09AB6247737280073069A /* ButterflyGradient.swift */,
 				C5E09AB924773C9F0073069A /* StyleGuide.swift */,
 				C5E09ABD2477459E0073069A /* TextField+Extensions.swift */,
+				C5E09ABF24776F580073069A /* UserError.swift */,
 			);
 			path = "Helpers + Extensions";
 			sourceTree = "<group>";
@@ -352,15 +355,16 @@
 				C5E09A9B24770ECD0073069A /* ChartsViewController.swift in Sources */,
 				C5E09A9324770E930073069A /* User.swift in Sources */,
 				C5E09A9124770E770073069A /* Habit.swift in Sources */,
-				C5E09A9524770E9E0073069A /* HabitController.swift in Sources */,
 				C5E09AB024772AD70073069A /* UserController.swift in Sources */,
 				C5E09ABE2477459E0073069A /* TextField+Extensions.swift in Sources */,
 				C5E09AAA247719CA0073069A /* AuthentificationViewController.swift in Sources */,
 				C5E09A9D24770EE90073069A /* AddHabitsTableViewController.swift in Sources */,
 				C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */,
 				C5E09AB7247737280073069A /* ButterflyGradient.swift in Sources */,
+				C5E09AC024776F580073069A /* UserError.swift in Sources */,
 				C5E09A9924770EBF0073069A /* HabitDetailViewController.swift in Sources */,
 				C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */,
+				C5E09AC2247774B10073069A /* HabitController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
