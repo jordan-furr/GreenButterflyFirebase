@@ -23,7 +23,6 @@ class HabitListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadUserHabits()
         tableView.reloadData()
     }
 
@@ -47,19 +46,6 @@ class HabitListTableViewController: UITableViewController {
     }
 
     //MARK: HELPERS
-    func loadUserHabits(){
-        guard let user = UserController.shared.currentUser else {return}
-        let allHabits = HabitController.shared.defaultHabits
-        
-        for i in 0..<allHabits.count {
-            if user.enabled[i]{
-                enabledHabits.append(allHabits[i])
-                enabledCounts.append(user.counts[i])
-            } else {
-                disabledHabits.append(allHabits[i])
-            }
-        }
-    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

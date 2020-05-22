@@ -25,11 +25,12 @@ class UserController {
     let db = Firestore.firestore()
     let storage = Storage.storage()
     lazy var storageRef = storage.reference()
+    let usersRef : CollectionReference = Firestore.firestore().collection("users")
     
     var currentUser: User?
     
+    
     func updateUserInfo(email: String, id: String, enabled: [Bool], counts: [Int], completion: @escaping (Result<User?, UserError>) -> Void) {
-        let usersRef = self.db.collection("users")
         let userDoc = usersRef.document(id)
         let data = [
             "\(UserKeys.emailKey)" : "\(email)",
@@ -64,8 +65,6 @@ class UserController {
         guard let currentUserId = Auth.auth().currentUser?.uid else {
             print("no current user")
             return completion(.failure(.noUserFound)) }
-        
-        let usersRef = Firestore.firestore().collection("users")
         let userDoc = usersRef.document(currentUserId)
         userDoc.getDocument { (snapshot, error) in
             if snapshot != nil {
@@ -78,6 +77,17 @@ class UserController {
             } else {
                 print("snapshot is nil")
                 return completion(.failure(.noRecordFound))
+            }
+        }
+    }
+    
+    func updateUserData(userID: String, data: [String: Any]){
+        usersRef.document(userID).updateData(data) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+                self.updatedUser()
             }
         }
     }
