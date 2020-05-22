@@ -10,9 +10,11 @@ import Foundation
 
 class HabitController {
     
-    static var defaultHabits: [Habit] = [
-        Habit(title: "Refill Waterbottle", counter: 0, enabled: false, iconUID: ""),
-        Habit(title: "Vegetarian Day", counter: 0, enabled: false, iconUID: ""),
-        Habit(title: "Washed laundry with cold water", counter: 0, enabled: false, iconUID: "")
+    static let shared = HabitController()
+    
+    var defaultHabits: [Habit] = [
+        Habit(title: "Refill Waterbottle", iconUID: "", energyValue: 10),
+        Habit(title: "Vegetarian Day", iconUID: "", energyValue: 8),
+        Habit(title: "Washed laundry with cold water", iconUID: "", energyValue: 4)
     ]
 }

@@ -8,21 +8,15 @@
 import UIKit
 import Foundation
 
-class Habit: NSObject, Codable {
-    
-    enum CodingKeys: String, CodingKey {
-        case title, counter, enabled, iconUID
-    }
+class Habit: NSObject {
     
     var title: String
-    var counter: Int
-    var enabled: Bool
     var iconUID: String
+    var energyValue: Int
     
-    init(title: String, counter: Int, enabled: Bool, iconUID: String){
+    init(title: String, iconUID: String, energyValue: Int){
         self.title = title
-        self.counter = counter
-        self.enabled = enabled
         self.iconUID = iconUID
+        self.energyValue = energyValue
     }
 }

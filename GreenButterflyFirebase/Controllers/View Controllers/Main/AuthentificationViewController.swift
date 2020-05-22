@@ -25,9 +25,9 @@ class AuthentificationViewController: UIViewController {
     var loginMode = false
     
     override func viewDidLoad() {
-          super.viewDidLoad()
-          setupViews()
-      }
+        super.viewDidLoad()
+        setupViews()
+    }
     
     //MARK: IB ACTIONS
     @IBAction func actionTapped(_ sender: Any) {
@@ -52,7 +52,15 @@ class AuthentificationViewController: UIViewController {
                 FirebaseController.shared.signup(email: email, password: password) { (success, error) in
                     if success {
                         print("signing user up")
-                        UserController.shared.updateUserInfo(email: email, id: Auth.auth().currentUser!.uid, habits: HabitController.defaultHabits) { (result) in
+                        
+                        var emptyEnabled: [Bool] = []
+                        var emptyCounts: [Int] = []
+                        
+                        for _ in HabitController.shared.defaultHabits {
+                            emptyEnabled.append(false)
+                            emptyCounts.append(0)
+                        }
+                        UserController.shared.updateUserInfo(email: email, id: Auth.auth().currentUser!.uid, enabled: emptyEnabled, counts: emptyCounts) { (result) in
                             if let error = error {
                                 print(error)
                             } else {
@@ -68,7 +76,6 @@ class AuthentificationViewController: UIViewController {
             }
         }
     }
-    
     
     @IBAction func signupTapped(_ sender: Any) {
         loginMode = false

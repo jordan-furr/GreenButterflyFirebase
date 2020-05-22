@@ -12,16 +12,18 @@ import Foundation
 class User: Codable {
     
     enum CodingKeys: String, CodingKey {
-        case email, id, habits
+        case email, id, enabled, counts
     }
     
     var email: String
     var id: String
-    var habits: [Habit]
+    var enabled: [Bool]
+    var counts: [Int]
     
-    init(email: String, id: String, habits: [Habit]) {
+    init(email: String, id: String, enabled: [Bool], counts: [Int]) {
         self.email = email
         self.id = id
-        self.habits = habits
+        self.enabled = enabled
+        self.counts = counts
     }
 }
