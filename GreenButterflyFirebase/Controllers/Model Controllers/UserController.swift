@@ -15,7 +15,8 @@ import FirebaseAuth
 struct UserKeys {
     static let emailKey = "email"
     static let idKey = "id"
-    static let habitsKey = "habits"
+    static let enabledKey = "enabled"
+    static let countsKey = "counts"
 }
 
 class UserController {
@@ -27,17 +28,20 @@ class UserController {
     
     var currentUser: User?
     
-    func updateUserInfo(email: String, id: String, habits: [Habit], completion: @escaping (Result<User?, UserError>) -> Void) {
+    func updateUserInfo(email: String, id: String, enabled: [Bool], counts: [Int], completion: @escaping (Result<User?, UserError>) -> Void) {
         let usersRef = self.db.collection("users")
         let userDoc = usersRef.document(id)
         let data = [
-            "\(UserKeys.habitsKey)" : "\(habits)",
+            "\(UserKeys.emailKey)" : "\(email)",
+            "\(UserKeys.idKey)" : "\(id)",
+            "\(UserKeys.enabledKey)" : enabled,
+            "\(UserKeys.countsKey)" : counts
             ] as [String : Any]
         userDoc.setData(data, merge: true) { (error) in
             if let error = error {
                 return completion(.failure(.firebaseError(error)))
             } else {
-                let updatedUser = User(email: email, id: id, habits: habits)
+                let updatedUser = User(email: email, id: id, enabled: enabled, counts: counts)
                 return completion(.success(updatedUser))
             }
         }
@@ -64,15 +68,15 @@ class UserController {
         let usersRef = Firestore.firestore().collection("users")
         let userDoc = usersRef.document(currentUserId)
         userDoc.getDocument { (snapshot, error) in
-            if error == nil {
-                if snapshot != nil && snapshot?.exists == true {
-                    guard let snapshot = snapshot else { return completion(.failure(.noUserFound)) }
-                    guard let data = snapshot.data() else { return completion(.failure(.couldNotUnwrapUser)) }
-                    print(currentUserId)
-                    let user = try! FirestoreDecoder().decode(User.self, from: data)
-                    self.currentUser = user
-                }
+            if snapshot != nil {
+                guard let snapshot = snapshot else { return completion(.failure(.noUserFound)) }
+                guard let data = snapshot.data() else { return completion(.failure(.couldNotUnwrapUser)) }
+                print(currentUserId)
+                let user = try! FirestoreDecoder().decode(User.self, from: data)
+                self.currentUser = user
+                return completion(.success(user))
             } else {
+                print("snapshot is nil")
                 return completion(.failure(.noRecordFound))
             }
         }
