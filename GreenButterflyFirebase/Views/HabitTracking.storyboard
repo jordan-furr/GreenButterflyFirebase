@@ -6,10 +6,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Add Habits Table View Controller-->
+        <scene sceneID="RPU-0U-a5q">
+            <objects>
+                <tableViewController id="0DE-Lx-Uo6" customClass="AddHabitsTableViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p2f-B6-eHS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newHabit" id="MCZ-Kr-WVm">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MCZ-Kr-WVm" id="Vks-hU-E93">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0DE-Lx-Uo6" id="l5U-B1-ORu"/>
+                            <outlet property="delegate" destination="0DE-Lx-Uo6" id="YRE-ix-MLG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Wu8-6u-uSl">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Y4Q-Ma-fc2">
+                            <connections>
+                                <action selector="doneTapped:" destination="0DE-Lx-Uo6" id="mnu-Lx-Tml"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUW-GG-Igd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016" y="-548"/>
+        </scene>
         <!--My Habits-->
         <scene sceneID="E9w-EJ-YGx">
             <objects>
-                <tableViewController id="cgp-zG-eRh" sceneMemberID="viewController">
+                <tableViewController id="cgp-zG-eRh" customClass="HabitListTableViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fnY-qw-B1u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +80,14 @@
                             <outlet property="delegate" destination="cgp-zG-eRh" id="NRu-s5-WKy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Habits" id="KM6-q4-5mc"/>
+                    <navigationItem key="navigationItem" title="My Habits" id="KM6-q4-5mc">
+                        <barButtonItem key="rightBarButtonItem" image="tabs" id="30e-eM-IZc">
+                            <color key="tintColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="0DE-Lx-Uo6" kind="show" identifier="addHabits" id="Wx4-Qm-BfW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8c-bo-sYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,6 +103,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fje-GV-qlW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.36385628170000001" green="0.2185911945" blue="0.14492904470000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.75820416489999998" green="0.79131136869999996" blue="0.97921954310000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -75,5 +118,6 @@
     </scenes>
     <resources>
         <image name="butterflyICON" width="26" height="18"/>
+        <image name="tabs" width="22" height="24"/>
     </resources>
 </document>

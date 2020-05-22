@@ -68,13 +68,14 @@ class UserController {
         let usersRef = Firestore.firestore().collection("users")
         let userDoc = usersRef.document(currentUserId)
         userDoc.getDocument { (snapshot, error) in
-           if snapshot != nil {
-                    guard let snapshot = snapshot else { return completion(.failure(.noUserFound)) }
-                    guard let data = snapshot.data() else { return completion(.failure(.couldNotUnwrapUser)) }
-                    print(currentUserId)
-                    let user = try! FirestoreDecoder().decode(User.self, from: data)
-                    self.currentUser = user
-                } else {
+            if snapshot != nil {
+                guard let snapshot = snapshot else { return completion(.failure(.noUserFound)) }
+                guard let data = snapshot.data() else { return completion(.failure(.couldNotUnwrapUser)) }
+                print(currentUserId)
+                let user = try! FirestoreDecoder().decode(User.self, from: data)
+                self.currentUser = user
+                return completion(.success(user))
+            } else {
                 print("snapshot is nil")
                 return completion(.failure(.noRecordFound))
             }
