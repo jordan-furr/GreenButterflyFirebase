@@ -21,15 +21,10 @@
                                 <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="butterfly" translatesAutoresizingMaskIntoConstraints="NO" id="lMQ-UT-SjX">
-                                <rect key="frame" x="133.5" y="383.5" width="147" height="90"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lMQ-UT-SjX" firstAttribute="centerY" secondItem="gQs-3d-HVA" secondAttribute="centerY" id="6xN-jj-X84"/>
                             <constraint firstItem="6UK-Lj-sFE" firstAttribute="top" secondItem="gQs-3d-HVA" secondAttribute="top" constant="20" id="AyY-1m-pil"/>
-                            <constraint firstItem="lMQ-UT-SjX" firstAttribute="centerX" secondItem="gQs-3d-HVA" secondAttribute="centerX" id="cX0-S1-wEN"/>
                             <constraint firstItem="6UK-Lj-sFE" firstAttribute="leading" secondItem="gQs-3d-HVA" secondAttribute="leading" constant="20" id="fO1-Vn-Cdm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gQs-3d-HVA"/>
@@ -43,7 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="butterfly" width="147" height="90"/>
         <image name="net" width="25" height="25"/>
     </resources>
 </document>

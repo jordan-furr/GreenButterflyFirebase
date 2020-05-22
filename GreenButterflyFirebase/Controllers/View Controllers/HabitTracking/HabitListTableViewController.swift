@@ -10,36 +10,31 @@ import UIKit
 
 class HabitListTableViewController: UITableViewController {
 
-    //MARK PROPERTIES
-    var enabledHabits: [Habit] = []
-    var disabledHabits: [Habit] = []
-    var enabledCounts: [Int] = []
-    
-    
+    var habits: [Habit] = []
+   
     //MARK: LIFECYCLE FUNCS
     override func viewWillAppear(_ animated: Bool) {
+        HabitController.shared.fetchUserHabits()
+        habits  = HabitController.shared.enabledHabits
         tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
+        tableView.allowsSelection = false
     }
-
-    
-    //MARK: IB FUNCTIONS
-    
    
     //MARK: DATA SOURCE
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           enabledHabits.count
+        return habits.count
        }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "habitCell", for: indexPath)
-        let habit = enabledHabits[indexPath.row]
-        let count = enabledCounts[indexPath.row]
+        let habit = habits[indexPath.row]
+        let count = HabitController.shared.enabledCounts[indexPath.row]
         cell.textLabel?.text = habit.title
         cell.detailTextLabel?.text = "\(count)"
         return cell
@@ -47,12 +42,16 @@ class HabitListTableViewController: UITableViewController {
 
     //MARK: HELPERS
     
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addHabits"{
-            if let desitnationVC = segue.destination as? AddHabitsTableViewController {
-        //        desitnationVC.disabledHabits = disabledHabits
-            }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let habit = habits[indexPath.row]
+            habits.remove(at: indexPath.row)
+            HabitController.shared.toggleHabit(habit: habit)
+            tableView.deleteRows(at: [indexPath], with: .left)
         }
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
 }

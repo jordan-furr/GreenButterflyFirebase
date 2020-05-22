@@ -26,6 +26,8 @@ class HabitController {
     
     func fetchUserHabits(){
         guard let user = UserController.shared.currentUser else {return}
+        enabledHabits = []
+        disabledHabits = []
         
         let allHabits = defaultHabits
         for i in 0..<allHabits.count {
