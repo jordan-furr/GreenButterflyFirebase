@@ -23,6 +23,11 @@ class HabitListTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.reloadData()
         tableView.allowsSelection = false
+        let image = UIImage(named: "title")
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 5, width: 80, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        self.navigationItem.titleView = imageView
     }
    
     //MARK: DATA SOURCE
