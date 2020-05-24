@@ -8,30 +8,36 @@
 
 import UIKit
 
+protocol ModalDismissed: class {
+    func modaldismissed()
+}
 class HabitDetailViewController: UIViewController {
 
     //MARK: PROPERTIES
     var habit: Habit?
+    weak var delegate: ModalDismissed?
     
     //MARK: IB OUTLETS
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var factLabel: UILabel!
     @IBOutlet weak var totalKWHLabel: UILabel!
-    @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var kwhLabel: UILabel!
     @IBOutlet weak var decrementButton: UIButton!
     @IBOutlet weak var sourceButton: UIButton!
+    @IBOutlet weak var iconImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
-        tableview.delegate = self
-        tableview.dataSource = self
         decrementButton.addCornerRadius()
         sourceButton.addCornerRadius()
+       
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        delegate?.modaldismissed()
+    }
 
     func setUpViews(){
         guard let habit = habit, let user = UserController.shared.currentUser else {return}
@@ -41,37 +47,27 @@ class HabitDetailViewController: UIViewController {
         
         factLabel.text = habit.fact
        
-        kwhLabel.text = "kwh saved per action: \(habit.kwhValue)"
-        let totalKWH = Double(round((Double(counts) * habit.kwhValue) * 1000) / 1000)
-        totalKWHLabel.text = "kwH saved by actions: \(totalKWH)"
+        kwhLabel.text = "CO2 saved per action:   \(habit.co2Value)kg"
+        let totalCO2 = Double(round((Double(counts) * habit.co2Value) * 100) / 100)
+        totalKWHLabel.text = "Total CO2 saved by actions:   \(totalCO2)kg"
+        iconImageView.image = UIImage(named: habit.iconUID)
     }
     
     //MARK: IB ACTIONS
-    @IBAction func resetTapped(_ sender: Any) {
-        countLabel.text = "0"
-        totalKWHLabel.text = "0"
+
+    @IBAction func decrementTapped(_ sender: Any) {
+        guard let habit = habit else {return}
+        let newCount = HabitController.shared.decrementHabitCounter(habit: habit)
+        countLabel.text = "\(newCount)"
+        print("tapped")
+        HabitController.shared.fetchUserHabits()
     }
+    
     
     @IBAction func sourceTapped(_ sender: Any) {
         guard let habit = habit else {return}
         if let url = URL(string: habit.source){
             UIApplication.shared.open(url)
         }
-    }
-    
-    
-    
-
-}
-extension HabitDetailViewController: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let habit = habit else {return 0}
-        return UserController.shared.currentUser!.counts[habit.identifier]
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "countCell", for: indexPath)
-        cell.textLabel?.text = "🤍"
-        return cell
     }
 }

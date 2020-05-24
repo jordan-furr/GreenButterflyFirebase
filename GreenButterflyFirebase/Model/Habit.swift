@@ -12,15 +12,15 @@ class Habit: NSObject {
     
     var title: String
     var iconUID: String
-    var kwhValue: Double
+    var co2Value: Double
     var identifier: Int
     var source: String
     var fact: String
     
-    init(title: String, iconUID: String, kwhValue: Double, identifier: Int, source: String, fact: String){
+    init(title: String, iconUID: String, co2Value: Double, identifier: Int, source: String, fact: String){
         self.title = title
         self.iconUID = iconUID
-        self.kwhValue = kwhValue
+        self.co2Value = co2Value
         self.identifier = identifier
         self.source = source
         self.fact = fact
