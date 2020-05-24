@@ -9,9 +9,9 @@
 import UIKit
 
 class HabitListTableViewController: UITableViewController {
-
+    
     var habits: [Habit] = []
-   
+    
     //MARK: LIFECYCLE FUNCS
     override func viewWillAppear(_ animated: Bool) {
         HabitController.shared.fetchUserHabits()
@@ -22,14 +22,19 @@ class HabitListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
-        tableView.allowsSelection = false
+        //tableView.allowsSelection = false
+        let image = UIImage(named: "title")
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 5, width: 80, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        //self.navigationItem.titleView = imageView
     }
-   
+    
     //MARK: DATA SOURCE
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return habits.count
-       }
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "habitCell", for: indexPath) as? HabitTableViewCell else {return UITableViewCell()}
@@ -38,9 +43,12 @@ class HabitListTableViewController: UITableViewController {
         let count = HabitController.shared.enabledCounts[indexPath.row]
         cell.setHabitAndCount(habit: habit, count: count)
         cell.delegate = self
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = .clear
+        cell.selectedBackgroundView = backgroundView
         return cell
     }
-
+    
     //MARK: HELPERS
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -51,9 +59,20 @@ class HabitListTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .left)
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 90.0
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            if let destinationVC = segue.destination as? HabitDetailViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let habit = habits[indexPath.row]
+                    destinationVC.habit = habit
+                }
+            }
+        }
     }
 }
 

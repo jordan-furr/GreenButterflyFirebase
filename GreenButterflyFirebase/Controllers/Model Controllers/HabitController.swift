@@ -13,10 +13,12 @@ class HabitController {
     static let shared = HabitController()
     
     var defaultHabits: [Habit] = [
-        Habit(title: "Refill Waterbottle", iconUID: "starADD", energyValue: 10),
-        Habit(title: "Vegetarian Day", iconUID: "starADD", energyValue: 8),
-        Habit(title: "Laundry w/ cold water", iconUID: "starADD", energyValue: 4)
+        Habit(title: "Refill Waterbottle", iconUID: "starADD", kwhValue: 2.194, identifier: 0, source: "http://www.container-recycling.org/assets/pdfs/2009-BottledWaterEnergy.pdf", fact: "Globally, humans now purchase 1 million single-use waterbottles a minute."),
+        Habit(title: "Meatless Day", iconUID: "starADD", kwhValue: 9.881, identifier: 1, source: "https://www.meatlessmonday.com/research/environment/", fact: "One 1/4 lb. of beef requires 425 gallons of water to produce."),
+        Habit(title: "Laundry w/ cold water", iconUID: "starADD", kwhValue: 3.1, identifier: 2, source: "https://coldwatersaves.org", fact: "Water heating can account for up to 90 percent of the total energy use in a hot water wash cycle")
     ]
+    
+    let kwhCost = 12.85
     
     var enabledHabits: [Habit] = []
     var enabledCounts: [Int] = []

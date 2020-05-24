@@ -14,6 +14,19 @@ protocol HabitTableViewCellDelegate: class {
 
 class HabitTableViewCell: UITableViewCell {
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 6.8, left: 5, bottom: 0, right: 5))
+        contentView.layer.cornerRadius = 7
+        backgroundColor = .clear // very important
+        layer.masksToBounds = false
+        layer.shadowOpacity = 0.23
+        layer.shadowRadius = 4
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowColor = UIColor.black.cgColor
+    }
+    
     var habit: Habit?
     var count: Int?
     weak var delegate: HabitTableViewCellDelegate?
