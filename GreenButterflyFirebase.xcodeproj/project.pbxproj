@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5115813735B135C7FCFF9BDC /* Pods_GreenButterflyFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */; };
+		C5406565247A32C00021B44E /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5406564247A32C00021B44E /* Badge.swift */; };
 		C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5880E812478800B001038AC /* HabitTableViewCell.swift */; };
 		C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7B24770B030073069A /* AppDelegate.swift */; };
 		C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7D24770B030073069A /* SceneDelegate.swift */; };
@@ -23,7 +24,6 @@
 		C5E09A9F24770F000073069A /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9E24770F000073069A /* LaunchViewController.swift */; };
 		C5E09AA124770F170073069A /* Insights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA024770F170073069A /* Insights.storyboard */; };
 		C5E09AA3247711BB0073069A /* Leaderboards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA2247711BB0073069A /* Leaderboards.storyboard */; };
-		C5E09AA5247711F20073069A /* Goals.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA4247711F20073069A /* Goals.storyboard */; };
 		C5E09AA7247712030073069A /* HabitTracking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA6247712030073069A /* HabitTracking.storyboard */; };
 		C5E09AAA247719CA0073069A /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */; };
 		C5E09AB024772AD70073069A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AAF24772AD70073069A /* UserController.swift */; };
@@ -40,6 +40,7 @@
 		289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenButterflyFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FEDA1A425F93C6F8C7777A1 /* Pods-GreenButterflyFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.release.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		9D91479F8F24C6D275872187 /* Pods-GreenButterflyFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.debug.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.debug.xcconfig"; sourceTree = "<group>"; };
+		C5406564247A32C00021B44E /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		C5880E812478800B001038AC /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		C5E09A7824770B030073069A /* GreenButterflyFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenButterflyFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E09A7B24770B030073069A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		C5E09A9E24770F000073069A /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		C5E09AA024770F170073069A /* Insights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Insights.storyboard; sourceTree = "<group>"; };
 		C5E09AA2247711BB0073069A /* Leaderboards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leaderboards.storyboard; sourceTree = "<group>"; };
-		C5E09AA4247711F20073069A /* Goals.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Goals.storyboard; sourceTree = "<group>"; };
 		C5E09AA6247712030073069A /* HabitTracking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitTracking.storyboard; sourceTree = "<group>"; };
 		C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationViewController.swift; sourceTree = "<group>"; };
 		C5E09AAF24772AD70073069A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -148,7 +148,6 @@
 				C5E09A8124770B030073069A /* Main.storyboard */,
 				C5E09AA024770F170073069A /* Insights.storyboard */,
 				C5E09AA2247711BB0073069A /* Leaderboards.storyboard */,
-				C5E09AA4247711F20073069A /* Goals.storyboard */,
 				C5E09AA6247712030073069A /* HabitTracking.storyboard */,
 			);
 			path = Views;
@@ -159,6 +158,7 @@
 			children = (
 				C5E09A9224770E930073069A /* User.swift */,
 				C5E09A9024770E770073069A /* Habit.swift */,
+				C5406564247A32C00021B44E /* Badge.swift */,
 				C5880E812478800B001038AC /* HabitTableViewCell.swift */,
 			);
 			path = Model;
@@ -298,7 +298,6 @@
 				C5E09A8324770B030073069A /* Main.storyboard in Resources */,
 				C5E09AA124770F170073069A /* Insights.storyboard in Resources */,
 				C5E09AA7247712030073069A /* HabitTracking.storyboard in Resources */,
-				C5E09AA5247711F20073069A /* Goals.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +368,7 @@
 				C5E09A9924770EBF0073069A /* HabitDetailViewController.swift in Sources */,
 				C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */,
 				C5E09AC2247774B10073069A /* HabitController.swift in Sources */,
+				C5406565247A32C00021B44E /* Badge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@ class HabitTableViewCell: UITableViewCell {
         super.layoutSubviews()
 
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 6.8, left: 5, bottom: 0, right: 5))
-        contentView.layer.cornerRadius = 6
+        contentView.layer.cornerRadius = 7
         backgroundColor = .clear // very important
         layer.masksToBounds = false
         layer.shadowOpacity = 0.23
