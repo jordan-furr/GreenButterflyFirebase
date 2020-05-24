@@ -70,6 +70,7 @@ class HabitListTableViewController: UITableViewController {
                 if let indexPath = tableView.indexPathForSelectedRow {
                     let habit = habits[indexPath.row]
                     destinationVC.habit = habit
+                    destinationVC.delegate = self
                 }
             }
         }
@@ -84,4 +85,13 @@ extension HabitListTableViewController: HabitTableViewCellDelegate{
         print("tapped")
         HabitController.shared.fetchUserHabits()
     }
+}
+
+extension HabitListTableViewController: ModalDismissed {
+    func modaldismissed() {
+        tableView.reloadData()
+        print("working")
+    }
+    
+    
 }
