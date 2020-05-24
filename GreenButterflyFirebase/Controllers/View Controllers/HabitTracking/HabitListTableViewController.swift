@@ -27,7 +27,7 @@ class HabitListTableViewController: UITableViewController {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 5, width: 80, height: 30))
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
-        self.navigationItem.titleView = imageView
+        //self.navigationItem.titleView = imageView
     }
     
     //MARK: DATA SOURCE
@@ -43,6 +43,9 @@ class HabitListTableViewController: UITableViewController {
         let count = HabitController.shared.enabledCounts[indexPath.row]
         cell.setHabitAndCount(habit: habit, count: count)
         cell.delegate = self
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = .clear
+        cell.selectedBackgroundView = backgroundView
         return cell
     }
     
@@ -58,7 +61,7 @@ class HabitListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 90.0
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
