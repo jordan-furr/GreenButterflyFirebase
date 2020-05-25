@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5115813735B135C7FCFF9BDC /* Pods_GreenButterflyFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */; };
 		C5406565247A32C00021B44E /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5406564247A32C00021B44E /* Badge.swift */; };
+		C5406567247B36430021B44E /* InsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5406566247B36420021B44E /* InsightsViewController.swift */; };
 		C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5880E812478800B001038AC /* HabitTableViewCell.swift */; };
 		C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7B24770B030073069A /* AppDelegate.swift */; };
 		C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7D24770B030073069A /* SceneDelegate.swift */; };
@@ -41,6 +42,7 @@
 		7FEDA1A425F93C6F8C7777A1 /* Pods-GreenButterflyFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.release.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		9D91479F8F24C6D275872187 /* Pods-GreenButterflyFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.debug.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		C5406564247A32C00021B44E /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		C5406566247B36420021B44E /* InsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewController.swift; sourceTree = "<group>"; };
 		C5880E812478800B001038AC /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		C5E09A7824770B030073069A /* GreenButterflyFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenButterflyFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E09A7B24770B030073069A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 				7FEDA1A425F93C6F8C7777A1 /* Pods-GreenButterflyFirebase.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C5406568247B36470021B44E /* Insights */ = {
+			isa = PBXGroup;
+			children = (
+				C5406566247B36420021B44E /* InsightsViewController.swift */,
+			);
+			path = Insights;
 			sourceTree = "<group>";
 		};
 		C5E09A6F24770B020073069A = {
@@ -180,6 +190,7 @@
 				C5E09AB324772AFD0073069A /* Leaderboards */,
 				C5E09AB224772AF50073069A /* HabitTracking */,
 				C5E09AB124772AEB0073069A /* Main */,
+				C5406568247B36470021B44E /* Insights */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -357,6 +368,7 @@
 				C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */,
 				C5E09A9B24770ECD0073069A /* ChartsViewController.swift in Sources */,
 				C5E09A9324770E930073069A /* User.swift in Sources */,
+				C5406567247B36430021B44E /* InsightsViewController.swift in Sources */,
 				C5E09A9124770E770073069A /* Habit.swift in Sources */,
 				C5E09AB024772AD70073069A /* UserController.swift in Sources */,
 				C5E09ABE2477459E0073069A /* TextField+Extensions.swift in Sources */,
