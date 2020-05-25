@@ -25,6 +25,11 @@ class InsightsViewController: UIViewController {
         super.viewDidLoad()
         setUpViews()
         balloonTextView.addCornerRadius()
+        let image = UIImage(named: "title")
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 20, width: 80, height: 30))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = image
+        self.navigationItem.titleView = imageView
     }
     
     func setUpViews() {

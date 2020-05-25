@@ -16,7 +16,6 @@ class LaunchViewController: UIViewController {
         //UserController.shared.signoutCurrentUser()
         
         DispatchQueue.main.async {
-            ButterflyGradient.setUpButterflyView(view: self.view)
             
             if Auth.auth().currentUser != nil {
                 UserController.shared.fetchCurrentUser { (result) in

@@ -20,11 +20,9 @@
 		C5E09A9324770E930073069A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9224770E930073069A /* User.swift */; };
 		C5E09A9724770EAE0073069A /* HabitListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9624770EAE0073069A /* HabitListTableViewController.swift */; };
 		C5E09A9924770EBF0073069A /* HabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9824770EBF0073069A /* HabitDetailViewController.swift */; };
-		C5E09A9B24770ECD0073069A /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9A24770ECD0073069A /* ChartsViewController.swift */; };
 		C5E09A9D24770EE90073069A /* AddHabitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9C24770EE90073069A /* AddHabitsTableViewController.swift */; };
 		C5E09A9F24770F000073069A /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A9E24770F000073069A /* LaunchViewController.swift */; };
 		C5E09AA124770F170073069A /* Insights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA024770F170073069A /* Insights.storyboard */; };
-		C5E09AA3247711BB0073069A /* Leaderboards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA2247711BB0073069A /* Leaderboards.storyboard */; };
 		C5E09AA7247712030073069A /* HabitTracking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09AA6247712030073069A /* HabitTracking.storyboard */; };
 		C5E09AAA247719CA0073069A /* AuthentificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */; };
 		C5E09AB024772AD70073069A /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AAF24772AD70073069A /* UserController.swift */; };
@@ -35,6 +33,7 @@
 		C5E09ABE2477459E0073069A /* TextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09ABD2477459E0073069A /* TextField+Extensions.swift */; };
 		C5E09AC024776F580073069A /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09ABF24776F580073069A /* UserError.swift */; };
 		C5E09AC2247774B10073069A /* HabitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09AC1247774B10073069A /* HabitController.swift */; };
+		C5F538C9247C2201006B0E02 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5F538C8247C2201006B0E02 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,11 +54,9 @@
 		C5E09A9224770E930073069A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C5E09A9624770EAE0073069A /* HabitListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListTableViewController.swift; sourceTree = "<group>"; };
 		C5E09A9824770EBF0073069A /* HabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewController.swift; sourceTree = "<group>"; };
-		C5E09A9A24770ECD0073069A /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
 		C5E09A9C24770EE90073069A /* AddHabitsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitsTableViewController.swift; sourceTree = "<group>"; };
 		C5E09A9E24770F000073069A /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		C5E09AA024770F170073069A /* Insights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Insights.storyboard; sourceTree = "<group>"; };
-		C5E09AA2247711BB0073069A /* Leaderboards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leaderboards.storyboard; sourceTree = "<group>"; };
 		C5E09AA6247712030073069A /* HabitTracking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HabitTracking.storyboard; sourceTree = "<group>"; };
 		C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationViewController.swift; sourceTree = "<group>"; };
 		C5E09AAF24772AD70073069A /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -70,6 +67,7 @@
 		C5E09ABD2477459E0073069A /* TextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensions.swift"; sourceTree = "<group>"; };
 		C5E09ABF24776F580073069A /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
 		C5E09AC1247774B10073069A /* HabitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitController.swift; sourceTree = "<group>"; };
+		C5F538C8247C2201006B0E02 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +143,7 @@
 				C5E09A7B24770B030073069A /* AppDelegate.swift */,
 				C5E09A7D24770B030073069A /* SceneDelegate.swift */,
 				C5E09A8424770B0A0073069A /* Assets.xcassets */,
+				C5F538C8247C2201006B0E02 /* Colors.xcassets */,
 				C5E09A8624770B0A0073069A /* LaunchScreen.storyboard */,
 				C5E09A8924770B0A0073069A /* Info.plist */,
 				C5E09AB424772C5B0073069A /* GoogleService-Info.plist */,
@@ -157,7 +156,6 @@
 			children = (
 				C5E09A8124770B030073069A /* Main.storyboard */,
 				C5E09AA024770F170073069A /* Insights.storyboard */,
-				C5E09AA2247711BB0073069A /* Leaderboards.storyboard */,
 				C5E09AA6247712030073069A /* HabitTracking.storyboard */,
 			);
 			path = Views;
@@ -187,7 +185,6 @@
 		C5E09AAD24771DA80073069A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C5E09AB324772AFD0073069A /* Leaderboards */,
 				C5E09AB224772AF50073069A /* HabitTracking */,
 				C5E09AB124772AEB0073069A /* Main */,
 				C5406568247B36470021B44E /* Insights */,
@@ -221,14 +218,6 @@
 				C5E09A9C24770EE90073069A /* AddHabitsTableViewController.swift */,
 			);
 			path = HabitTracking;
-			sourceTree = "<group>";
-		};
-		C5E09AB324772AFD0073069A /* Leaderboards */ = {
-			isa = PBXGroup;
-			children = (
-				C5E09A9A24770ECD0073069A /* ChartsViewController.swift */,
-			);
-			path = Leaderboards;
 			sourceTree = "<group>";
 		};
 		C5E09AB82477373E0073069A /* Helpers + Extensions */ = {
@@ -302,13 +291,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5E09AA3247711BB0073069A /* Leaderboards.storyboard in Resources */,
 				C5E09AB524772C5B0073069A /* GoogleService-Info.plist in Resources */,
 				C5E09A8824770B0A0073069A /* LaunchScreen.storyboard in Resources */,
 				C5E09A8524770B0A0073069A /* Assets.xcassets in Resources */,
 				C5E09A8324770B030073069A /* Main.storyboard in Resources */,
 				C5E09AA124770F170073069A /* Insights.storyboard in Resources */,
 				C5E09AA7247712030073069A /* HabitTracking.storyboard in Resources */,
+				C5F538C9247C2201006B0E02 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,7 +355,6 @@
 				C5E09A9724770EAE0073069A /* HabitListTableViewController.swift in Sources */,
 				C5E09A9F24770F000073069A /* LaunchViewController.swift in Sources */,
 				C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */,
-				C5E09A9B24770ECD0073069A /* ChartsViewController.swift in Sources */,
 				C5E09A9324770E930073069A /* User.swift in Sources */,
 				C5406567247B36430021B44E /* InsightsViewController.swift in Sources */,
 				C5E09A9124770E770073069A /* Habit.swift in Sources */,
