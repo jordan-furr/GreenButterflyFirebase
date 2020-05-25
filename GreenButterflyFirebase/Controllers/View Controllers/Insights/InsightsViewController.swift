@@ -25,7 +25,7 @@ class InsightsViewController: UIViewController {
         super.viewDidLoad()
         setUpViews()
         balloonTextView.addCornerRadius()
-        let image = UIImage(named: "title")
+        let image = UIImage(named: "titleGreen")
         let imageView = UIImageView(frame: CGRect(x: 0, y: 20, width: 80, height: 30))
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
@@ -38,7 +38,7 @@ class InsightsViewController: UIViewController {
         let numberOfBalloons = Int((total * 1000) / 30)
         let balloonCount = "You've saved enough CO2 to fill \(numberOfBalloons) balloons"
         balloonLabel.text = balloonCount
-        totalco2Label.text = "\(Double(round(total * 100)) / 100)kg"
+        totalco2Label.text = "\(Double(round(total * 100)) / 100)kg of CO2 saved."
         var balloons = ""
         let balloonsdividedby100 = numberOfBalloons / 100
         for _ in (0...balloonsdividedby100){

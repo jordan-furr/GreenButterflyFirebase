@@ -16,16 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total C02 saved from all actions:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPg-Ea-LfP">
-                                <rect key="frame" x="20" y="108" width="145" height="43"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtU-qs-oDr">
-                                <rect key="frame" x="144" y="108" width="250" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtU-qs-oDr">
+                                <rect key="frame" x="20" y="108" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="BlJ-fK-66p"/>
                                     <constraint firstAttribute="height" constant="50" id="u8v-v0-eVn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
@@ -33,21 +26,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYM-qF-aUK">
-                                <rect key="frame" x="20" y="188" width="374" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="20" y="188" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="balooons" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYq-uJ-ngG">
-                                <rect key="frame" x="15" y="240" width="384" height="553"/>
-                                <color key="backgroundColor" red="0.61648935110000003" green="0.8831694162" blue="0.65886847069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="15" y="239" width="384" height="554"/>
+                                <color key="backgroundColor" red="0.11674408133944732" green="0.30978679309036528" blue="0.26884772431041287" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Each balloon below represents 100 more balloons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDa-Kc-7lD">
-                                <rect key="frame" x="20" y="212" width="340" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Each balloon below represents 100 more balloons:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDa-Kc-7lD">
+                                <rect key="frame" x="20" y="211" width="324" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -56,22 +49,24 @@
                         <constraints>
                             <constraint firstItem="XDa-Kc-7lD" firstAttribute="top" secondItem="IYM-qF-aUK" secondAttribute="bottom" constant="6" id="3EQ-gX-fAI"/>
                             <constraint firstItem="XDa-Kc-7lD" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="20" id="6uX-oQ-Mnt"/>
+                            <constraint firstItem="CtU-qs-oDr" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="20" id="AYw-ae-2ED"/>
                             <constraint firstItem="GYq-uJ-ngG" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="15" id="DZs-d4-Mgj"/>
-                            <constraint firstItem="YPg-Ea-LfP" firstAttribute="top" secondItem="Xcw-tb-TKX" secondAttribute="top" constant="20" id="OLE-Vg-60I"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="IYM-qF-aUK" secondAttribute="trailing" constant="20" id="RF8-P1-Gi0"/>
-                            <constraint firstItem="YPg-Ea-LfP" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="20" id="WLj-JM-Ufc"/>
                             <constraint firstItem="IYM-qF-aUK" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="20" id="et0-Ij-66E"/>
-                            <constraint firstItem="YPg-Ea-LfP" firstAttribute="width" secondItem="25b-NU-X0p" secondAttribute="width" multiplier="0.35" id="iYF-UF-p3G"/>
-                            <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="CtU-qs-oDr" secondAttribute="trailing" constant="20" id="jV5-dX-922"/>
                             <constraint firstItem="IYM-qF-aUK" firstAttribute="top" secondItem="CtU-qs-oDr" secondAttribute="bottom" constant="30" id="mmj-1X-yMU"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="GYq-uJ-ngG" secondAttribute="trailing" constant="15" id="oay-E5-j6u"/>
                             <constraint firstItem="GYq-uJ-ngG" firstAttribute="top" secondItem="IYM-qF-aUK" secondAttribute="bottom" constant="34" id="s0X-8v-VFB"/>
                             <constraint firstItem="CtU-qs-oDr" firstAttribute="top" secondItem="Xcw-tb-TKX" secondAttribute="top" constant="20" id="t2K-gG-stY"/>
+                            <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="CtU-qs-oDr" secondAttribute="trailing" constant="20" id="t3H-aq-HfD"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="bottom" secondItem="GYq-uJ-ngG" secondAttribute="bottom" constant="20" id="v5s-UE-TMc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xcw-tb-TKX"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Insights" id="gQ8-Vf-x4F"/>
+                    <navigationItem key="navigationItem" title="Insights" id="gQ8-Vf-x4F">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="VeP-7M-Nxx">
+                            <color key="tintColor" name="butterflyGreen"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="balloonLabel" destination="IYM-qF-aUK" id="3Ux-yf-jeW"/>
@@ -92,6 +87,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iH2-0h-mv3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -105,6 +101,7 @@
     </scenes>
     <resources>
         <image name="lightning" width="22" height="26"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="butterflyGreen">
             <color red="0.0" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

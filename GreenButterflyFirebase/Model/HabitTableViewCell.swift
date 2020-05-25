@@ -17,7 +17,7 @@ class HabitTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 7, left: 7, bottom: 0, right: 7))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 9, left: 7, bottom: 0, right: 7))
         contentView.layer.cornerRadius = 7
         backgroundColor = .clear // very important
         layer.masksToBounds = false
