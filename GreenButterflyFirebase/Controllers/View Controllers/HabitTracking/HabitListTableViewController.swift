@@ -23,7 +23,7 @@ class HabitListTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.reloadData()
         //tableView.allowsSelection = false
-        let image = UIImage(named: "titleGreen")
+        let image = UIImage(named: "title")
         let imageView = UIImageView(frame: CGRect(x: 0, y: 20, width: 80, height: 30))
         imageView.contentMode = .scaleAspectFit
         imageView.image = image

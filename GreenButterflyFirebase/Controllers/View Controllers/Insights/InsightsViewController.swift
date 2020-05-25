@@ -25,20 +25,21 @@ class InsightsViewController: UIViewController {
         super.viewDidLoad()
         setUpViews()
         balloonTextView.addCornerRadius()
-        let image = UIImage(named: "titleGreen")
+        let image = UIImage(named: "titleSmall")
         let imageView = UIImageView(frame: CGRect(x: 0, y: 20, width: 80, height: 30))
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
         self.navigationItem.titleView = imageView
+        totalco2Label.addCornerRadius()
     }
     
     func setUpViews() {
         let total = HabitController.shared.getUsertotalCO2() //kg
         
         let numberOfBalloons = Int((total * 1000) / 30)
-        let balloonCount = "You've saved enough CO2 to fill \(numberOfBalloons) balloons"
+        let balloonCount = "Thats enough to fill \(numberOfBalloons) balloons"
         balloonLabel.text = balloonCount
-        totalco2Label.text = "\(Double(round(total * 100)) / 100)kg of CO2 saved."
+        totalco2Label.text = "\(Double(round(total * 100)) / 100)kg"
         var balloons = ""
         let balloonsdividedby100 = numberOfBalloons / 100
         for _ in (0...balloonsdividedby100){
