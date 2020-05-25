@@ -10,7 +10,7 @@
         <!--Insights-->
         <scene sceneID="b0X-Ve-3aR">
             <objects>
-                <viewController id="6ra-fF-r1Z" sceneMemberID="viewController">
+                <viewController id="6ra-fF-r1Z" customClass="InsightsViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="25b-NU-X0p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,20 +21,73 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total C02 saved from all actions:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPg-Ea-LfP">
+                                <rect key="frame" x="20" y="133" width="265" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtU-qs-oDr">
+                                <rect key="frame" x="289" y="131.5" width="105" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="BlJ-fK-66p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYM-qF-aUK">
+                                <rect key="frame" x="20" y="182.5" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="balooons" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYq-uJ-ngG">
+                                <rect key="frame" x="15" y="234.5" width="384" height="558.5"/>
+                                <color key="backgroundColor" red="0.011368932016821787" green="0.69004695699086294" blue="0.42424762127956367" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Each balloon below represents 100 more balloons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDa-Kc-7lD">
+                                <rect key="frame" x="20" y="206.5" width="340" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="XDa-Kc-7lD" firstAttribute="top" secondItem="IYM-qF-aUK" secondAttribute="bottom" constant="6" id="3EQ-gX-fAI"/>
                             <constraint firstItem="B4c-cB-DHa" firstAttribute="top" secondItem="Xcw-tb-TKX" secondAttribute="top" constant="20" id="6Ve-kP-io8"/>
+                            <constraint firstItem="XDa-Kc-7lD" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="20" id="6uX-oQ-Mnt"/>
+                            <constraint firstItem="GYq-uJ-ngG" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="15" id="DZs-d4-Mgj"/>
                             <constraint firstItem="B4c-cB-DHa" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="20" id="IPG-9F-yEo"/>
+                            <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="IYM-qF-aUK" secondAttribute="trailing" constant="20" id="RF8-P1-Gi0"/>
+                            <constraint firstItem="YPg-Ea-LfP" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="20" id="WLj-JM-Ufc"/>
+                            <constraint firstItem="CtU-qs-oDr" firstAttribute="centerY" secondItem="YPg-Ea-LfP" secondAttribute="centerY" id="YDF-UE-sFd"/>
+                            <constraint firstItem="YPg-Ea-LfP" firstAttribute="top" secondItem="B4c-cB-DHa" secondAttribute="bottom" constant="40" id="cfW-rL-bSW"/>
+                            <constraint firstItem="IYM-qF-aUK" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="20" id="et0-Ij-66E"/>
+                            <constraint firstItem="YPg-Ea-LfP" firstAttribute="width" secondItem="25b-NU-X0p" secondAttribute="width" multiplier="0.64" id="iYF-UF-p3G"/>
+                            <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="CtU-qs-oDr" secondAttribute="trailing" constant="20" id="jV5-dX-922"/>
+                            <constraint firstItem="IYM-qF-aUK" firstAttribute="top" secondItem="CtU-qs-oDr" secondAttribute="bottom" constant="30" id="mmj-1X-yMU"/>
+                            <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="GYq-uJ-ngG" secondAttribute="trailing" constant="15" id="oay-E5-j6u"/>
+                            <constraint firstItem="GYq-uJ-ngG" firstAttribute="top" secondItem="IYM-qF-aUK" secondAttribute="bottom" constant="34" id="s0X-8v-VFB"/>
+                            <constraint firstItem="Xcw-tb-TKX" firstAttribute="bottom" secondItem="GYq-uJ-ngG" secondAttribute="bottom" constant="20" id="v5s-UE-TMc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xcw-tb-TKX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Insights" image="lightning" selectedImage="lightning" id="TUl-Jb-Ktg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="balloonLabel" destination="IYM-qF-aUK" id="3Ux-yf-jeW"/>
+                        <outlet property="balloonTextView" destination="GYq-uJ-ngG" id="695-E8-qtH"/>
+                        <outlet property="totalco2Label" destination="CtU-qs-oDr" id="KPD-Ge-mzN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7l1-76-SXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="136"/>
+            <point key="canvasLocation" x="5.7971014492753632" y="135.9375"/>
         </scene>
     </scenes>
     <resources>

@@ -52,24 +52,32 @@ class HabitController {
     }
     
     func incrementHabitCounter(habit: Habit) -> Int{
-        guard let user = UserController.shared.currentUser,
-            let index = defaultHabits.firstIndex(of: habit) else {return 0}
+        guard let user = UserController.shared.currentUser else {return 0}
         
-        user.counts[index] = user.counts[index] + 1
+        user.counts[habit.identifier] = user.counts[habit.identifier] + 1
         let data = ["counts" : user.counts]
         UserController.shared.updateUserData(userID: user.id, data: data)
         fetchUserHabits()
-        return user.counts[index]
+        return user.counts[habit.identifier]
     }
     
     func decrementHabitCounter(habit: Habit) -> Int{
-        guard let user = UserController.shared.currentUser,
-            let index = defaultHabits.firstIndex(of: habit) else {return 0}
+        guard let user = UserController.shared.currentUser else {return 0}
         
-        user.counts[index] = user.counts[index] - 1
+        user.counts[habit.identifier] = user.counts[habit.identifier] - 1
         let data = ["counts" : user.counts]
         UserController.shared.updateUserData(userID: user.id, data: data)
         fetchUserHabits()
-        return user.counts[index]
+        return user.counts[habit.identifier]
+    }
+    
+    func getUsertotalCO2() -> Double {
+        guard let user = UserController.shared.currentUser else {return 0}
+        var total: Double =  0
+        for habit in defaultHabits {
+            let habitTotal = habit.co2Value * Double(user.counts[habit.identifier])
+            total = total + habitTotal
+        }
+        return total
     }
 }
