@@ -26,6 +26,9 @@ class AddHabitsTableViewController: UITableViewController {
     }
     
     //MARK: IB FUNCTIONS
+    @IBAction func donetapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     
     // MARK: - DATA SOURCE
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
