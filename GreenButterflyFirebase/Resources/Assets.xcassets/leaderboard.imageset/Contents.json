@@ -1,17 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "leaderboard.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "icons8-leaderboard-100.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

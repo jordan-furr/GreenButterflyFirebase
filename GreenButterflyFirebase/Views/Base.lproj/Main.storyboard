@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +15,17 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="0l2-YR-o6c">
+                                <rect key="frame" x="20.5" y="425.5" width="373" height="55"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="butterflyGreen"/>
+                        <constraints>
+                            <constraint firstItem="0l2-YR-o6c" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4bp-d9-nm5"/>
+                            <constraint firstItem="0l2-YR-o6c" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="BvV-84-5Yh"/>
+                            <constraint firstItem="0l2-YR-o6c" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lil-j9-0rc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -105,7 +116,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="butterflyGreen"/>
                         <constraints>
                             <constraint firstItem="eov-PD-4db" firstAttribute="width" secondItem="QaC-qK-F6H" secondAttribute="width" multiplier="0.8" id="9BO-Q0-3f2"/>
                             <constraint firstItem="eov-PD-4db" firstAttribute="top" secondItem="Rab-Ho-ggk" secondAttribute="bottom" constant="20" id="9H6-2S-cn4"/>
@@ -127,57 +138,11 @@
                         <outlet property="passwordTextField" destination="h0L-8g-yZf" id="rbf-w9-i5l"/>
                         <outlet property="signupButton" destination="Cvi-8X-qcA" id="m41-4B-lRL"/>
                         <segue destination="lfC-gh-25R" kind="show" identifier="loggedin" id="iaT-ra-Ins"/>
-                        <segue destination="Sjr-UN-Hl4" kind="show" identifier="onboarding" id="LpL-aO-7Fo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lza-Px-Fag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1312" y="-308"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="1yj-rK-oPF">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Sjr-UN-Hl4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7SN-d7-7hc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onboarding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMs-qz-iMa">
-                                <rect key="frame" x="107.5" y="64" width="199" height="43"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmh-ed-QHs">
-                                <rect key="frame" x="145" y="678" width="124" height="46"/>
-                                <color key="backgroundColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="z8V-eT-xq5"/>
-                                </constraints>
-                                <state key="normal" title="DONE">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="actionTapped:" destination="YaK-gA-DUi" eventType="touchUpInside" id="MeX-Vp-SGq"/>
-                                    <segue destination="lfC-gh-25R" kind="show" id="9Zv-wH-Www"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Fmh-ed-QHs" firstAttribute="width" secondItem="7SN-d7-7hc" secondAttribute="width" multiplier="0.299517" id="0FD-LN-LDL"/>
-                            <constraint firstItem="RMs-qz-iMa" firstAttribute="centerX" secondItem="h68-QS-m0t" secondAttribute="centerX" id="1zr-SU-0bU"/>
-                            <constraint firstItem="h68-QS-m0t" firstAttribute="bottom" secondItem="Fmh-ed-QHs" secondAttribute="bottom" constant="138" id="CEn-ch-1Gk"/>
-                            <constraint firstItem="RMs-qz-iMa" firstAttribute="top" secondItem="h68-QS-m0t" secondAttribute="top" constant="20" id="Gpi-pM-OdD"/>
-                            <constraint firstItem="Fmh-ed-QHs" firstAttribute="centerX" secondItem="h68-QS-m0t" secondAttribute="centerX" id="YAX-5a-8Kn"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="h68-QS-m0t"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="nLH-wC-2gZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RLY-vJ-wRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2033" y="-308"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Zv8-a0-KPp">
@@ -187,15 +152,14 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vy7-XP-N1f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="butterflyGreen"/>
+                        <color key="tintColor" name="butterflyGreen"/>
+                        <color key="barTintColor" name="butterflyGreen"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="fRi-LK-4O8" kind="relationship" relationship="viewControllers" id="GwQ-6u-1Rq"/>
                         <segue destination="poR-DM-q5e" kind="relationship" relationship="viewControllers" id="Gns-RV-0Zp"/>
-                        <segue destination="bfR-dZ-qeh" kind="relationship" relationship="viewControllers" id="8dF-iv-Yia"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wk6-lG-9Iu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -210,7 +174,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhM-zb-mZR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="814"/>
+            <point key="canvasLocation" x="1096" y="814"/>
         </scene>
         <!--Insights-->
         <scene sceneID="LLf-IN-uqM">
@@ -220,20 +184,16 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLk-Rz-nt8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1288" y="814"/>
-        </scene>
-        <!--Leaderboards-->
-        <scene sceneID="2gM-6P-Y1J">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Leaderboards" id="bfR-dZ-qeh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4qn-Vm-EU5"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Vf-0I-mxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1528" y="814"/>
+            <point key="canvasLocation" x="1553" y="814"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="iaT-ra-Ins"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="title" width="463" height="55"/>
+        <namedColor name="butterflyGreen">
+            <color red="0.0" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

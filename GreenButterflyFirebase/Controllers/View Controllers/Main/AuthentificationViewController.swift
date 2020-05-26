@@ -66,7 +66,7 @@ class AuthentificationViewController: UIViewController {
                             } else {
                                 print("user updated with empty habits")
                                 UserController.shared.updatedUser()
-                                self.performSegue(withIdentifier: "onboarding", sender: self)
+                                self.performSegue(withIdentifier: "loggedin", sender: self)
                             }
                         }
                     } else {

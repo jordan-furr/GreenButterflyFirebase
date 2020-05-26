@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,18 +12,20 @@
         <scene sceneID="RPU-0U-a5q">
             <objects>
                 <tableViewController id="0DE-Lx-Uo6" customClass="AddHabitsTableViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p2f-B6-eHS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p2f-B6-eHS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newHabit" id="MCZ-Kr-WVm">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MCZ-Kr-WVm" id="Vks-hU-E93">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -31,9 +34,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Wu8-6u-uSl">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="Y4Q-Ma-fc2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="9rJ-P1-cQv">
                             <connections>
-                                <action selector="doneTapped:" destination="0DE-Lx-Uo6" id="mnu-Lx-Tml"/>
+                                <action selector="donetapped:" destination="0DE-Lx-Uo6" id="2aF-Pd-DUq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -49,7 +52,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fnY-qw-B1u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="butterflyGreen"/>
                         <color key="separatorColor" red="0.0" green="0.14700983500000001" blue="0.093592808159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -80,11 +83,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr9-Z2-ghR">
-                                            <rect key="frame" x="346" y="9.5" width="58" height="80"/>
+                                            <rect key="frame" x="354" y="9.5" width="58" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="80" id="i4D-EV-Tf8"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                             <state key="normal" title="+">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
@@ -104,7 +107,7 @@
                                         <constraint firstItem="Yr9-Z2-ghR" firstAttribute="width" secondItem="zCp-4W-X2Z" secondAttribute="width" multiplier="0.14" id="igF-yT-TRl"/>
                                         <constraint firstItem="YhJ-6J-dtr" firstAttribute="centerY" secondItem="zCp-4W-X2Z" secondAttribute="centerY" id="j2C-Zy-AmR"/>
                                         <constraint firstItem="bSa-Ng-S7x" firstAttribute="width" secondItem="zCp-4W-X2Z" secondAttribute="width" multiplier="0.11" id="ohk-XR-CcY"/>
-                                        <constraint firstAttribute="trailing" secondItem="Yr9-Z2-ghR" secondAttribute="trailing" constant="10" id="wxX-Ov-PYE"/>
+                                        <constraint firstAttribute="trailing" secondItem="Yr9-Z2-ghR" secondAttribute="trailing" constant="2" id="wxX-Ov-PYE"/>
                                         <constraint firstItem="YhJ-6J-dtr" firstAttribute="leading" secondItem="zCp-4W-X2Z" secondAttribute="leading" constant="18" id="ygT-JY-zQQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -123,7 +126,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Green Butterfly" id="KM6-q4-5mc">
                         <barButtonItem key="rightBarButtonItem" image="tabs" id="30e-eM-IZc">
-                            <color key="tintColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="0DE-Lx-Uo6" kind="show" identifier="addHabits" id="Wx4-Qm-BfW"/>
                             </connections>
@@ -139,7 +142,7 @@
             <objects>
                 <viewController id="5TA-yN-ByM" customClass="HabitDetailViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RUs-8Z-cJs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total kwh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGW-os-aBP">
@@ -174,7 +177,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="open in safari">
-                                    <color key="titleColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" name="butterflyGreen"/>
                                 </state>
                                 <connections>
                                     <action selector="sourceTapped:" destination="5TA-yN-ByM" eventType="touchUpInside" id="lSZ-Rd-WK7"/>
@@ -211,7 +214,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="decrease count">
-                                    <color key="titleColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" name="butterflyGreen"/>
                                 </state>
                                 <connections>
                                     <action selector="decrementTapped:" destination="5TA-yN-ByM" eventType="touchUpInside" id="riT-zf-7w6"/>
@@ -289,8 +292,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fje-GV-qlW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="butterflyGreen"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -304,6 +307,9 @@
     </scenes>
     <resources>
         <image name="net" width="25" height="25"/>
-        <image name="tabs" width="22" height="24"/>
+        <image name="tabs" width="29" height="23"/>
+        <namedColor name="butterflyGreen">
+            <color red="0.0" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -22,3 +22,7 @@ extension UIImageView {
     self.tintColor = color
   }
 }
+
+extension UIColor {
+    static let customGreen = UIColor(named: "butterflyGreen")
+}
