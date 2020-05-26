@@ -138,57 +138,11 @@
                         <outlet property="passwordTextField" destination="h0L-8g-yZf" id="rbf-w9-i5l"/>
                         <outlet property="signupButton" destination="Cvi-8X-qcA" id="m41-4B-lRL"/>
                         <segue destination="lfC-gh-25R" kind="show" identifier="loggedin" id="iaT-ra-Ins"/>
-                        <segue destination="Sjr-UN-Hl4" kind="show" identifier="onboarding" id="LpL-aO-7Fo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lza-Px-Fag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1312" y="-308"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="1yj-rK-oPF">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Sjr-UN-Hl4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7SN-d7-7hc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Onboarding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMs-qz-iMa">
-                                <rect key="frame" x="107.5" y="64" width="199" height="43"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmh-ed-QHs">
-                                <rect key="frame" x="145" y="678" width="124" height="46"/>
-                                <color key="backgroundColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="z8V-eT-xq5"/>
-                                </constraints>
-                                <state key="normal" title="DONE">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="actionTapped:" destination="YaK-gA-DUi" eventType="touchUpInside" id="MeX-Vp-SGq"/>
-                                    <segue destination="lfC-gh-25R" kind="show" id="9Zv-wH-Www"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" name="butterflyGreen"/>
-                        <constraints>
-                            <constraint firstItem="Fmh-ed-QHs" firstAttribute="width" secondItem="7SN-d7-7hc" secondAttribute="width" multiplier="0.299517" id="0FD-LN-LDL"/>
-                            <constraint firstItem="RMs-qz-iMa" firstAttribute="centerX" secondItem="h68-QS-m0t" secondAttribute="centerX" id="1zr-SU-0bU"/>
-                            <constraint firstItem="h68-QS-m0t" firstAttribute="bottom" secondItem="Fmh-ed-QHs" secondAttribute="bottom" constant="138" id="CEn-ch-1Gk"/>
-                            <constraint firstItem="RMs-qz-iMa" firstAttribute="top" secondItem="h68-QS-m0t" secondAttribute="top" constant="20" id="Gpi-pM-OdD"/>
-                            <constraint firstItem="Fmh-ed-QHs" firstAttribute="centerX" secondItem="h68-QS-m0t" secondAttribute="centerX" id="YAX-5a-8Kn"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="h68-QS-m0t"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="nLH-wC-2gZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RLY-vJ-wRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2033" y="-308"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Zv8-a0-KPp">

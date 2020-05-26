@@ -46,9 +46,9 @@ class HabitDetailViewController: UIViewController {
         
         factLabel.text = habit.fact
        
-        kwhLabel.text = "CO2 saved per action:   \(habit.co2Value)kg"
+        kwhLabel.text = "co2 saved per action:   \(habit.co2Value)kg"
         let totalCO2 = Double(round((Double(counts) * habit.co2Value) * 100) / 100)
-        totalKWHLabel.text = "Total CO2 saved by actions:   \(totalCO2)kg"
+        totalKWHLabel.text = "Total co2 saved by actions:   \(totalCO2)kg"
         iconImageView.image = UIImage(named: habit.iconUID)
     }
     

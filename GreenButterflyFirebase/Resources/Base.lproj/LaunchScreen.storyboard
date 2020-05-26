@@ -15,17 +15,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="G9a-nc-Not">
-                                <rect key="frame" x="52" y="425.5" width="310.5" height="55"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" name="butterflyGreen"/>
-                        <constraints>
-                            <constraint firstItem="G9a-nc-Not" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="R2h-OY-Yp8"/>
-                            <constraint firstItem="G9a-nc-Not" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.75" id="oUs-In-GC3"/>
-                            <constraint firstItem="G9a-nc-Not" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zmN-jV-64U"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -35,7 +25,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="title" width="463" height="55"/>
         <namedColor name="butterflyGreen">
             <color red="0.0" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
