@@ -19,7 +19,6 @@ class InsightsViewController: UIViewController {
     @IBOutlet weak var totalco2Label: UILabel!
     @IBOutlet weak var balloonLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var logout: UIButton!
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +45,6 @@ class InsightsViewController: UIViewController {
         totalco2Label.addCornerRadius()
         collectionView.dataSource = self
         collectionView.delegate = self
-        logout.addCornerRadius()
     }
     
     func setUpViews() {
@@ -54,22 +52,6 @@ class InsightsViewController: UIViewController {
         let balloonCount = "\(balloonsCount)"
         balloonLabel.text = balloonCount
         totalco2Label.text = "\(Double(round(total * 100)) / 100)kg of co2"
-    }
-    
-    @IBAction func logouttapped(_ sender: Any) {
-        let alertController = UIAlertController(title: "Logout?", message: "Are you sure you want to log out?", preferredStyle: .alert)
-        let defaultAction = UIAlertAction(title: "Go ahead", style: .default, handler: { action in
-            
-            UserController.shared.signoutCurrentUser()
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            guard let initial = storyboard.instantiateInitialViewController() else {return}
-            self.present(initial, animated: true, completion: nil)
-        })
-        alertController.addAction(defaultAction)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alertController.addAction(cancelAction)
-        present(alertController, animated: true, completion: nil)
     }
 }
 

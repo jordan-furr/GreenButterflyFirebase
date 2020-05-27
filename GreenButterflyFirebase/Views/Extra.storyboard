@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tcb-Ko-AXD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Extra View Controller-->
+        <scene sceneID="EVl-Px-lUN">
+            <objects>
+                <viewController id="6o8-Q2-qVA" customClass="ExtraViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TJZ-8V-K3Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f1-Ve-Wxx">
+                                <rect key="frame" x="20" y="157" width="374" height="125.5"/>
+                                <string key="text">Carbon footprints measure how much carbon dioxide (co2) we produce from our daily lives. Greenhouse gases like co2 contribute to global warming and although tranportation, home energy, and corporations are the largest contributors to GHG, the small eco friendly actions we make add up and help set back global warming. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is a carbon footprint? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzF-2u-kLZ">
+                                <rect key="frame" x="20" y="116" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-bf-PgY">
+                                <rect key="frame" x="20" y="330.5" width="374" height="57.5"/>
+                                <string key="text">Green Butterfly attempts to help individuals visualize how their "small" eco-friendly actions add up and lower their carbon footprint.</string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elE-53-eQF">
+                                <rect key="frame" x="314" y="426" width="80" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="T8S-F2-hdn"/>
+                                    <constraint firstAttribute="height" constant="30" id="zwd-Ot-wxy"/>
+                                </constraints>
+                                <state key="normal" title="log out">
+                                    <color key="titleColor" name="butterflyGreen"/>
+                                </state>
+                                <connections>
+                                    <action selector="logouttapped:" destination="6o8-Q2-qVA" eventType="touchUpInside" id="vJR-NC-S24"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="butterflyGreen"/>
+                        <constraints>
+                            <constraint firstItem="elE-53-eQF" firstAttribute="top" secondItem="DdT-bf-PgY" secondAttribute="bottom" constant="38" id="7uZ-6T-p1V"/>
+                            <constraint firstItem="3f1-Ve-Wxx" firstAttribute="top" secondItem="XzF-2u-kLZ" secondAttribute="bottom" constant="12" id="8T9-GE-XeR"/>
+                            <constraint firstItem="DdT-bf-PgY" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="20" id="HI1-wn-oH2"/>
+                            <constraint firstItem="XzF-2u-kLZ" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="20" id="M2U-tg-fTB"/>
+                            <constraint firstItem="3f1-Ve-Wxx" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="20" id="N9z-qb-Qbl"/>
+                            <constraint firstItem="04i-EC-j3m" firstAttribute="trailing" secondItem="3f1-Ve-Wxx" secondAttribute="trailing" constant="20" id="Qr9-3t-Uks"/>
+                            <constraint firstItem="elE-53-eQF" firstAttribute="trailing" secondItem="DdT-bf-PgY" secondAttribute="trailing" id="Sej-KD-VX2"/>
+                            <constraint firstItem="04i-EC-j3m" firstAttribute="trailing" secondItem="XzF-2u-kLZ" secondAttribute="trailing" constant="20" id="fLU-Ak-bqY"/>
+                            <constraint firstAttribute="trailing" secondItem="DdT-bf-PgY" secondAttribute="trailing" constant="20" id="jkR-sg-hor"/>
+                            <constraint firstItem="XzF-2u-kLZ" firstAttribute="top" secondItem="04i-EC-j3m" secondAttribute="top" constant="28" id="onQ-sf-N9w"/>
+                            <constraint firstItem="DdT-bf-PgY" firstAttribute="top" secondItem="3f1-Ve-Wxx" secondAttribute="bottom" constant="48" id="t8U-jH-s7w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="04i-EC-j3m"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ox8-JB-mh5"/>
+                    <connections>
+                        <outlet property="logoutbutton" destination="elE-53-eQF" id="y9w-CX-m7Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTM-pW-94P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="102"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="jld-uD-6rZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tcb-Ko-AXD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About" image="paperplane.fill" catalog="system" selectedImage="paperplane.fill" id="XYt-1y-U0Y"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MKO-fR-xUa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="butterflyGreen"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6o8-Q2-qVA" kind="relationship" relationship="rootViewController" id="zc3-YL-5mv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQ0-b3-iBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="butterflyGreen">
+            <color red="0.0" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

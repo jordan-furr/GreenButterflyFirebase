@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5115813735B135C7FCFF9BDC /* Pods_GreenButterflyFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */; };
+		C53B101B247EA4B400E22124 /* Extra.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53B101A247EA4B400E22124 /* Extra.storyboard */; };
+		C53B101D247EB5B200E22124 /* ExtraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B101C247EB5B200E22124 /* ExtraViewController.swift */; };
 		C5406565247A32C00021B44E /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5406564247A32C00021B44E /* Badge.swift */; };
 		C5406567247B36430021B44E /* InsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5406566247B36420021B44E /* InsightsViewController.swift */; };
 		C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5880E812478800B001038AC /* HabitTableViewCell.swift */; };
@@ -40,6 +42,8 @@
 		289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreenButterflyFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FEDA1A425F93C6F8C7777A1 /* Pods-GreenButterflyFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.release.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		9D91479F8F24C6D275872187 /* Pods-GreenButterflyFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.debug.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.debug.xcconfig"; sourceTree = "<group>"; };
+		C53B101A247EA4B400E22124 /* Extra.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Extra.storyboard; sourceTree = "<group>"; };
+		C53B101C247EB5B200E22124 /* ExtraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraViewController.swift; sourceTree = "<group>"; };
 		C5406564247A32C00021B44E /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		C5406566247B36420021B44E /* InsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewController.swift; sourceTree = "<group>"; };
 		C5880E812478800B001038AC /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				C5406566247B36420021B44E /* InsightsViewController.swift */,
+				C53B101C247EB5B200E22124 /* ExtraViewController.swift */,
 			);
 			path = Insights;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				C5E09A8124770B030073069A /* Main.storyboard */,
 				C5E09AA024770F170073069A /* Insights.storyboard */,
 				C5E09AA6247712030073069A /* HabitTracking.storyboard */,
+				C53B101A247EA4B400E22124 /* Extra.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 				C5E09AB524772C5B0073069A /* GoogleService-Info.plist in Resources */,
 				C5E09A8824770B0A0073069A /* LaunchScreen.storyboard in Resources */,
 				C5E09A8524770B0A0073069A /* Assets.xcassets in Resources */,
+				C53B101B247EA4B400E22124 /* Extra.storyboard in Resources */,
 				C5E09A8324770B030073069A /* Main.storyboard in Resources */,
 				C5E09AA124770F170073069A /* Insights.storyboard in Resources */,
 				C5E09AA7247712030073069A /* HabitTracking.storyboard in Resources */,
@@ -353,6 +360,7 @@
 				C5E09ABC247741930073069A /* FirebaseController.swift in Sources */,
 				C5E09ABA24773C9F0073069A /* StyleGuide.swift in Sources */,
 				C5E09A9724770EAE0073069A /* HabitListTableViewController.swift in Sources */,
+				C53B101D247EB5B200E22124 /* ExtraViewController.swift in Sources */,
 				C5E09A9F24770F000073069A /* LaunchViewController.swift in Sources */,
 				C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */,
 				C5E09A9324770E930073069A /* User.swift in Sources */,

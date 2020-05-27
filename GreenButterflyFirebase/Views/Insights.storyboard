@@ -104,25 +104,9 @@
                                 <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgS-Qz-kQH">
-                                <rect key="frame" x="348" y="771" width="58" height="18"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="58" id="1H7-Lh-WF7"/>
-                                    <constraint firstAttribute="height" constant="18" id="DuJ-7e-P09"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <state key="normal" title="log out">
-                                    <color key="titleColor" name="butterflyGreen"/>
-                                </state>
-                                <connections>
-                                    <action selector="logouttapped:" destination="6ra-fF-r1Z" eventType="touchUpInside" id="FCX-sA-LLM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" name="butterflyGreen"/>
                         <constraints>
-                            <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="YgS-Qz-kQH" secondAttribute="trailing" constant="8" id="132-g1-8Ec"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="bottom" secondItem="Oc0-fb-nwP" secondAttribute="bottom" constant="50" id="1dS-mx-tGz"/>
                             <constraint firstItem="TWl-rE-5at" firstAttribute="leading" secondItem="CtU-qs-oDr" secondAttribute="leading" id="33m-d3-5wa"/>
                             <constraint firstItem="Vjy-lZ-4rO" firstAttribute="width" secondItem="25b-NU-X0p" secondAttribute="width" multiplier="0.42" id="4wc-3g-Fdt"/>
@@ -130,7 +114,6 @@
                             <constraint firstItem="UxR-eX-S6V" firstAttribute="top" secondItem="CtU-qs-oDr" secondAttribute="bottom" constant="10" id="5QW-NG-2pd"/>
                             <constraint firstItem="Vjy-lZ-4rO" firstAttribute="leading" secondItem="IYM-qF-aUK" secondAttribute="trailing" constant="8" id="5dP-Yv-uiI"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="Oc0-fb-nwP" secondAttribute="trailing" id="6v5-mT-ekE"/>
-                            <constraint firstItem="YgS-Qz-kQH" firstAttribute="top" secondItem="Oc0-fb-nwP" secondAttribute="bottom" constant="8" id="8eR-ia-5AA"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="TWl-rE-5at" secondAttribute="trailing" constant="10" id="ARn-m2-IcM"/>
                             <constraint firstItem="CtU-qs-oDr" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" id="AYw-ae-2ED"/>
                             <constraint firstItem="TWl-rE-5at" firstAttribute="top" secondItem="Xcw-tb-TKX" secondAttribute="top" constant="30" id="Ade-4n-5Bs"/>
@@ -154,7 +137,6 @@
                     <connections>
                         <outlet property="balloonLabel" destination="IYM-qF-aUK" id="3Ux-yf-jeW"/>
                         <outlet property="collectionView" destination="Oc0-fb-nwP" id="UdN-w4-aPq"/>
-                        <outlet property="logout" destination="YgS-Qz-kQH" id="uro-V6-W7K"/>
                         <outlet property="totalco2Label" destination="CtU-qs-oDr" id="KPD-Ge-mzN"/>
                     </connections>
                 </viewController>
