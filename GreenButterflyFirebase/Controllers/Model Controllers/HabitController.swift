@@ -34,7 +34,7 @@ class HabitController {
         Habit(title: "Recycled cardboard", iconUID: "cardboard", co2Value: 0.140, identifier: 16, source: "https://recoverusa.com/environmental-impact-of-recycling-cardboard/", fact: "For every ton of cardboard recycled, about 17 trees are saved."),
         Habit(title: "Recycled plastic", iconUID: "plastic", co2Value: 0.580, identifier: 17, source: "https://stanfordmag.org/contents/the-link-between-plastic-use-and-climate-change-nitty-gritty", fact: "Recycling and re-manufacturing plastic saves at least 30 percent of the carbon emissions that original processing and manufacturing produces."),
         Habit(title: "Bought locally", iconUID: "local", co2Value: 0.100, identifier: 18, source: "https://stanfordmag.org/contents/eat-local-save-energy-essential-answer", fact: "The Worldwatch Institute reports that locally sourced products generate 5 to 17 times less carbon dioxide (co2) than those sourced with far-flung ingredients."),
-        Habit(title: <#T##String#>, iconUID: <#T##String#>, co2Value: <#T##Double#>, identifier: 19, source: <#T##String#>, fact: <#T##String#>)
+        Habit(title: "Turned off the lights", iconUID: "lights", co2Value: 0.050, identifier: 19, source: "https://www.energy.gov/energysaver/save-electricity-and-fuel/lighting-choices-save-you-money/when-turn-your-lights", fact: "Replacing an incandescent bulb with an LED bulb can save 6 tons of household emissions per year.")
     ]
  
     var enabledHabits: [Habit] = []
