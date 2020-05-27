@@ -1,12 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "butterflyWhite.png",
+      "filename" : "icons8-train-100.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-parantica-sita-butterfly-100.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

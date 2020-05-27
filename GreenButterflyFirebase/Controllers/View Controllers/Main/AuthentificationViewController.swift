@@ -43,12 +43,32 @@ class AuthentificationViewController: UIViewController {
                         print("logging user in")
                     } else {
                         print("error logging in")
+                        let alertController = UIAlertController(title: "Error", message: "Login credentials incorrect", preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alertController.addAction(defaultAction)
+                        self.present(alertController, animated: true, completion: nil)
                     }
                 }
             }
         } else {
             //SIGNING UP
-            if email != "" && password == confirm && password.count >= 5 {
+            
+            if password != confirm {
+                let alertController = UIAlertController(title: "Passwords do not match", message: "Please re-type password", preferredStyle: .alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+            
+            if password.count < 6 {
+                let alertController = UIAlertController(title: "Password is too short", message: "Password must be at least 6 characters", preferredStyle: .alert)
+                
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+            if email != "" && password == confirm && password.count >= 6 {
                 FirebaseController.shared.signup(email: email, password: password) { (success, error) in
                     if success {
                         print("signing user up")
@@ -71,6 +91,10 @@ class AuthentificationViewController: UIViewController {
                         }
                     } else {
                         print("error signing up")
+                        let alertController = UIAlertController(title: "Error signing up", message: "Please try again", preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alertController.addAction(defaultAction)
+                        self.present(alertController, animated: true, completion: nil)
                     }
                 }
             }
@@ -88,9 +112,13 @@ class AuthentificationViewController: UIViewController {
         actionButton.setTitle("LOGIN", for: .normal)
     }
     
+    @IBAction func backgroundtapped(_ sender: Any) {
+        self.view.endEditing(true)
+    }
+    
+    
     //MARK: HELPERS
     func setupViews(){
-        ButterflyGradient.setUpButterflyView(view: view)
         actionButton.addCornerRadius()
         loginTapped(self)
         emailTextField.addDoneButtonOnKeyboard()

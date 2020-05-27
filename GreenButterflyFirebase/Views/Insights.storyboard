@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="balloons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="IYM-qF-aUK">
-                                <rect key="frame" x="10" y="298" width="200" height="80"/>
+                                <rect key="frame" x="12" y="298" width="200" height="80"/>
                                 <color key="backgroundColor" name="butterflyGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="AaV-Rv-Xmh"/>
@@ -62,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Oc0-fb-nwP">
-                                <rect key="frame" x="0.0" y="442" width="414" height="343"/>
+                                <rect key="frame" x="0.0" y="442" width="414" height="321"/>
                                 <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TIJ-tY-wJi">
                                     <size key="itemSize" width="49" height="49"/>
@@ -104,26 +104,43 @@
                                 <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YgS-Qz-kQH">
+                                <rect key="frame" x="348" y="771" width="58" height="18"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="1H7-Lh-WF7"/>
+                                    <constraint firstAttribute="height" constant="18" id="DuJ-7e-P09"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <state key="normal" title="log out">
+                                    <color key="titleColor" name="butterflyGreen"/>
+                                </state>
+                                <connections>
+                                    <action selector="logouttapped:" destination="6ra-fF-r1Z" eventType="touchUpInside" id="FCX-sA-LLM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="butterflyGreen"/>
                         <constraints>
+                            <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="YgS-Qz-kQH" secondAttribute="trailing" constant="8" id="132-g1-8Ec"/>
+                            <constraint firstItem="Xcw-tb-TKX" firstAttribute="bottom" secondItem="Oc0-fb-nwP" secondAttribute="bottom" constant="50" id="1dS-mx-tGz"/>
                             <constraint firstItem="TWl-rE-5at" firstAttribute="leading" secondItem="CtU-qs-oDr" secondAttribute="leading" id="33m-d3-5wa"/>
                             <constraint firstItem="Vjy-lZ-4rO" firstAttribute="width" secondItem="25b-NU-X0p" secondAttribute="width" multiplier="0.42" id="4wc-3g-Fdt"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="Vjy-lZ-4rO" secondAttribute="trailing" constant="20" id="59e-65-TuO"/>
                             <constraint firstItem="UxR-eX-S6V" firstAttribute="top" secondItem="CtU-qs-oDr" secondAttribute="bottom" constant="10" id="5QW-NG-2pd"/>
-                            <constraint firstItem="Vjy-lZ-4rO" firstAttribute="leading" secondItem="IYM-qF-aUK" secondAttribute="trailing" constant="10" id="5dP-Yv-uiI"/>
+                            <constraint firstItem="Vjy-lZ-4rO" firstAttribute="leading" secondItem="IYM-qF-aUK" secondAttribute="trailing" constant="8" id="5dP-Yv-uiI"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="Oc0-fb-nwP" secondAttribute="trailing" id="6v5-mT-ekE"/>
+                            <constraint firstItem="YgS-Qz-kQH" firstAttribute="top" secondItem="Oc0-fb-nwP" secondAttribute="bottom" constant="8" id="8eR-ia-5AA"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="TWl-rE-5at" secondAttribute="trailing" constant="10" id="ARn-m2-IcM"/>
                             <constraint firstItem="CtU-qs-oDr" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" id="AYw-ae-2ED"/>
                             <constraint firstItem="TWl-rE-5at" firstAttribute="top" secondItem="Xcw-tb-TKX" secondAttribute="top" constant="30" id="Ade-4n-5Bs"/>
                             <constraint firstItem="UxR-eX-S6V" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="10" id="BmT-cm-nbS"/>
                             <constraint firstItem="UxR-eX-S6V" firstAttribute="trailing" secondItem="CtU-qs-oDr" secondAttribute="trailing" id="ETf-34-tfW"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="6Tg-GT-tO6" secondAttribute="trailing" constant="4" id="GgF-Z0-SHi"/>
-                            <constraint firstItem="Xcw-tb-TKX" firstAttribute="bottom" secondItem="Oc0-fb-nwP" secondAttribute="bottom" constant="28" id="Nmg-De-XBT"/>
                             <constraint firstItem="Oc0-fb-nwP" firstAttribute="top" secondItem="6Tg-GT-tO6" secondAttribute="bottom" constant="4" id="Vs8-Nr-TfC"/>
                             <constraint firstItem="Vjy-lZ-4rO" firstAttribute="centerY" secondItem="IYM-qF-aUK" secondAttribute="centerY" id="c2M-ql-cco"/>
                             <constraint firstItem="IYM-qF-aUK" firstAttribute="top" secondItem="UxR-eX-S6V" secondAttribute="bottom" constant="50" id="cUU-6o-k0A"/>
-                            <constraint firstItem="IYM-qF-aUK" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="10" id="et0-Ij-66E"/>
+                            <constraint firstItem="IYM-qF-aUK" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="12" id="et0-Ij-66E"/>
                             <constraint firstItem="6Tg-GT-tO6" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="4" id="mSr-wG-Ff1"/>
                             <constraint firstItem="Oc0-fb-nwP" firstAttribute="top" secondItem="IYM-qF-aUK" secondAttribute="bottom" constant="64" id="pag-7p-qaU"/>
                             <constraint firstItem="CtU-qs-oDr" firstAttribute="top" secondItem="TWl-rE-5at" secondAttribute="bottom" constant="12" id="uA6-1Q-Ro3"/>
@@ -137,6 +154,7 @@
                     <connections>
                         <outlet property="balloonLabel" destination="IYM-qF-aUK" id="3Ux-yf-jeW"/>
                         <outlet property="collectionView" destination="Oc0-fb-nwP" id="UdN-w4-aPq"/>
+                        <outlet property="logout" destination="YgS-Qz-kQH" id="uro-V6-W7K"/>
                         <outlet property="totalco2Label" destination="CtU-qs-oDr" id="KPD-Ge-mzN"/>
                     </connections>
                 </viewController>
