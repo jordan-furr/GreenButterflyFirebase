@@ -11,11 +11,13 @@ import UIKit
 class HabitListTableViewController: UITableViewController {
     
     var habits: [Habit] = []
+    var counts: [Int] = []
     
     //MARK: LIFECYCLE FUNCS
     override func viewWillAppear(_ animated: Bool) {
         HabitController.shared.fetchUserHabits()
         habits  = HabitController.shared.enabledHabits
+        counts = HabitController.shared.enabledCounts
         tableView.reloadData()
     }
     
@@ -40,7 +42,7 @@ class HabitListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "habitCell", for: indexPath) as? HabitTableViewCell else {return UITableViewCell()}
         
         let habit = habits[indexPath.row]
-        let count = HabitController.shared.enabledCounts[indexPath.row]
+        let count = counts[indexPath.row]
         cell.setHabitAndCount(habit: habit, count: count)
         cell.delegate = self
         let backgroundView = UIView()
@@ -92,6 +94,4 @@ extension HabitListTableViewController: ModalDismissed {
         tableView.reloadData()
         print("working")
     }
-    
-    
 }

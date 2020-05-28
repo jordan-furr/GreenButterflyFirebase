@@ -43,6 +43,7 @@ class UserController {
                 return completion(.failure(.firebaseError(error)))
             } else {
                 let updatedUser = User(email: email, id: id, enabled: enabled, counts: counts)
+                self.currentUser = updatedUser
                 return completion(.success(updatedUser))
             }
         }

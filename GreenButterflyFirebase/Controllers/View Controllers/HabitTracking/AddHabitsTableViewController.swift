@@ -37,7 +37,7 @@ class AddHabitsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newHabit", for: indexPath)
-        cell.textLabel?.text = HabitController.shared.disabledHabits[indexPath.row].title
+        cell.textLabel?.text = habits[indexPath.row].title
         cell.textLabel?.textColor = .white
         return cell
     }

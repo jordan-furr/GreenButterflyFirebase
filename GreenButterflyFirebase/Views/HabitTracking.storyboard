@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xeG-6b-oY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yxz-g0-nGi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -13,7 +13,7 @@
             <objects>
                 <tableViewController id="0DE-Lx-Uo6" customClass="AddHabitsTableViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p2f-B6-eHS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="butterflyGreen"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,14 +43,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUW-GG-Igd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="-548"/>
+            <point key="canvasLocation" x="2877" y="-536"/>
         </scene>
         <!--Green Butterfly-->
         <scene sceneID="E9w-EJ-YGx">
             <objects>
-                <tableViewController id="cgp-zG-eRh" customClass="HabitListTableViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="habits" modalPresentationStyle="fullScreen" id="cgp-zG-eRh" customClass="HabitListTableViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fnY-qw-B1u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="butterflyGreen"/>
                         <color key="separatorColor" red="0.0" green="0.14700983500000001" blue="0.093592808159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -137,14 +137,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W8c-bo-sYX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015.9420289855074" y="134.59821428571428"/>
+            <point key="canvasLocation" x="2717.3913043478265" y="137.94642857142856"/>
         </scene>
         <!--Habit Detail View Controller-->
         <scene sceneID="YWt-NF-Vtl">
             <objects>
                 <viewController id="5TA-yN-ByM" customClass="HabitDetailViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RUs-8Z-cJs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total kwh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGW-os-aBP">
@@ -153,7 +153,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fact" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaO-sQ-7hO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fact" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaO-sQ-7hO">
                                 <rect key="frame" x="20" y="68.5" width="374" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="EWd-NF-QYA"/>
@@ -282,16 +282,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Bk-3x-7KX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776.8115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="3591.3043478260875" y="137.94642857142856"/>
         </scene>
-        <!--Habits-->
-        <scene sceneID="Krg-8B-Lli">
+        <!--Item-->
+        <scene sceneID="0rz-p8-Qms">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xeG-6b-oY0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Habits" image="net" selectedImage="net" id="aIE-Sk-kFB"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yxz-g0-nGi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" image="net" selectedImage="net" id="lyF-ha-e9l"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fje-GV-qlW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="8tg-ni-ymp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -299,12 +299,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="cgp-zG-eRh" kind="relationship" relationship="rootViewController" id="OEG-8G-UHs"/>
+                        <segue destination="cgp-zG-eRh" kind="relationship" relationship="rootViewController" id="GEM-Cv-Xod"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9C4-Fz-vTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wA2-pF-gaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="135"/>
+            <point key="canvasLocation" x="1810.144927536232" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
