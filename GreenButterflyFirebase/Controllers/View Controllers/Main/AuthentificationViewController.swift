@@ -53,10 +53,7 @@ class AuthentificationViewController: UIViewController {
                         print("logging user in")
                     } else {
                         print("error logging in")
-                        let alertController = UIAlertController(title: "Error", message: "Login credentials incorrect", preferredStyle: .alert)
-                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                        alertController.addAction(defaultAction)
-                        self.present(alertController, animated: true, completion: nil)
+                        self.presentLoginAlertView()
                     }
                 }
             }
@@ -101,10 +98,7 @@ class AuthentificationViewController: UIViewController {
                         }
                     } else {
                         print("error signing up")
-                        let alertController = UIAlertController(title: "Error signing up", message: "Please try again", preferredStyle: .alert)
-                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                        alertController.addAction(defaultAction)
-                        self.present(alertController, animated: true, completion: nil)
+                        self.presentSignupAlertView()
                     }
                 }
             }
@@ -114,11 +108,15 @@ class AuthentificationViewController: UIViewController {
     @IBAction func signupTapped(_ sender: Any) {
         loginMode = false
         confirmTextField.isHidden = false
+        loginButton.setTitleColor(.darkGreen, for: .normal)
+        signupButton.setTitleColor(.lightGreen, for: .normal)
         actionButton.setTitle("SIGN UP", for: .normal)
     }
     @IBAction func loginTapped(_ sender: Any) {
         loginMode = true
         confirmTextField.isHidden = true
+        loginButton.setTitleColor(.lightGreen, for: .normal)
+        signupButton.setTitleColor(.darkGreen, for: .normal)
         actionButton.setTitle("LOGIN", for: .normal)
     }
     
@@ -135,6 +133,21 @@ class AuthentificationViewController: UIViewController {
         passwordTextField.addDoneButtonOnKeyboard()
         confirmTextField.addDoneButtonOnKeyboard()
     }
+    
+    func presentSignupAlertView() {
+           let alertController = UIAlertController(title: "Error", message: "Couldn't create account", preferredStyle: .alert)
+           let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+           alertController.addAction(defaultAction)
+           present(alertController, animated: true, completion: nil)
+       }
+       
+       func presentLoginAlertView() {
+           let alertController = UIAlertController(title: "Error", message: "Email/password is incorrect", preferredStyle: .alert)
+           let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+           alertController.addAction(defaultAction)
+           present(alertController, animated: true, completion: nil)
+       }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let barVC = segue.destination as? UITabBarController {

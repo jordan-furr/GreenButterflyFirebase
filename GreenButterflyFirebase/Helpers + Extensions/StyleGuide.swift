@@ -25,4 +25,6 @@ extension UIImageView {
 
 extension UIColor {
     static let customGreen = UIColor(named: "butterflyGreen")
+    static let lightGreen = UIColor(named: "loginGreen")
+    static let darkGreen = UIColor(named: "loginDarkGreen")
 }
