@@ -160,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="1312" y="-308"/>
         </scene>
-        <!--My Tab Bar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="Zv8-a0-KPp">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="lfC-gh-25R" customClass="MyTabBarController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="lfC-gh-25R" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="q0p-v0-4c1"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vy7-XP-N1f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
