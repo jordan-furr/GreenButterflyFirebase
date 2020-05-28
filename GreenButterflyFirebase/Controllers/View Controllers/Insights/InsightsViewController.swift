@@ -19,7 +19,7 @@ class InsightsViewController: UIViewController {
     @IBOutlet weak var totalco2Label: UILabel!
     @IBOutlet weak var balloonLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    
     
     override func viewWillAppear(_ animated: Bool) {
         let total = HabitController.shared.getUsertotalCO2() //kg
@@ -52,6 +52,14 @@ class InsightsViewController: UIViewController {
         let balloonCount = "\(balloonsCount)"
         balloonLabel.text = balloonCount
         totalco2Label.text = "\(Double(round(total * 100)) / 100)kg of co2"
+        collectionView.contentInset = UIEdgeInsets(top: 6, left: 8, bottom: 10, right: 8)
+        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 2)
+        collectionView.layer.cornerRadius = 10
+        collectionView.layer.masksToBounds = true
+        collectionView.layer.shadowColor = UIColor.black.cgColor
+        collectionView.layer.shadowOpacity = 0.23
+        collectionView.layer.shadowRadius = 4
+        collectionView.layer.shadowOffset = CGSize(width: 2, height: 2)
     }
 }
 
@@ -64,6 +72,7 @@ extension InsightsViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "balloon", for: indexPath) as! MyCell
         cell.imageViewCell.image = UIImage(named: "balloon")
+        cell.imageViewCell.setImageColor(color: UIColor.lightGreen!)
         return cell
     }
 }

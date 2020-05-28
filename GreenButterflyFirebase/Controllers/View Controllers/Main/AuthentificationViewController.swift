@@ -132,6 +132,7 @@ class AuthentificationViewController: UIViewController {
         emailTextField.addDoneButtonOnKeyboard()
         passwordTextField.addDoneButtonOnKeyboard()
         confirmTextField.addDoneButtonOnKeyboard()
+        emailTextField.autocorrectionType = .yes
     }
     
     func presentSignupAlertView() {
