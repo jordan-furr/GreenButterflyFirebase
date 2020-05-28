@@ -92,6 +92,4 @@ extension HabitListTableViewController: ModalDismissed {
         tableView.reloadData()
         print("working")
     }
-    
-    
 }

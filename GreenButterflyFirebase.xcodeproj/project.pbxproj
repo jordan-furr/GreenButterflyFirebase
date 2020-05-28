@@ -10,6 +10,8 @@
 		5115813735B135C7FCFF9BDC /* Pods_GreenButterflyFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */; };
 		C53B101B247EA4B400E22124 /* Extra.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53B101A247EA4B400E22124 /* Extra.storyboard */; };
 		C53B101D247EB5B200E22124 /* ExtraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B101C247EB5B200E22124 /* ExtraViewController.swift */; };
+		C53B101F247F51E400E22124 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B101E247F51E400E22124 /* MyTabBarController.swift */; };
+		C53B1023247F6A0B00E22124 /* MyNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B1022247F6A0B00E22124 /* MyNavBarViewController.swift */; };
 		C5406565247A32C00021B44E /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5406564247A32C00021B44E /* Badge.swift */; };
 		C5406567247B36430021B44E /* InsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5406566247B36420021B44E /* InsightsViewController.swift */; };
 		C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5880E812478800B001038AC /* HabitTableViewCell.swift */; };
@@ -44,6 +46,8 @@
 		9D91479F8F24C6D275872187 /* Pods-GreenButterflyFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.debug.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		C53B101A247EA4B400E22124 /* Extra.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Extra.storyboard; sourceTree = "<group>"; };
 		C53B101C247EB5B200E22124 /* ExtraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraViewController.swift; sourceTree = "<group>"; };
+		C53B101E247F51E400E22124 /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
+		C53B1022247F6A0B00E22124 /* MyNavBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavBarViewController.swift; sourceTree = "<group>"; };
 		C5406564247A32C00021B44E /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		C5406566247B36420021B44E /* InsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewController.swift; sourceTree = "<group>"; };
 		C5880E812478800B001038AC /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
@@ -212,6 +216,8 @@
 			children = (
 				C5E09A9E24770F000073069A /* LaunchViewController.swift */,
 				C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */,
+				C53B101E247F51E400E22124 /* MyTabBarController.swift */,
+				C53B1022247F6A0B00E22124 /* MyNavBarViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 				C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */,
 				C5E09A9324770E930073069A /* User.swift in Sources */,
 				C5406567247B36430021B44E /* InsightsViewController.swift in Sources */,
+				C53B1023247F6A0B00E22124 /* MyNavBarViewController.swift in Sources */,
 				C5E09A9124770E770073069A /* Habit.swift in Sources */,
 				C5E09AB024772AD70073069A /* UserController.swift in Sources */,
 				C5E09ABE2477459E0073069A /* TextField+Extensions.swift in Sources */,
@@ -377,6 +384,7 @@
 				C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */,
 				C5E09AC2247774B10073069A /* HabitController.swift in Sources */,
 				C5406565247A32C00021B44E /* Badge.swift in Sources */,
+				C53B101F247F51E400E22124 /* MyTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

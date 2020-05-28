@@ -39,7 +39,17 @@ class AuthentificationViewController: UIViewController {
             if email != "" {
                 FirebaseController.shared.login(email: email, password: password) { (success) in
                     if success {
-                        self.performSegue(withIdentifier: "loggedin", sender: self)
+                        UserController.shared.fetchCurrentUser { (result) in
+                            switch result {
+                            case .failure(let error):
+                                print("error fetching user", error)
+                            case .success(let user):
+                                print("user fetched successfully")
+                                UserController.shared.currentUser = user
+                                HabitController.shared.fetchUserHabits()
+                                self.performSegue(withIdentifier: "loggedin", sender: self)
+                            }
+                        }
                         print("logging user in")
                     } else {
                         print("error logging in")
@@ -124,5 +134,14 @@ class AuthentificationViewController: UIViewController {
         emailTextField.addDoneButtonOnKeyboard()
         passwordTextField.addDoneButtonOnKeyboard()
         confirmTextField.addDoneButtonOnKeyboard()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let barVC = segue.destination as? UITabBarController {
+            let navBar = barVC.viewControllers![0] as! UINavigationController
+            let destinationVC = navBar.topViewController as! HabitListTableViewController
+            destinationVC.habits = HabitController.shared.enabledHabits
+            print("authentification segue")
+        }
     }
 }

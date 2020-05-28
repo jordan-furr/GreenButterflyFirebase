@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="139"/>
+            <point key="canvasLocation" x="-399" y="146"/>
         </scene>
         <!--Authentification View Controller-->
         <scene sceneID="tGb-di-c5W">
@@ -89,7 +89,7 @@
                                             <constraint firstAttribute="height" constant="50" id="jMZ-KU-ajH"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEh-Mh-5Tn">
                                         <rect key="frame" x="0.0" y="140" width="331" height="50"/>
@@ -98,7 +98,7 @@
                                             <constraint firstAttribute="height" constant="50" id="ls9-ak-Exc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -160,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="1312" y="-308"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--My Tab Bar Controller-->
         <scene sceneID="Zv8-a0-KPp">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="lfC-gh-25R" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="lfC-gh-25R" customClass="MyTabBarController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="q0p-v0-4c1"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vy7-XP-N1f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

@@ -19,7 +19,7 @@ class InsightsViewController: UIViewController {
     @IBOutlet weak var totalco2Label: UILabel!
     @IBOutlet weak var balloonLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+
     
     override func viewWillAppear(_ animated: Bool) {
         let total = HabitController.shared.getUsertotalCO2() //kg

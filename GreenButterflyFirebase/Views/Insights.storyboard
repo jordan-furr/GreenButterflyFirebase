@@ -62,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Oc0-fb-nwP">
-                                <rect key="frame" x="0.0" y="442" width="414" height="321"/>
+                                <rect key="frame" x="0.0" y="456" width="414" height="307"/>
                                 <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TIJ-tY-wJi">
                                     <size key="itemSize" width="49" height="49"/>
@@ -99,7 +99,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what that many balloons looks like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tg-GT-tO6">
-                                <rect key="frame" x="4" y="424.5" width="406" height="13.5"/>
+                                <rect key="frame" x="4" y="432.5" width="406" height="13.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -120,12 +120,12 @@
                             <constraint firstItem="UxR-eX-S6V" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="10" id="BmT-cm-nbS"/>
                             <constraint firstItem="UxR-eX-S6V" firstAttribute="trailing" secondItem="CtU-qs-oDr" secondAttribute="trailing" id="ETf-34-tfW"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="6Tg-GT-tO6" secondAttribute="trailing" constant="4" id="GgF-Z0-SHi"/>
-                            <constraint firstItem="Oc0-fb-nwP" firstAttribute="top" secondItem="6Tg-GT-tO6" secondAttribute="bottom" constant="4" id="Vs8-Nr-TfC"/>
+                            <constraint firstItem="Oc0-fb-nwP" firstAttribute="top" secondItem="6Tg-GT-tO6" secondAttribute="bottom" constant="10" id="Vs8-Nr-TfC"/>
                             <constraint firstItem="Vjy-lZ-4rO" firstAttribute="centerY" secondItem="IYM-qF-aUK" secondAttribute="centerY" id="c2M-ql-cco"/>
                             <constraint firstItem="IYM-qF-aUK" firstAttribute="top" secondItem="UxR-eX-S6V" secondAttribute="bottom" constant="50" id="cUU-6o-k0A"/>
                             <constraint firstItem="IYM-qF-aUK" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="12" id="et0-Ij-66E"/>
                             <constraint firstItem="6Tg-GT-tO6" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="4" id="mSr-wG-Ff1"/>
-                            <constraint firstItem="Oc0-fb-nwP" firstAttribute="top" secondItem="IYM-qF-aUK" secondAttribute="bottom" constant="64" id="pag-7p-qaU"/>
+                            <constraint firstItem="Oc0-fb-nwP" firstAttribute="top" secondItem="IYM-qF-aUK" secondAttribute="bottom" constant="78" id="pag-7p-qaU"/>
                             <constraint firstItem="CtU-qs-oDr" firstAttribute="top" secondItem="TWl-rE-5at" secondAttribute="bottom" constant="12" id="uA6-1Q-Ro3"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="CtU-qs-oDr" secondAttribute="trailing" id="uFU-pq-vGh"/>
                             <constraint firstItem="Oc0-fb-nwP" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" id="wow-Na-YcS"/>
@@ -147,6 +147,7 @@
         <!--Insights-->
         <scene sceneID="6QV-Lu-4YU">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPE-k2-jM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="spi-5l-FkI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Insights" image="lightning" selectedImage="lightning" id="TUl-Jb-Ktg"/>
                     <toolbarItems/>
@@ -160,7 +161,6 @@
                         <segue destination="6ra-fF-r1Z" kind="relationship" relationship="rootViewController" id="OzO-dF-3Y4"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oPE-k2-jM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="99" y="136"/>
         </scene>
