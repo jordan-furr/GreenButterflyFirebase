@@ -39,6 +39,11 @@ class AuthentificationViewController: UIViewController {
             if email != "" {
                 FirebaseController.shared.login(email: email, password: password) { (success) in
                     if success {
+                        self.loginButton.isHidden = true
+                                   self.signupButton.isHidden = true
+                                   self.actionButton.isHidden = true
+                                   self.emailTextField.isHidden = true
+                                   self.passwordTextField.isHidden = true
                         UserController.shared.fetchCurrentUser { (result) in
                             switch result {
                             case .failure(let error):
@@ -54,10 +59,12 @@ class AuthentificationViewController: UIViewController {
                     } else {
                         print("error logging in")
                         self.presentLoginAlertView()
+                        self.setupViews()
                     }
                 }
             }
         } else {
+            
             //SIGNING UP
             
             if password != confirm {
@@ -78,6 +85,12 @@ class AuthentificationViewController: UIViewController {
             if email != "" && password == confirm && password.count >= 6 {
                 FirebaseController.shared.signup(email: email, password: password) { (success, error) in
                     if success {
+                        self.loginButton.isHidden = true
+                        self.signupButton.isHidden = true
+                        self.actionButton.isHidden = true
+                        self.emailTextField.isHidden = true
+                        self.passwordTextField.isHidden = true
+                        self.confirmTextField.isHidden = true
                         print("signing user up")
                         
                         var emptyEnabled: [Bool] = []
@@ -99,6 +112,7 @@ class AuthentificationViewController: UIViewController {
                     } else {
                         print("error signing up")
                         self.presentSignupAlertView()
+                        self.setupViews()
                     }
                 }
             }
@@ -133,6 +147,11 @@ class AuthentificationViewController: UIViewController {
         passwordTextField.addDoneButtonOnKeyboard()
         confirmTextField.addDoneButtonOnKeyboard()
         emailTextField.autocorrectionType = .yes
+        loginButton.isHidden = false
+        signupButton.isHidden = false
+        actionButton.isHidden = false
+        emailTextField.isHidden = false
+        passwordTextField.isHidden = false
     }
     
     func presentSignupAlertView() {

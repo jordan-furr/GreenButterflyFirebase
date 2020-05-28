@@ -17,7 +17,7 @@ class HabitTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 7, bottom: 4, right: 7))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 7, bottom: 5, right: 7))
         contentView.layer.cornerRadius = 7
         backgroundColor = .clear // very important
         layer.masksToBounds = false
@@ -56,6 +56,6 @@ class HabitTableViewCell: UITableViewCell {
         counterLabel.text = "\(count)"
         let image = UIImage(named: habit.iconUID)
         iconImageView.image = image
-        iconImageView.setImageColor(color: .white)
+        iconImageView.setImageColor(color: UIColor.lightGreen!)
     }
 }

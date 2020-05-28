@@ -41,7 +41,11 @@ class ExtraViewController: UIViewController {
            present(alertController, animated: true, completion: nil)
        }
     
-   
-    
-
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .portrait
+        } else {
+            return .portrait
+        }
+    }
 }

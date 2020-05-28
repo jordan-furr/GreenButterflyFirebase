@@ -91,6 +91,9 @@ extension HabitListTableViewController: HabitTableViewCellDelegate{
 
 extension HabitListTableViewController: ModalDismissed {
     func modaldismissed() {
+        HabitController.shared.fetchUserHabits()
+        habits  = HabitController.shared.enabledHabits
+        counts = HabitController.shared.enabledCounts
         tableView.reloadData()
         print("working")
     }

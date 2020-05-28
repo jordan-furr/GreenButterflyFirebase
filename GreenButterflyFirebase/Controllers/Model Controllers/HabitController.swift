@@ -103,4 +103,12 @@ class HabitController {
         }
         return total
     }
+    
+    func resetHabit(habit: Habit){
+        guard let user = UserController.shared.currentUser else {return}
+        user.counts[habit.identifier] = 0
+        let data = ["counts" : user.counts]
+        UserController.shared.updateUserData(userID: user.id, data: data)
+        fetchUserHabits()
+    }
 }
