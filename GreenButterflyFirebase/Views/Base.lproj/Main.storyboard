@@ -80,7 +80,7 @@
                                             <constraint firstAttribute="height" constant="50" id="ZJt-2e-nKW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0L-8g-yZf">
                                         <rect key="frame" x="0.0" y="70" width="331" height="50"/>
@@ -89,7 +89,7 @@
                                             <constraint firstAttribute="height" constant="50" id="jMZ-KU-ajH"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEh-Mh-5Tn">
                                         <rect key="frame" x="0.0" y="140" width="331" height="50"/>
@@ -108,8 +108,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="B8T-3I-FHG"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <state key="normal" title="SIGN UP">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" name="butterflyGreen"/>
                                 </state>
                                 <connections>
                                     <action selector="actionTapped:" destination="YaK-gA-DUi" eventType="touchUpInside" id="mCK-YY-xLo"/>
