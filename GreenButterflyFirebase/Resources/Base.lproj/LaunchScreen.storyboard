@@ -15,7 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="net" translatesAutoresizingMaskIntoConstraints="NO" id="XJ9-Xv-CRR">
+                                <rect key="frame" x="182" y="428" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Osf-lG-6HF"/>
+                                    <constraint firstAttribute="width" secondItem="XJ9-Xv-CRR" secondAttribute="height" multiplier="1:1" id="gkW-5a-IgY"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" name="butterflyGreen"/>
+                        <constraints>
+                            <constraint firstItem="XJ9-Xv-CRR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="U3x-fd-kep"/>
+                            <constraint firstItem="XJ9-Xv-CRR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ij4-jA-PsD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -25,6 +38,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="net" width="25" height="25"/>
         <namedColor name="butterflyGreen">
             <color red="0.0" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

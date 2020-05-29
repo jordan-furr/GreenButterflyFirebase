@@ -18,6 +18,7 @@ class AuthentificationViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var confirmTextField: UITextField!
     
     
@@ -31,7 +32,7 @@ class AuthentificationViewController: UIViewController {
     
     //MARK: IB ACTIONS
     @IBAction func actionTapped(_ sender: Any) {
-        
+        self.view.endEditing(true)
         guard let email = emailTextField.text, let password = passwordTextField.text, let confirm = confirmTextField.text else {return}
         
         if loginMode {
@@ -44,6 +45,7 @@ class AuthentificationViewController: UIViewController {
                                    self.actionButton.isHidden = true
                                    self.emailTextField.isHidden = true
                                    self.passwordTextField.isHidden = true
+                        ButterflyGradient.setUpButterflyView(view: self.view)
                         UserController.shared.fetchCurrentUser { (result) in
                             switch result {
                             case .failure(let error):
@@ -64,7 +66,6 @@ class AuthentificationViewController: UIViewController {
                 }
             }
         } else {
-            
             //SIGNING UP
             
             if password != confirm {
@@ -91,6 +92,8 @@ class AuthentificationViewController: UIViewController {
                         self.emailTextField.isHidden = true
                         self.passwordTextField.isHidden = true
                         self.confirmTextField.isHidden = true
+                        self.titleImageView.isHidden = true
+                        ButterflyGradient.setUpButterflyView(view: self.view)
                         print("signing user up")
                         
                         var emptyEnabled: [Bool] = []
@@ -152,6 +155,7 @@ class AuthentificationViewController: UIViewController {
         actionButton.isHidden = false
         emailTextField.isHidden = false
         passwordTextField.isHidden = false
+        titleImageView.isHidden = false
     }
     
     func presentSignupAlertView() {

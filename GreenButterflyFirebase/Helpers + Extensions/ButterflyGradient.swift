@@ -10,7 +10,7 @@ import Foundation
 
 class ButterflyGradient: UIView {
    static func setUpButterflyView(view: UIView){
-        let image = #imageLiteral(resourceName: "butterfly")
+        let image = UIImage(named: "net")!
         let mask = CALayer()
         mask.contents = image.cgImage
         mask.frame.size = image.size
@@ -23,7 +23,7 @@ class ButterflyGradient: UIView {
             UIColor(red: 0.85, green: 0.25, blue: 0.25, alpha: 1).cgColor
         ]
         gradient.mask = mask
-    gradient.frame.origin = CGPoint(x: (view.center.x - 73.5), y: 70)
+    gradient.frame.origin = CGPoint(x: (view.center.x), y: (view.center.y))
         view.layer.addSublayer(gradient)
     }
 }

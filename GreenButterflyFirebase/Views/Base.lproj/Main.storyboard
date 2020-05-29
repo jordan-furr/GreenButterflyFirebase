@@ -11,7 +11,7 @@
         <!--Launch View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LaunchViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LaunchViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="-399" y="146"/>
         </scene>
-        <!--Authentification View Controller-->
+        <!--login-->
         <scene sceneID="tGb-di-c5W">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="YaK-gA-DUi" customClass="AuthentificationViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" title="login" modalPresentationStyle="fullScreen" id="YaK-gA-DUi" customClass="AuthentificationViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QaC-qK-F6H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="87"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <state key="normal" title="LOGIN">
-                                            <color key="titleColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="loginGreen"/>
                                         </state>
                                         <connections>
                                             <action selector="loginTapped:" destination="YaK-gA-DUi" eventType="touchUpInside" id="MMd-II-a4H"/>
@@ -62,7 +62,7 @@
                                         <rect key="frame" x="130" y="0.0" width="83" height="87"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <state key="normal" title="SIGNUP">
-                                            <color key="titleColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="loginGreen"/>
                                         </state>
                                         <connections>
                                             <action selector="signupTapped:" destination="YaK-gA-DUi" eventType="touchUpInside" id="OiW-nY-2uR"/>
@@ -75,7 +75,7 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Kz-Aw-ZuU">
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="46"/>
-                                        <color key="backgroundColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="loginGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="ZJt-2e-nKW"/>
                                         </constraints>
@@ -85,7 +85,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0L-8g-yZf">
                                         <rect key="frame" x="0.0" y="66" width="331" height="46"/>
-                                        <color key="backgroundColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="loginGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="jMZ-KU-ajH"/>
                                         </constraints>
@@ -95,7 +95,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEh-Mh-5Tn">
                                         <rect key="frame" x="0.0" y="132" width="331" height="46"/>
-                                        <color key="backgroundColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" name="loginGreen"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="ls9-ak-Exc"/>
                                         </constraints>
@@ -106,8 +106,8 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGe-lQ-n0t">
-                                <rect key="frame" x="145" y="450" width="124" height="46"/>
-                                <color key="backgroundColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="124" y="450" width="166" height="46"/>
+                                <color key="backgroundColor" name="loginGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="B8T-3I-FHG"/>
                                 </constraints>
@@ -129,7 +129,7 @@
                             <constraint firstItem="eov-PD-4db" firstAttribute="width" secondItem="QaC-qK-F6H" secondAttribute="width" multiplier="0.8" id="9BO-Q0-3f2"/>
                             <constraint firstItem="eov-PD-4db" firstAttribute="top" secondItem="Rab-Ho-ggk" secondAttribute="bottom" constant="20" id="9H6-2S-cn4"/>
                             <constraint firstItem="PGe-lQ-n0t" firstAttribute="centerX" secondItem="P0J-P8-rxm" secondAttribute="centerX" id="9Z0-5K-AmP"/>
-                            <constraint firstItem="PGe-lQ-n0t" firstAttribute="width" secondItem="QaC-qK-F6H" secondAttribute="width" multiplier="0.3" id="Acg-ig-PMl"/>
+                            <constraint firstItem="PGe-lQ-n0t" firstAttribute="width" secondItem="QaC-qK-F6H" secondAttribute="width" multiplier="0.4" id="Acg-ig-PMl"/>
                             <constraint firstItem="Rab-Ho-ggk" firstAttribute="top" secondItem="6KH-M2-PAU" secondAttribute="bottom" constant="20" id="DhI-ex-YPG"/>
                             <constraint firstItem="Rab-Ho-ggk" firstAttribute="centerX" secondItem="P0J-P8-rxm" secondAttribute="centerX" id="Jgx-hF-a7B"/>
                             <constraint firstItem="Rab-Ho-ggk" firstAttribute="centerY" secondItem="P0J-P8-rxm" secondAttribute="centerY" multiplier="0.35" id="Qf6-kS-hjv"/>
@@ -152,6 +152,7 @@
                         <outlet property="loginButton" destination="LqN-3M-sD7" id="Hkt-sw-ONN"/>
                         <outlet property="passwordTextField" destination="h0L-8g-yZf" id="rbf-w9-i5l"/>
                         <outlet property="signupButton" destination="Cvi-8X-qcA" id="m41-4B-lRL"/>
+                        <outlet property="titleImageView" destination="6KH-M2-PAU" id="3Tl-vS-Eac"/>
                         <segue destination="lfC-gh-25R" kind="show" identifier="loggedin" id="iaT-ra-Ins"/>
                     </connections>
                 </viewController>
@@ -224,7 +225,10 @@
     <resources>
         <image name="title" width="463" height="55"/>
         <namedColor name="butterflyGreen">
-            <color red="0.0" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.074509803921568626" green="0.23137254901960785" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="loginGreen">
+            <color red="0.91764705882352937" green="0.9882352941176471" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

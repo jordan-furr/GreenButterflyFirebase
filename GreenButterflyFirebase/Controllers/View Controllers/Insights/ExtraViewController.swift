@@ -31,9 +31,10 @@ class ExtraViewController: UIViewController {
                
                UserController.shared.signoutCurrentUser()
                
-               let storyboard = UIStoryboard(name: "Main", bundle: nil)
-               guard let initial = storyboard.instantiateInitialViewController() else {return}
-               self.present(initial, animated: true, completion: nil)
+              
+            let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login") as! AuthentificationViewController
+            self.present(loginVC, animated: true, completion: nil)
+            
            })
            alertController.addAction(defaultAction)
            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
