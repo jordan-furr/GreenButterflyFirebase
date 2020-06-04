@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="24" id="OFQ-Ae-5yv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="cell"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from being released into our atmosphere!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxR-eX-S6V">
@@ -52,7 +52,7 @@
                                     <constraint firstAttribute="height" constant="24" id="Cjj-Vo-nbC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="cell"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="balloons could be filled with that much co2!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjy-lZ-4rO">
@@ -171,7 +171,7 @@
             <color red="0.074509803921568626" green="0.23137254901960785" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="cell">
-            <color red="0.29803921568627451" green="0.81176470588235294" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.25882352941176473" green="0.70196078431372544" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="loginDarkGreen">
             <color red="0.17254901960784313" green="0.49019607843137253" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

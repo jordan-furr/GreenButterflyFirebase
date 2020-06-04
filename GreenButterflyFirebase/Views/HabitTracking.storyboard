@@ -39,7 +39,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="loginDarkGreen"/>
                                     <constraints>
                                         <constraint firstItem="FME-YY-WPG" firstAttribute="centerY" secondItem="Vks-hU-E93" secondAttribute="centerY" id="9gv-Pl-h8e"/>
                                         <constraint firstItem="rrB-SI-Gt6" firstAttribute="leading" secondItem="FME-YY-WPG" secondAttribute="trailing" constant="30" id="Bwn-c6-gdy"/>
@@ -126,7 +126,7 @@
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="loginDarkGreen"/>
                                     <constraints>
                                         <constraint firstItem="bSa-Ng-S7x" firstAttribute="leading" secondItem="3o0-6Q-ty1" secondAttribute="trailing" constant="6" id="7eC-hI-Xpf"/>
                                         <constraint firstItem="3o0-6Q-ty1" firstAttribute="leading" secondItem="YhJ-6J-dtr" secondAttribute="trailing" constant="18" id="Gbw-1h-F6h"/>
@@ -276,7 +276,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="loginDarkGreen"/>
                         <constraints>
                             <constraint firstItem="bXG-UK-znH" firstAttribute="trailing" secondItem="kw0-nB-bFW" secondAttribute="trailing" constant="80" id="10k-3B-oEh"/>
                             <constraint firstItem="bXG-UK-znH" firstAttribute="trailing" secondItem="fkO-yr-mqy" secondAttribute="trailing" constant="15" id="2eq-B2-Ru3"/>
@@ -362,13 +362,13 @@
         <image name="net" width="25" height="25"/>
         <image name="tabs" width="29" height="23"/>
         <namedColor name="butterflyGreen">
-            <color red="0.0" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.074509803921568626" green="0.23137254901960785" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="loginDarkGreen">
-            <color red="0.10499999672174454" green="0.45199999213218689" blue="0.28299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.17254901960784313" green="0.49019607843137253" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="loginGreen">
-            <color red="0.70899999141693115" green="1" blue="0.73900002241134644" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.91764705882352937" green="0.9882352941176471" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

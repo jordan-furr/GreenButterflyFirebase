@@ -20,7 +20,7 @@
                                 <rect key="frame" x="20" y="159.5" width="374" height="125.5"/>
                                 <string key="text">Carbon footprints measure how much carbon dioxide (co2) we produce from our daily lives. Greenhouse gases like co2 contribute to global warming and although tranportation, home energy, and corporations are the largest contributors to GHG, the small eco friendly actions we make add up and help set back global warming. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="cell"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is a carbon footprint? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzF-2u-kLZ">
@@ -39,11 +39,11 @@
                                 <rect key="frame" x="20" y="407.5" width="374" height="90"/>
                                 <string key="text">In order to provide these insights, action estimates are based on estimates of co2 saved from a year of continously adopting these eco friendly practices. More info about how these estimates are computed can be found in the detail view of every action.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" name="cell"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elE-53-eQF">
-                                <rect key="frame" x="264" y="756" width="130" height="27"/>
+                                <rect key="frame" x="264" y="736" width="130" height="27"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="T8S-F2-hdn"/>
@@ -59,7 +59,7 @@
                         </subviews>
                         <color key="backgroundColor" name="butterflyGreen"/>
                         <constraints>
-                            <constraint firstItem="04i-EC-j3m" firstAttribute="bottom" secondItem="elE-53-eQF" secondAttribute="bottom" constant="30" id="86b-8O-d3i"/>
+                            <constraint firstItem="04i-EC-j3m" firstAttribute="bottom" secondItem="elE-53-eQF" secondAttribute="bottom" constant="50" id="86b-8O-d3i"/>
                             <constraint firstItem="3f1-Ve-Wxx" firstAttribute="top" secondItem="XzF-2u-kLZ" secondAttribute="bottom" constant="12" id="8T9-GE-XeR"/>
                             <constraint firstItem="cgq-3j-vF8" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="20" id="EGe-Jz-Tnk"/>
                             <constraint firstItem="DdT-bf-PgY" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="20" id="HI1-wn-oH2"/>
@@ -110,10 +110,13 @@
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="121"/>
         <namedColor name="butterflyGreen">
-            <color red="0.0" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.074509803921568626" green="0.23137254901960785" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cell">
+            <color red="0.25882352941176473" green="0.70196078431372544" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="loginDarkGreen">
-            <color red="0.10499999672174454" green="0.45199999213218689" blue="0.28299999237060547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.17254901960784313" green="0.49019607843137253" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
