@@ -35,6 +35,7 @@ class HabitTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var co2label: UILabel!
     
     
     
@@ -53,6 +54,7 @@ class HabitTableViewCell: UITableViewCell {
     @objc func updateUI(){
         guard let habit = habit, let count = count else {return}
         titleLabel.text = habit.title
+        co2label.text = "\(habit.co2Value)"
         counterLabel.text = "\(count)"
         let image = UIImage(named: habit.iconUID)
         iconImageView.image = image
