@@ -16,18 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="net" translatesAutoresizingMaskIntoConstraints="NO" id="0l2-YR-o6c">
-                                <rect key="frame" x="182" y="428" width="50" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigNET" translatesAutoresizingMaskIntoConstraints="NO" id="aHv-d5-9ox">
+                                <rect key="frame" x="177" y="423" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="cfX-b7-Cmf"/>
-                                    <constraint firstAttribute="width" secondItem="0l2-YR-o6c" secondAttribute="height" multiplier="1:1" id="g4m-Uy-ud7"/>
+                                    <constraint firstAttribute="width" secondItem="aHv-d5-9ox" secondAttribute="height" multiplier="1:1" id="6pr-WA-Bxp"/>
+                                    <constraint firstAttribute="width" constant="60" id="X1K-Qg-7gJ"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="butterflyGreen"/>
                         <constraints>
-                            <constraint firstItem="0l2-YR-o6c" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4bp-d9-nm5"/>
-                            <constraint firstItem="0l2-YR-o6c" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lil-j9-0rc"/>
+                            <constraint firstItem="aHv-d5-9ox" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5MF-gH-hsb"/>
+                            <constraint firstItem="aHv-d5-9ox" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JV1-cW-Gai"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -135,6 +135,7 @@
                             <constraint firstItem="PGe-lQ-n0t" firstAttribute="width" secondItem="QaC-qK-F6H" secondAttribute="width" multiplier="0.4" id="Acg-ig-PMl"/>
                             <constraint firstItem="Rab-Ho-ggk" firstAttribute="top" secondItem="6KH-M2-PAU" secondAttribute="bottom" constant="20" id="DhI-ex-YPG"/>
                             <constraint firstItem="Rab-Ho-ggk" firstAttribute="centerX" secondItem="P0J-P8-rxm" secondAttribute="centerX" id="Jgx-hF-a7B"/>
+                            <constraint firstItem="P0J-P8-rxm" firstAttribute="top" secondItem="6KH-M2-PAU" secondAttribute="top" constant="4" id="PcI-sw-MI7"/>
                             <constraint firstItem="Rab-Ho-ggk" firstAttribute="centerY" secondItem="P0J-P8-rxm" secondAttribute="centerY" multiplier="0.35" id="Qf6-kS-hjv"/>
                             <constraint firstItem="P0J-P8-rxm" firstAttribute="trailing" secondItem="6KH-M2-PAU" secondAttribute="trailing" constant="20" id="Svn-Ij-Wix"/>
                             <constraint firstItem="6KH-M2-PAU" firstAttribute="top" secondItem="QaC-qK-F6H" secondAttribute="top" constant="40" id="WDy-Vd-PIl"/>
@@ -226,7 +227,7 @@
         <segue reference="Wfp-PD-9Le"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="net" width="25" height="25"/>
+        <image name="bigNET" width="100" height="100"/>
         <image name="title" width="463" height="55"/>
         <namedColor name="butterflyGreen">
             <color red="0.074509803921568626" green="0.23137254901960785" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
