@@ -16,14 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="0l2-YR-o6c">
-                                <rect key="frame" x="20.5" y="425.5" width="373" height="55"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="net" translatesAutoresizingMaskIntoConstraints="NO" id="0l2-YR-o6c">
+                                <rect key="frame" x="182" y="428" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="cfX-b7-Cmf"/>
+                                    <constraint firstAttribute="width" secondItem="0l2-YR-o6c" secondAttribute="height" multiplier="1:1" id="g4m-Uy-ud7"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="butterflyGreen"/>
                         <constraints>
                             <constraint firstItem="0l2-YR-o6c" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4bp-d9-nm5"/>
-                            <constraint firstItem="0l2-YR-o6c" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="BvV-84-5Yh"/>
                             <constraint firstItem="0l2-YR-o6c" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lil-j9-0rc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -220,9 +223,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iaT-ra-Ins"/>
+        <segue reference="Wfp-PD-9Le"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="net" width="25" height="25"/>
         <image name="title" width="463" height="55"/>
         <namedColor name="butterflyGreen">
             <color red="0.074509803921568626" green="0.23137254901960785" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
