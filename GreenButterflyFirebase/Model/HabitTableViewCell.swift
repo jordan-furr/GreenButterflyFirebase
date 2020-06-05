@@ -56,6 +56,6 @@ class HabitTableViewCell: UITableViewCell {
         co2label.text = "\(count)"
         let image = UIImage(named: habit.iconUID)
         iconImageView.image = image
-        iconImageView.setImageColor(color: UIColor.lightGreen!)
+        iconImageView.setImageColor(color: .white)
     }
 }
