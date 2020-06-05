@@ -100,14 +100,14 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yr9-Z2-ghR">
-                                            <rect key="frame" x="346" y="16.5" width="66" height="66"/>
+                                            <rect key="frame" x="374" y="33.5" width="25" height="32"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="Yr9-Z2-ghR" secondAttribute="height" multiplier="1:1" id="MWp-4Q-5v5"/>
+                                                <constraint firstAttribute="width" secondItem="Yr9-Z2-ghR" secondAttribute="height" multiplier="7:9" id="HVa-WL-SOO"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="32"/>
                                             <color key="tintColor" red="0.87409400069999998" green="1" blue="0.28349309750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <state key="normal" title="+">
-                                                <color key="titleColor" name="customYellow"/>
+                                            <state key="normal" image="plus">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
                                             </state>
                                             <connections>
@@ -115,18 +115,18 @@
                                             </connections>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="2b6-op-J4F">
-                                            <rect key="frame" x="64" y="37.5" width="282" height="24"/>
+                                            <rect key="frame" x="64" y="34" width="302" height="31"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recycled Cardbaord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3o0-6Q-ty1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="207.5" height="24"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="204.5" height="31"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vE4-lf-IAq">
-                                                    <rect key="frame" x="214.5" y="0.0" width="67.5" height="24"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                                    <color key="textColor" name="loginGreen"/>
+                                                    <rect key="frame" x="211.5" y="0.0" width="90.5" height="31"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                                    <color key="textColor" name="customYellow"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -137,14 +137,14 @@
                                     </subviews>
                                     <color key="backgroundColor" name="loginDarkGreen"/>
                                     <constraints>
-                                        <constraint firstItem="Yr9-Z2-ghR" firstAttribute="leading" secondItem="2b6-op-J4F" secondAttribute="trailing" id="3Bh-14-fsC"/>
+                                        <constraint firstItem="Yr9-Z2-ghR" firstAttribute="leading" secondItem="2b6-op-J4F" secondAttribute="trailing" constant="8" symbolic="YES" id="3Bh-14-fsC"/>
                                         <constraint firstItem="YhJ-6J-dtr" firstAttribute="centerY" secondItem="3o0-6Q-ty1" secondAttribute="centerY" id="OJX-8B-lMz"/>
                                         <constraint firstItem="YhJ-6J-dtr" firstAttribute="leading" secondItem="zCp-4W-X2Z" secondAttribute="leading" constant="20" id="QvH-Fr-OOY"/>
-                                        <constraint firstItem="Yr9-Z2-ghR" firstAttribute="width" secondItem="zCp-4W-X2Z" secondAttribute="width" multiplier="0.16" id="igF-yT-TRl"/>
+                                        <constraint firstItem="Yr9-Z2-ghR" firstAttribute="width" secondItem="zCp-4W-X2Z" secondAttribute="width" multiplier="0.06" id="igF-yT-TRl"/>
                                         <constraint firstItem="3o0-6Q-ty1" firstAttribute="centerY" secondItem="zCp-4W-X2Z" secondAttribute="centerY" id="tQw-gO-BEC"/>
                                         <constraint firstItem="Yr9-Z2-ghR" firstAttribute="centerY" secondItem="zCp-4W-X2Z" secondAttribute="centerY" id="w1K-Id-2DZ"/>
                                         <constraint firstItem="2b6-op-J4F" firstAttribute="leading" secondItem="YhJ-6J-dtr" secondAttribute="trailing" constant="20" id="wbL-kf-01L"/>
-                                        <constraint firstAttribute="trailing" secondItem="Yr9-Z2-ghR" secondAttribute="trailing" constant="2" id="wxX-Ov-PYE"/>
+                                        <constraint firstAttribute="trailing" secondItem="Yr9-Z2-ghR" secondAttribute="trailing" constant="15" id="wxX-Ov-PYE"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -370,15 +370,16 @@
     <resources>
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <image name="net" width="25" height="25"/>
+        <image name="plus" width="52" height="65"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="butterflyGreen">
-            <color red="0.074509803921568626" green="0.23137254901960785" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.070588235294117646" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="customYellow">
             <color red="0.8901960784313725" green="1" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="loginDarkGreen">
-            <color red="0.20784313725490197" green="0.52941176470588236" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20784313725490197" green="0.52941176470588236" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="loginGreen">
             <color red="0.91764705882352937" green="0.9882352941176471" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
