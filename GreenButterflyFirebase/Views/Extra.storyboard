@@ -17,33 +17,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f1-Ve-Wxx">
-                                <rect key="frame" x="20" y="159.5" width="374" height="125.5"/>
+                                <rect key="frame" x="20" y="149.5" width="374" height="125.5"/>
                                 <string key="text">Carbon footprints measure how much carbon dioxide (co2) we produce from our daily lives. Greenhouse gases like co2 contribute to global warming and although tranportation, home energy, and corporations are the largest contributors to GHG, the small eco friendly actions we make add up and help set back global warming. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" name="loginDarkGreen"/>
+                                <color key="textColor" name="cell"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is a carbon footprint? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzF-2u-kLZ">
-                                <rect key="frame" x="20" y="116" width="374" height="31.5"/>
+                                <rect key="frame" x="20" y="106" width="374" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green Butterfly attempts to help individuals visualize how their &quot;small&quot; eco-friendly actions add up make a difference." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-bf-PgY">
-                                <rect key="frame" x="20" y="323" width="374" height="61"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgq-3j-vF8">
-                                <rect key="frame" x="20" y="404" width="374" height="90"/>
-                                <string key="text">In order to provide these insights, action estimates are based on estimates of co2 saved from a year of continously adopting these eco friendly practices. More info about how these estimates are computed can be found in the detail view of every action.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" name="loginDarkGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green Butterfly attempts to help individuals visualize how their &quot;small&quot; eco-friendly actions add up make a difference." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-bf-PgY">
+                                <rect key="frame" x="20" y="313" width="374" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" name="loginDarkGreen"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgq-3j-vF8">
+                                <rect key="frame" x="20" y="397.5" width="374" height="90"/>
+                                <string key="text">In order to provide these insights, action estimates are based on estimates of co2 saved from a year of continously adopting these eco friendly practices. More info about how these estimates are computed can be found in the detail view of every action.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" name="cell"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elE-53-eQF">
-                                <rect key="frame" x="264" y="542" width="130" height="27"/>
+                                <rect key="frame" x="264" y="527.5" width="130" height="27"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="T8S-F2-hdn"/>
@@ -66,10 +66,10 @@
                             <constraint firstItem="3f1-Ve-Wxx" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="20" id="N9z-qb-Qbl"/>
                             <constraint firstItem="04i-EC-j3m" firstAttribute="trailing" secondItem="3f1-Ve-Wxx" secondAttribute="trailing" constant="20" id="Qr9-3t-Uks"/>
                             <constraint firstItem="elE-53-eQF" firstAttribute="trailing" secondItem="DdT-bf-PgY" secondAttribute="trailing" id="Sej-KD-VX2"/>
+                            <constraint firstItem="elE-53-eQF" firstAttribute="top" secondItem="cgq-3j-vF8" secondAttribute="bottom" constant="40" id="b7B-rb-eaj"/>
                             <constraint firstItem="04i-EC-j3m" firstAttribute="trailing" secondItem="XzF-2u-kLZ" secondAttribute="trailing" constant="20" id="fLU-Ak-bqY"/>
                             <constraint firstAttribute="trailing" secondItem="DdT-bf-PgY" secondAttribute="trailing" constant="20" id="jkR-sg-hor"/>
-                            <constraint firstItem="elE-53-eQF" firstAttribute="top" secondItem="cgq-3j-vF8" secondAttribute="bottom" constant="48" id="kaH-9d-KLi"/>
-                            <constraint firstItem="XzF-2u-kLZ" firstAttribute="top" secondItem="04i-EC-j3m" secondAttribute="top" constant="28" id="onQ-sf-N9w"/>
+                            <constraint firstItem="XzF-2u-kLZ" firstAttribute="top" secondItem="04i-EC-j3m" secondAttribute="top" constant="18" id="onQ-sf-N9w"/>
                             <constraint firstItem="04i-EC-j3m" firstAttribute="trailing" secondItem="cgq-3j-vF8" secondAttribute="trailing" constant="20" id="p6G-G9-Tge"/>
                             <constraint firstItem="cgq-3j-vF8" firstAttribute="top" secondItem="DdT-bf-PgY" secondAttribute="bottom" constant="20" id="qe6-W7-5NE"/>
                             <constraint firstItem="DdT-bf-PgY" firstAttribute="top" secondItem="3f1-Ve-Wxx" secondAttribute="bottom" constant="38" id="t8U-jH-s7w"/>
@@ -88,7 +88,7 @@
         <!--About-->
         <scene sceneID="jld-uD-6rZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tcb-Ko-AXD" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tcb-Ko-AXD" customClass="LightNavBarViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About" image="paperplane.fill" catalog="system" selectedImage="paperplane.fill" id="XYt-1y-U0Y"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -110,10 +110,13 @@
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="121"/>
         <namedColor name="butterflyGreen">
-            <color red="0.0" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.070588235294117646" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cell">
+            <color red="0.25882352941176473" green="0.70196078431372544" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="loginDarkGreen">
-            <color red="0.10538383573293686" green="0.45204025506973267" blue="0.28328138589859009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20784313725490197" green="0.52941176470588236" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

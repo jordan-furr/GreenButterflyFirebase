@@ -26,12 +26,15 @@ class HabitDetailViewController: UIViewController {
     @IBOutlet weak var decrementButton: UIButton!
     @IBOutlet weak var sourceButton: UIButton!
     @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var resetButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
         decrementButton.addCornerRadius()
         sourceButton.addCornerRadius()
+        resetButton.addCornerRadius()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -50,6 +53,7 @@ class HabitDetailViewController: UIViewController {
         let totalCO2 = Double(round((Double(counts) * habit.co2Value) * 1000) / 1000)
         totalKWHLabel.text = "Total co2 saved by actions:   \(totalCO2)kg"
         iconImageView.image = UIImage(named: habit.iconUID)
+        iconImageView.setImageColor(color: UIColor.lightGreen!)
     }
     
     //MARK: IB ACTIONS
@@ -69,4 +73,19 @@ class HabitDetailViewController: UIViewController {
             UIApplication.shared.open(url)
         }
     }
+    
+    @IBAction func resetTapped(_ sender: Any) {
+        guard let habit = habit else {return}
+        let alertController = UIAlertController(title: "Reset Count?", message: "Are you sure you want to reset your count for this action to 0?", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "Yes", style: .default, handler: { action in
+            HabitController.shared.resetHabit(habit: habit)
+            self.setUpViews()
+        })
+        alertController.addAction(defaultAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    
 }

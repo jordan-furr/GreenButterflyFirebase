@@ -52,8 +52,8 @@ class InsightsViewController: UIViewController {
         let balloonCount = "\(balloonsCount)"
         balloonLabel.text = balloonCount
         totalco2Label.text = "\(Double(round(total * 100)) / 100)kg of co2"
-        collectionView.contentInset = UIEdgeInsets(top: 6, left: 8, bottom: 10, right: 8)
-        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 2)
+        collectionView.contentInset = UIEdgeInsets(top: 4, left: 8, bottom: 10, right: 8)
+        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 2.8)
         collectionView.layer.cornerRadius = 10
         collectionView.layer.masksToBounds = true
         collectionView.layer.shadowColor = UIColor.black.cgColor
@@ -75,6 +75,16 @@ extension InsightsViewController: UICollectionViewDelegate, UICollectionViewData
         cell.imageViewCell.setImageColor(color: UIColor.lightGreen!)
         return cell
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return .portrait
+        } else {
+            return .portrait
+        }
+    }
+    
+    
 }
 
 class MyCell: UICollectionViewCell{

@@ -10,8 +10,10 @@
 		5115813735B135C7FCFF9BDC /* Pods_GreenButterflyFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289E04F0035B5599BAC27A21 /* Pods_GreenButterflyFirebase.framework */; };
 		C53B101B247EA4B400E22124 /* Extra.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53B101A247EA4B400E22124 /* Extra.storyboard */; };
 		C53B101D247EB5B200E22124 /* ExtraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B101C247EB5B200E22124 /* ExtraViewController.swift */; };
+		C53B102524805D5400E22124 /* NewHabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53B102424805D5400E22124 /* NewHabitTableViewCell.swift */; };
 		C5406565247A32C00021B44E /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5406564247A32C00021B44E /* Badge.swift */; };
 		C5406567247B36430021B44E /* InsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5406566247B36420021B44E /* InsightsViewController.swift */; };
+		C54949C52489F7A300B469F6 /* LightNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54949C42489F7A300B469F6 /* LightNavBarViewController.swift */; };
 		C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5880E812478800B001038AC /* HabitTableViewCell.swift */; };
 		C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7B24770B030073069A /* AppDelegate.swift */; };
 		C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7D24770B030073069A /* SceneDelegate.swift */; };
@@ -44,8 +46,10 @@
 		9D91479F8F24C6D275872187 /* Pods-GreenButterflyFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreenButterflyFirebase.debug.xcconfig"; path = "Target Support Files/Pods-GreenButterflyFirebase/Pods-GreenButterflyFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		C53B101A247EA4B400E22124 /* Extra.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Extra.storyboard; sourceTree = "<group>"; };
 		C53B101C247EB5B200E22124 /* ExtraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraViewController.swift; sourceTree = "<group>"; };
+		C53B102424805D5400E22124 /* NewHabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewHabitTableViewCell.swift; sourceTree = "<group>"; };
 		C5406564247A32C00021B44E /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		C5406566247B36420021B44E /* InsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewController.swift; sourceTree = "<group>"; };
+		C54949C42489F7A300B469F6 /* LightNavBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNavBarViewController.swift; sourceTree = "<group>"; };
 		C5880E812478800B001038AC /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		C5E09A7824770B030073069A /* GreenButterflyFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenButterflyFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E09A7B24770B030073069A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				C5E09A9024770E770073069A /* Habit.swift */,
 				C5406564247A32C00021B44E /* Badge.swift */,
 				C5880E812478800B001038AC /* HabitTableViewCell.swift */,
+				C53B102424805D5400E22124 /* NewHabitTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 				C5E09AB924773C9F0073069A /* StyleGuide.swift */,
 				C5E09ABD2477459E0073069A /* TextField+Extensions.swift */,
 				C5E09ABF24776F580073069A /* UserError.swift */,
+				C54949C42489F7A300B469F6 /* LightNavBarViewController.swift */,
 			);
 			path = "Helpers + Extensions";
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53B102524805D5400E22124 /* NewHabitTableViewCell.swift in Sources */,
 				C5E09ABC247741930073069A /* FirebaseController.swift in Sources */,
 				C5E09ABA24773C9F0073069A /* StyleGuide.swift in Sources */,
 				C5E09A9724770EAE0073069A /* HabitListTableViewController.swift in Sources */,
@@ -377,6 +384,7 @@
 				C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */,
 				C5E09AC2247774B10073069A /* HabitController.swift in Sources */,
 				C5406565247A32C00021B44E /* Badge.swift in Sources */,
+				C54949C52489F7A300B469F6 /* LightNavBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

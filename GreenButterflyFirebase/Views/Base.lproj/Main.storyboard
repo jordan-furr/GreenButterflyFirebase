@@ -11,20 +11,23 @@
         <!--Launch View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LaunchViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="LaunchViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="0l2-YR-o6c">
-                                <rect key="frame" x="20.5" y="425.5" width="373" height="55"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigNET" translatesAutoresizingMaskIntoConstraints="NO" id="aHv-d5-9ox">
+                                <rect key="frame" x="181" y="427" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aHv-d5-9ox" secondAttribute="height" multiplier="1:1" id="6pr-WA-Bxp"/>
+                                    <constraint firstAttribute="width" constant="52" id="X1K-Qg-7gJ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="butterflyGreen"/>
                         <constraints>
-                            <constraint firstItem="0l2-YR-o6c" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4bp-d9-nm5"/>
-                            <constraint firstItem="0l2-YR-o6c" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="BvV-84-5Yh"/>
-                            <constraint firstItem="0l2-YR-o6c" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lil-j9-0rc"/>
+                            <constraint firstItem="aHv-d5-9ox" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5MF-gH-hsb"/>
+                            <constraint firstItem="aHv-d5-9ox" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JV1-cW-Gai"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -37,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="-399" y="146"/>
         </scene>
-        <!--Authentification View Controller-->
+        <!--login-->
         <scene sceneID="tGb-di-c5W">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="YaK-gA-DUi" customClass="AuthentificationViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" title="login" modalPresentationStyle="fullScreen" id="YaK-gA-DUi" customClass="AuthentificationViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QaC-qK-F6H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +55,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="87"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <state key="normal" title="LOGIN">
-                                            <color key="titleColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="loginGreen"/>
                                         </state>
                                         <connections>
                                             <action selector="loginTapped:" destination="YaK-gA-DUi" eventType="touchUpInside" id="MMd-II-a4H"/>
@@ -62,7 +65,7 @@
                                         <rect key="frame" x="130" y="0.0" width="83" height="87"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <state key="normal" title="SIGNUP">
-                                            <color key="titleColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" name="loginGreen"/>
                                         </state>
                                         <connections>
                                             <action selector="signupTapped:" destination="YaK-gA-DUi" eventType="touchUpInside" id="OiW-nY-2uR"/>
@@ -71,40 +74,43 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eov-PD-4db">
-                                <rect key="frame" x="41.5" y="222" width="331" height="190"/>
+                                <rect key="frame" x="41.5" y="222" width="331" height="178"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Kz-Aw-ZuU">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="50"/>
-                                        <color key="backgroundColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="46"/>
+                                        <color key="backgroundColor" name="loginGreen"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ZJt-2e-nKW"/>
+                                            <constraint firstAttribute="height" constant="46" id="ZJt-2e-nKW"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="butterflyGreen"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0L-8g-yZf">
-                                        <rect key="frame" x="0.0" y="70" width="331" height="50"/>
-                                        <color key="backgroundColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="66" width="331" height="46"/>
+                                        <color key="backgroundColor" name="loginGreen"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="jMZ-KU-ajH"/>
+                                            <constraint firstAttribute="height" constant="46" id="jMZ-KU-ajH"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="butterflyGreen"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEh-Mh-5Tn">
-                                        <rect key="frame" x="0.0" y="140" width="331" height="50"/>
-                                        <color key="backgroundColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="0.0" y="132" width="331" height="46"/>
+                                        <color key="backgroundColor" name="loginGreen"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ls9-ak-Exc"/>
+                                            <constraint firstAttribute="height" constant="46" id="ls9-ak-Exc"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="butterflyGreen"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGe-lQ-n0t">
-                                <rect key="frame" x="145" y="492" width="124" height="46"/>
-                                <color key="backgroundColor" red="0.76087431589999999" green="1" blue="0.7483829931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="124" y="450" width="166" height="46"/>
+                                <color key="backgroundColor" name="loginGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="B8T-3I-FHG"/>
                                 </constraints>
@@ -126,13 +132,14 @@
                             <constraint firstItem="eov-PD-4db" firstAttribute="width" secondItem="QaC-qK-F6H" secondAttribute="width" multiplier="0.8" id="9BO-Q0-3f2"/>
                             <constraint firstItem="eov-PD-4db" firstAttribute="top" secondItem="Rab-Ho-ggk" secondAttribute="bottom" constant="20" id="9H6-2S-cn4"/>
                             <constraint firstItem="PGe-lQ-n0t" firstAttribute="centerX" secondItem="P0J-P8-rxm" secondAttribute="centerX" id="9Z0-5K-AmP"/>
-                            <constraint firstItem="PGe-lQ-n0t" firstAttribute="width" secondItem="QaC-qK-F6H" secondAttribute="width" multiplier="0.3" id="Acg-ig-PMl"/>
+                            <constraint firstItem="PGe-lQ-n0t" firstAttribute="width" secondItem="QaC-qK-F6H" secondAttribute="width" multiplier="0.4" id="Acg-ig-PMl"/>
                             <constraint firstItem="Rab-Ho-ggk" firstAttribute="top" secondItem="6KH-M2-PAU" secondAttribute="bottom" constant="20" id="DhI-ex-YPG"/>
                             <constraint firstItem="Rab-Ho-ggk" firstAttribute="centerX" secondItem="P0J-P8-rxm" secondAttribute="centerX" id="Jgx-hF-a7B"/>
+                            <constraint firstItem="P0J-P8-rxm" firstAttribute="top" secondItem="6KH-M2-PAU" secondAttribute="top" constant="4" id="PcI-sw-MI7"/>
                             <constraint firstItem="Rab-Ho-ggk" firstAttribute="centerY" secondItem="P0J-P8-rxm" secondAttribute="centerY" multiplier="0.35" id="Qf6-kS-hjv"/>
                             <constraint firstItem="P0J-P8-rxm" firstAttribute="trailing" secondItem="6KH-M2-PAU" secondAttribute="trailing" constant="20" id="Svn-Ij-Wix"/>
                             <constraint firstItem="6KH-M2-PAU" firstAttribute="top" secondItem="QaC-qK-F6H" secondAttribute="top" constant="40" id="WDy-Vd-PIl"/>
-                            <constraint firstItem="PGe-lQ-n0t" firstAttribute="top" secondItem="eov-PD-4db" secondAttribute="bottom" constant="80" id="WnC-VF-bb3"/>
+                            <constraint firstItem="PGe-lQ-n0t" firstAttribute="top" secondItem="eov-PD-4db" secondAttribute="bottom" constant="50" id="WnC-VF-bb3"/>
                             <constraint firstItem="6KH-M2-PAU" firstAttribute="leading" secondItem="P0J-P8-rxm" secondAttribute="leading" constant="20" id="lvT-KL-VIF"/>
                             <constraint firstItem="eov-PD-4db" firstAttribute="centerX" secondItem="P0J-P8-rxm" secondAttribute="centerX" id="uGj-bc-bOe"/>
                         </constraints>
@@ -149,6 +156,7 @@
                         <outlet property="loginButton" destination="LqN-3M-sD7" id="Hkt-sw-ONN"/>
                         <outlet property="passwordTextField" destination="h0L-8g-yZf" id="rbf-w9-i5l"/>
                         <outlet property="signupButton" destination="Cvi-8X-qcA" id="m41-4B-lRL"/>
+                        <outlet property="titleImageView" destination="6KH-M2-PAU" id="3Tl-vS-Eac"/>
                         <segue destination="lfC-gh-25R" kind="show" identifier="loggedin" id="iaT-ra-Ins"/>
                     </connections>
                 </viewController>
@@ -219,9 +227,13 @@
         <segue reference="iaT-ra-Ins"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="bigNET" width="100" height="100"/>
         <image name="title" width="463" height="55"/>
         <namedColor name="butterflyGreen">
-            <color red="0.0" green="0.25490196078431371" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.070588235294117646" green="0.20000000000000001" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="loginGreen">
+            <color red="0.91764705882352937" green="0.9882352941176471" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

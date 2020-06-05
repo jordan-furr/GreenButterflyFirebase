@@ -17,7 +17,7 @@ class HabitTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 7, bottom: 4, right: 7))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 8, bottom: 5, right: 8))
         contentView.layer.cornerRadius = 7
         backgroundColor = .clear // very important
         layer.masksToBounds = false
@@ -33,8 +33,8 @@ class HabitTableViewCell: UITableViewCell {
     
     //MARK: - IB Outlets
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var co2label: UILabel!
     
     
     
@@ -53,9 +53,9 @@ class HabitTableViewCell: UITableViewCell {
     @objc func updateUI(){
         guard let habit = habit, let count = count else {return}
         titleLabel.text = habit.title
-        counterLabel.text = "\(count)"
+        co2label.text = "\(count)"
         let image = UIImage(named: habit.iconUID)
         iconImageView.image = image
-        iconImageView.setImageColor(color: .white)
+        iconImageView.setImageColor(color: UIColor.lightGreen!)
     }
 }

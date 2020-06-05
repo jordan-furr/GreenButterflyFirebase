@@ -36,15 +36,20 @@ class AddHabitsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "newHabit", for: indexPath)
-        cell.textLabel?.text = habits[indexPath.row].title
-        cell.textLabel?.textColor = .white
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "newHabit", for: indexPath) as? NewHabitTableViewCell else {return UITableViewCell()}
+        let habit = habits[indexPath.row]
+        cell.setHabit(habit: habit)
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = .clear
+        cell.selectedBackgroundView = backgroundView
+        cell.tintColor = .white
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
+      let cell = tableView.cellForRow(at: indexPath)
         cell?.accessoryType = .checkmark
+        
         let habit = habits[indexPath.row]
         HabitController.shared.toggleHabit(habit: habit)
         print("\(habit.title) enabled)")
@@ -59,6 +64,6 @@ class AddHabitsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60.0
+        return 68.0
     }
 }
