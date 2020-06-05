@@ -45,6 +45,7 @@ class HabitListTableViewController: UITableViewController {
         let count = counts[indexPath.row]
         cell.setHabitAndCount(habit: habit, count: count)
         cell.delegate = self
+        cell.tintColor = .white
         let backgroundView = UIView()
         backgroundView.backgroundColor = .clear
         cell.selectedBackgroundView = backgroundView

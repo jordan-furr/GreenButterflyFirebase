@@ -42,12 +42,14 @@ class AddHabitsTableViewController: UITableViewController {
         let backgroundView = UIView()
         backgroundView.backgroundColor = .clear
         cell.selectedBackgroundView = backgroundView
+        cell.tintColor = .white
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       let cell = tableView.cellForRow(at: indexPath)
-       cell?.accessoryType = .checkmark
+        cell?.accessoryType = .checkmark
+        
         let habit = habits[indexPath.row]
         HabitController.shared.toggleHabit(habit: habit)
         print("\(habit.title) enabled)")
