@@ -36,6 +36,7 @@ class HabitTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var co2label: UILabel!
     
+    @IBOutlet weak var plusButton: UIButton!
     
     
     //MARK: - IB Actions
@@ -57,5 +58,23 @@ class HabitTableViewCell: UITableViewCell {
         let image = UIImage(named: habit.iconUID)
         iconImageView.image = image
         iconImageView.setImageColor(color: .white)
+        plusButton.addTarget(self, action: #selector(self.animateNumber(sender:)), for: .touchUpInside)
+    }
+    
+    @objc fileprivate func animateNumber(sender:UIButton){
+        self.animateView(sender)
+        self.animateView(co2label)
+    }
+    
+    fileprivate func animateView(_ viewToAnimate:UIView){
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            
+        }) { (_) in
+            print("animation complete")
+            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }, completion: nil)
+        }
     }
 }

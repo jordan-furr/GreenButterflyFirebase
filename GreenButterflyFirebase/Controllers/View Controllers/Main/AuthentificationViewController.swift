@@ -45,7 +45,7 @@ class AuthentificationViewController: UIViewController {
                                    self.actionButton.isHidden = true
                                    self.emailTextField.isHidden = true
                                    self.passwordTextField.isHidden = true
-                        ButterflyGradient.setUpButterflyView(view: self.view)
+                    //    ButterflyGradient.setUpButterflyView(view: self.view)
                         UserController.shared.fetchCurrentUser { (result) in
                             switch result {
                             case .failure(let error):
@@ -93,7 +93,7 @@ class AuthentificationViewController: UIViewController {
                         self.passwordTextField.isHidden = true
                         self.confirmTextField.isHidden = true
                         self.titleImageView.isHidden = true
-                        ButterflyGradient.setUpButterflyView(view: self.view)
+                     //   ButterflyGradient.setUpButterflyView(view: self.view)
                         print("signing user up")
                         
                         var emptyEnabled: [Bool] = []
@@ -157,6 +157,9 @@ class AuthentificationViewController: UIViewController {
         passwordTextField.isHidden = false
         titleImageView.isHidden = false
         setNeedsStatusBarAppearanceUpdate()
+        actionButton.translatesAutoresizingMaskIntoConstraints = false
+        actionButton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)
+        
         
     }
     
@@ -190,6 +193,23 @@ class AuthentificationViewController: UIViewController {
             let destinationVC = navBar.topViewController as! HabitListTableViewController
             destinationVC.habits = HabitController.shared.enabledHabits
             print("authentification segue")
+        }
+    }
+    
+    @objc fileprivate func animateButton(sender:UIButton){
+        print("tapped")
+        self.animateView(sender)
+    }
+    
+    fileprivate func animateView(_ viewToAnimate:UIView){
+        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+            
+        }) { (_) in
+            print("animation complete")
+            UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
+                viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }, completion: nil)
         }
     }
 }

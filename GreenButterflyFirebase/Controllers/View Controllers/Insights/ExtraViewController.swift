@@ -23,6 +23,7 @@ class ExtraViewController: UIViewController {
         imageView.image = image
         self.navigationItem.titleView = imageView
         logoutbutton.addCornerRadius()
+        logoutbutton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)
     }
     
     @IBAction func logouttapped(_ sender: Any) {
@@ -49,4 +50,20 @@ class ExtraViewController: UIViewController {
             return .portrait
         }
     }
+    
+    @objc fileprivate func animateButton(sender:UIButton){
+           self.animateView(sender)
+       }
+          
+          fileprivate func animateView(_ viewToAnimate:UIView){
+           UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+               viewToAnimate.transform = CGAffineTransform(scaleX: 0.93, y: 0.93)
+                  
+              }) { (_) in
+                  print("animation complete")
+               UIView.animate(withDuration: 0.18, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.2, options: .curveEaseIn, animations: {
+                      viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+                  }, completion: nil)
+              }
+          }
 }

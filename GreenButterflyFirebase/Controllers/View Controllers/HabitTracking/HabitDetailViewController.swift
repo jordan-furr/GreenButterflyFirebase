@@ -54,6 +54,9 @@ class HabitDetailViewController: UIViewController {
         totalKWHLabel.text = "Total co2 saved by actions:   \(totalCO2)kg"
         iconImageView.image = UIImage(named: habit.iconUID)
         iconImageView.setImageColor(color: UIColor.lightGreen!)
+        decrementButton.addTarget(self, action: #selector(self.animateNumber(sender:)), for: .touchUpInside)
+        resetButton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)
+        sourceButton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)
     }
     
     //MARK: IB ACTIONS
@@ -87,5 +90,26 @@ class HabitDetailViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    
+    @objc fileprivate func animateNumber(sender:UIButton){
+           self.animateView(countLabel)
+        self.animateView(sender)
+       }
+    
+    @objc fileprivate func animateButton(sender:UIButton){
+        self.animateView(sender)
+    }
+       
+       fileprivate func animateView(_ viewToAnimate:UIView){
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.93, y: 0.93)
+               
+           }) { (_) in
+               print("animation complete")
+            UIView.animate(withDuration: 0.18, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.2, options: .curveEaseIn, animations: {
+                   viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+               }, completion: nil)
+           }
+       }
     
 }
