@@ -83,6 +83,8 @@ extension InsightsViewController: UICollectionViewDelegate, UICollectionViewData
             return .portrait
         }
     }
+    
+    
 }
 
 class MyCell: UICollectionViewCell{

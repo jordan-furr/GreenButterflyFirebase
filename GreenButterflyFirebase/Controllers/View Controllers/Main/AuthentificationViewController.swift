@@ -156,6 +156,17 @@ class AuthentificationViewController: UIViewController {
         emailTextField.isHidden = false
         passwordTextField.isHidden = false
         titleImageView.isHidden = false
+        setNeedsStatusBarAppearanceUpdate()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+              
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func presentSignupAlertView() {

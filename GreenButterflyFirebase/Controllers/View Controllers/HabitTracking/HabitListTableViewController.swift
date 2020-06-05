@@ -18,13 +18,14 @@ class HabitListTableViewController: UITableViewController {
         HabitController.shared.fetchUserHabits()
         habits  = HabitController.shared.enabledHabits
         counts = HabitController.shared.enabledCounts
+        setNeedsStatusBarAppearanceUpdate()
         tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
-        //tableView.allowsSelection = false
+        setNeedsStatusBarAppearanceUpdate()
         let image = UIImage(named: "title")
         let imageView = UIImageView(frame: CGRect(x: 0, y: 20, width: 80, height: 30))
         imageView.contentMode = .scaleAspectFit
@@ -62,6 +63,10 @@ class HabitListTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .left)
         }
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+       }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90.0

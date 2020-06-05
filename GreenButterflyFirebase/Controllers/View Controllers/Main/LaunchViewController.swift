@@ -36,6 +36,17 @@ class LaunchViewController: UIViewController {
                 self.performSegue(withIdentifier: "noUser", sender: self)
             }
         }
+        setNeedsStatusBarAppearanceUpdate()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+              
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     //MARK: HELPERS
 }
