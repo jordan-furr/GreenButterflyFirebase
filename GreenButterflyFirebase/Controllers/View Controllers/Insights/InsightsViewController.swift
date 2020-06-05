@@ -28,6 +28,7 @@ class InsightsViewController: UIViewController {
         balloonsCount = numberOfBalloons
         setUpViews()
         collectionView.reloadData()
+        animateView(totalco2Label)
     }
     
     override func viewDidLayoutSubviews() {
@@ -83,6 +84,32 @@ extension InsightsViewController: UICollectionViewDelegate, UICollectionViewData
             return .portrait
         }
     }
+          
+          fileprivate func animateView(_ viewToAnimate:UIView){
+            UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 1.12, y: 1.12)
+                  
+              }) { (_) in
+                  print("animation complete")
+                UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.2, options: .curveEaseIn, animations: {
+                      viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
+                  }, completion: nil)
+              }
+          }
+    
+    
+    @IBAction func share(){
+        let promo = "Check out Green Butterfly on the AppStore! It helps you track your daily efforts to lower your carbon footprint! 😤"
+        let url = URL(string: "https://itunes.apple.com/in/app/green-butterfly/id1515632919")!
+        let objectsToShare: [Any] = [promo, url]
+        let activityViewController = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.addToReadingList]
+        self.present(activityViewController, animated: true, completion: nil)
+        
+    }
+
+    
     
     
 }

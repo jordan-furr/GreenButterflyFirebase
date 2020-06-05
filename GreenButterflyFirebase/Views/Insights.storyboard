@@ -131,7 +131,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xcw-tb-TKX"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Insights" id="gQ8-Vf-x4F"/>
+                    <navigationItem key="navigationItem" title="Insights" id="gQ8-Vf-x4F">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up" catalog="system" id="600-jK-ghk">
+                            <color key="tintColor" name="loginDarkGreen"/>
+                            <connections>
+                                <action selector="share" destination="6ra-fF-r1Z" id="Kj8-21-Ha0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="balloonLabel" destination="IYM-qF-aUK" id="3Ux-yf-jeW"/>
@@ -166,6 +173,7 @@
     </scenes>
     <resources>
         <image name="lightning" width="22" height="26"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="butterflyGreen">
             <color red="0.070588235294117646" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
