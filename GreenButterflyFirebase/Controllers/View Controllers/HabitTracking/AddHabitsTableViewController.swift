@@ -43,6 +43,7 @@ class AddHabitsTableViewController: UITableViewController {
         backgroundView.backgroundColor = .clear
         cell.selectedBackgroundView = backgroundView
         cell.tintColor = .white
+        cell.accessoryType = .none
         return cell
     }
     

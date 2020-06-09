@@ -101,7 +101,7 @@ class UserController {
     func sendResetPasswordLink(withEmail: String) {
         Auth.auth().sendPasswordReset(withEmail: withEmail) { (error) in
             if error == nil {
-                print(error?.localizedDescription ?? "error"
+                print(error ?? "error"
                 )
             } else {
                 print("sent email to reset password")

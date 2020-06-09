@@ -20,6 +20,7 @@ class AuthentificationViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var confirmTextField: UITextField!
+    @IBOutlet weak var forgotbutton: UIButton!
     
     
     //MARK: PROPERTIES
@@ -45,6 +46,7 @@ class AuthentificationViewController: UIViewController {
                                    self.actionButton.isHidden = true
                                    self.emailTextField.isHidden = true
                                    self.passwordTextField.isHidden = true
+                        self.forgotbutton.isHidden = true
                     //    ButterflyGradient.setUpButterflyView(view: self.view)
                         UserController.shared.fetchCurrentUser { (result) in
                             switch result {
@@ -125,6 +127,7 @@ class AuthentificationViewController: UIViewController {
     @IBAction func signupTapped(_ sender: Any) {
         loginMode = false
         confirmTextField.isHidden = false
+        forgotbutton.isHidden = true
         loginButton.setTitleColor(.darkGreen, for: .normal)
         signupButton.setTitleColor(.lightGreen, for: .normal)
         actionButton.setTitle("SIGN UP", for: .normal)
@@ -132,6 +135,7 @@ class AuthentificationViewController: UIViewController {
     @IBAction func loginTapped(_ sender: Any) {
         loginMode = true
         confirmTextField.isHidden = true
+        forgotbutton.isHidden = false
         loginButton.setTitleColor(.lightGreen, for: .normal)
         signupButton.setTitleColor(.darkGreen, for: .normal)
         actionButton.setTitle("LOGIN", for: .normal)
@@ -150,12 +154,15 @@ class AuthentificationViewController: UIViewController {
         passwordTextField.addDoneButtonOnKeyboard()
         confirmTextField.addDoneButtonOnKeyboard()
         emailTextField.autocorrectionType = .yes
+        passwordTextField.autocorrectionType = .no
+        confirmTextField.autocorrectionType = .no
         loginButton.isHidden = false
         signupButton.isHidden = false
         actionButton.isHidden = false
         emailTextField.isHidden = false
         passwordTextField.isHidden = false
         titleImageView.isHidden = false
+        forgotbutton.isHidden = false
         setNeedsStatusBarAppearanceUpdate()
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         actionButton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)

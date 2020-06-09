@@ -54,7 +54,11 @@ class HabitTableViewCell: UITableViewCell {
     @objc func updateUI(){
         guard let habit = habit, let count = count else {return}
         titleLabel.text = habit.title
-        co2label.text = "\(count)"
+        if count != 0 {
+            co2label.text = "\(count)"
+        } else {
+            co2label.text = ""
+        }
         let image = UIImage(named: habit.iconUID)
         iconImageView.image = image
         iconImageView.setImageColor(color: .white)
@@ -63,16 +67,15 @@ class HabitTableViewCell: UITableViewCell {
     
     @objc fileprivate func animateNumber(sender:UIButton){
         self.animateView(sender)
-        self.animateView(co2label)
     }
     
     fileprivate func animateView(_ viewToAnimate:UIView){
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
             viewToAnimate.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             
         }) { (_) in
             print("animation complete")
-            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: .curveEaseIn, animations: {
                 viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil)
         }

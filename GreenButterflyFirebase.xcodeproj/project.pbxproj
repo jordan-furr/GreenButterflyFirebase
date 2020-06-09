@@ -14,6 +14,7 @@
 		C5406565247A32C00021B44E /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5406564247A32C00021B44E /* Badge.swift */; };
 		C5406567247B36430021B44E /* InsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5406566247B36420021B44E /* InsightsViewController.swift */; };
 		C54949C52489F7A300B469F6 /* LightNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54949C42489F7A300B469F6 /* LightNavBarViewController.swift */; };
+		C54949C7248AECD900B469F6 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54949C6248AECD900B469F6 /* ForgotPassViewController.swift */; };
 		C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5880E812478800B001038AC /* HabitTableViewCell.swift */; };
 		C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7B24770B030073069A /* AppDelegate.swift */; };
 		C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7D24770B030073069A /* SceneDelegate.swift */; };
@@ -50,6 +51,7 @@
 		C5406564247A32C00021B44E /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		C5406566247B36420021B44E /* InsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsightsViewController.swift; sourceTree = "<group>"; };
 		C54949C42489F7A300B469F6 /* LightNavBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNavBarViewController.swift; sourceTree = "<group>"; };
+		C54949C6248AECD900B469F6 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		C5880E812478800B001038AC /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		C5E09A7824770B030073069A /* GreenButterflyFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenButterflyFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E09A7B24770B030073069A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			children = (
 				C5E09A9E24770F000073069A /* LaunchViewController.swift */,
 				C5E09AA9247719CA0073069A /* AuthentificationViewController.swift */,
+				C54949C6248AECD900B469F6 /* ForgotPassViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				C5E09ABA24773C9F0073069A /* StyleGuide.swift in Sources */,
 				C5E09A9724770EAE0073069A /* HabitListTableViewController.swift in Sources */,
 				C53B101D247EB5B200E22124 /* ExtraViewController.swift in Sources */,
+				C54949C7248AECD900B469F6 /* ForgotPassViewController.swift in Sources */,
 				C5E09A9F24770F000073069A /* LaunchViewController.swift in Sources */,
 				C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */,
 				C5E09A9324770E930073069A /* User.swift in Sources */,
@@ -532,6 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V2Q4X6DAJ;
 				INFOPLIST_FILE = GreenButterflyFirebase/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -551,6 +556,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V2Q4X6DAJ;
 				INFOPLIST_FILE = GreenButterflyFirebase/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
