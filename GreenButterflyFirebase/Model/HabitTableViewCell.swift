@@ -70,12 +70,12 @@ class HabitTableViewCell: UITableViewCell {
     }
     
     fileprivate func animateView(_ viewToAnimate:UIView){
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
             viewToAnimate.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
             
         }) { (_) in
             print("animation complete")
-            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: .curveEaseIn, animations: {
+            UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: .curveEaseIn, animations: {
                 viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil)
         }

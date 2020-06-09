@@ -154,6 +154,8 @@ class AuthentificationViewController: UIViewController {
         passwordTextField.addDoneButtonOnKeyboard()
         confirmTextField.addDoneButtonOnKeyboard()
         emailTextField.autocorrectionType = .yes
+        passwordTextField.autocorrectionType = .no
+        confirmTextField.autocorrectionType = .no
         loginButton.isHidden = false
         signupButton.isHidden = false
         actionButton.isHidden = false

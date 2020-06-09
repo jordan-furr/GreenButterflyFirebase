@@ -18,7 +18,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f1-Ve-Wxx">
                                 <rect key="frame" x="20" y="139" width="374" height="107.5"/>
-                                <string key="text">Carbon footprints measure how much carbon dioxide (co2) we produce. Greenhouse gases like co2 contribute to global warming and although tranportation, home energy, and corporations are the largest contributors to GHG, the small eco friendly actions we make help set back global warming. </string>
+                                <string key="text">Carbon footprints measure how much carbon dioxide (co2) we produce. Greenhouse gases like co2 contribute to global warming and although transportation, home energy, and corporations are the largest contributors to GHG, the small eco friendly actions we make help set back global warming. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" name="cell"/>
                                 <nil key="highlightedColor"/>
@@ -31,14 +31,14 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-bf-PgY">
                                 <rect key="frame" x="20" y="261.5" width="374" height="129"/>
-                                <string key="text">Green Butterfly attempts to help individuals visualize how their "small" eco-friendly actions compound and make a difference. GB does this by allowing users to track &amp; tally their efforts while providing insights about energy saved!</string>
+                                <string key="text">Green Butterfly helps users visualize how their "small" eco-friendly actions compound and make a difference. GB does this by allowing users to track &amp; tally their efforts while providing insights about energy saved!</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" name="loginDarkGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgq-3j-vF8">
                                 <rect key="frame" x="20" y="402.5" width="374" height="90"/>
-                                <string key="text">In order to provide these insights, action estimates are based on estimates of co2 saved from a year of continously adopting these eco friendly practices. More info about how these estimates are computed can be found in the detail view of every action.</string>
+                                <string key="text">In order to provide these insights, action estimates are based on estimates of co2 saved from a year of continuously adopting these eco friendly practices. More info about how these estimates are computed can be found in the detail view of every action.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" name="cell"/>
                                 <nil key="highlightedColor"/>
