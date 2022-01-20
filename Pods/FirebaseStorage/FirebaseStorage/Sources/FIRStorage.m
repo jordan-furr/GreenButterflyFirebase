@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import <FirebaseStorage/FIRStorage.h>
-#import <FirebaseStorage/FIRStorageReference.h>
+#import "FirebaseStorage/Sources/Public/FirebaseStorage/FIRStorage.h"
+#import "FirebaseStorage/Sources/Public/FirebaseStorage/FIRStorageReference.h"
 
 #import "FirebaseStorage/Sources/FIRStorageComponent.h"
 #import "FirebaseStorage/Sources/FIRStorageConstants_Private.h"
@@ -23,13 +23,16 @@
 #import "FirebaseStorage/Sources/FIRStorageUtils.h"
 #import "FirebaseStorage/Sources/FIRStorage_Private.h"
 
-#import <FirebaseAuthInterop/FIRAuthInterop.h>
-#import <FirebaseCore/FIRAppInternal.h>
-#import <FirebaseCore/FIRComponentContainer.h>
-#import <FirebaseCore/FIROptions.h>
+#import "FirebaseAppCheck/Sources/Interop/FIRAppCheckInterop.h"
+#import "FirebaseCore/Sources/Private/FirebaseCoreInternal.h"
+#import "Interop/Auth/Public/FIRAuthInterop.h"
 
+#if SWIFT_PACKAGE
+@import GTMSessionFetcherCore;
+#else
 #import <GTMSessionFetcher/GTMSessionFetcher.h>
 #import <GTMSessionFetcher/GTMSessionFetcherLogging.h>
+#endif
 
 static NSMutableDictionary<
     NSString * /* app name */,
@@ -39,6 +42,10 @@ static GTMSessionFetcherRetryBlock _retryWhenOffline;
 @interface FIRStorage () {
   /// Stored Auth reference, if it exists. This needs to be stored for `copyWithZone:`.
   id<FIRAuthInterop> _Nullable _auth;
+  id<FIRAppCheckInterop> _Nullable _appCheck;
+  NSTimeInterval _maxUploadRetryTime;
+  NSTimeInterval _maxDownloadRetryTime;
+  NSTimeInterval _maxOperationRetryTime;
 }
 @end
 
@@ -63,7 +70,8 @@ static GTMSessionFetcherRetryBlock _retryWhenOffline;
 
 + (GTMSessionFetcherService *)fetcherServiceForApp:(FIRApp *)app
                                             bucket:(NSString *)bucket
-                                              auth:(nullable id<FIRAuthInterop>)auth {
+                                              auth:(nullable id<FIRAuthInterop>)auth
+                                          appCheck:(nullable id<FIRAppCheckInterop>)appCheck {
   @synchronized(_fetcherServiceMap) {
     NSMutableDictionary *bucketMap = _fetcherServiceMap[app.name];
     if (!bucketMap) {
@@ -76,10 +84,12 @@ static GTMSessionFetcherRetryBlock _retryWhenOffline;
       fetcherService = [[GTMSessionFetcherService alloc] init];
       [fetcherService setRetryEnabled:YES];
       [fetcherService setRetryBlock:_retryWhenOffline];
+      [fetcherService setAllowLocalhostRequest:YES];
       FIRStorageTokenAuthorizer *authorizer =
           [[FIRStorageTokenAuthorizer alloc] initWithGoogleAppID:app.options.googleAppID
                                                   fetcherService:fetcherService
-                                                    authProvider:auth];
+                                                    authProvider:auth
+                                                        appCheck:appCheck];
       [fetcherService setAuthorizer:authorizer];
       bucketMap[bucket] = fetcherService;
     }
@@ -143,17 +153,28 @@ static GTMSessionFetcherRetryBlock _retryWhenOffline;
 
 - (instancetype)initWithApp:(FIRApp *)app
                      bucket:(NSString *)bucket
-                       auth:(nullable id<FIRAuthInterop>)auth {
+                       auth:(nullable id<FIRAuthInterop>)auth
+                   appCheck:(nullable id<FIRAppCheckInterop>)appCheck {
   self = [super init];
   if (self) {
     _app = app;
     _auth = auth;
+    _appCheck = appCheck;
     _storageBucket = bucket;
+    _host = kFIRStorageHost;
+    _scheme = kFIRStorageScheme;
+    _port = @(kFIRStoragePort);
+    _fetcherServiceForApp = nil;  // Configured in `ensureConfigured()`
     _dispatchQueue = dispatch_queue_create("com.google.firebase.storage", DISPATCH_QUEUE_SERIAL);
-    _fetcherServiceForApp = [FIRStorage fetcherServiceForApp:_app bucket:bucket auth:auth];
     _maxDownloadRetryTime = 600.0;
+    _maxDownloadRetryInterval =
+        [FIRStorageUtils computeRetryIntervalFromRetryTime:_maxDownloadRetryTime];
     _maxOperationRetryTime = 120.0;
+    _maxOperationRetryInterval =
+        [FIRStorageUtils computeRetryIntervalFromRetryTime:_maxOperationRetryTime];
     _maxUploadRetryTime = 600.0;
+    _maxUploadRetryInterval =
+        [FIRStorageUtils computeRetryIntervalFromRetryTime:_maxUploadRetryTime];
   }
   return self;
 }
@@ -169,7 +190,8 @@ static GTMSessionFetcherRetryBlock _retryWhenOffline;
 - (instancetype)copyWithZone:(NSZone *)zone {
   FIRStorage *storage = [[[self class] allocWithZone:zone] initWithApp:_app
                                                                 bucket:_storageBucket
-                                                                  auth:_auth];
+                                                                  auth:_auth
+                                                              appCheck:_appCheck];
   storage.callbackQueue = self.callbackQueue;
   return storage;
 }
@@ -203,14 +225,62 @@ static GTMSessionFetcherRetryBlock _retryWhenOffline;
   return [NSString stringWithFormat:@"%@ %p: %@", [self class], self, _app];
 }
 
+#pragma mark - Retry time intervals
+
+- (void)setMaxUploadRetryTime:(NSTimeInterval)maxUploadRetryTime {
+  @synchronized(self) {
+    _maxUploadRetryTime = maxUploadRetryTime;
+    _maxUploadRetryInterval =
+        [FIRStorageUtils computeRetryIntervalFromRetryTime:maxUploadRetryTime];
+  }
+}
+
+- (NSTimeInterval)maxDownloadRetryTime {
+  @synchronized(self) {
+    return _maxDownloadRetryTime;
+  }
+}
+
+- (void)setMaxDownloadRetryTime:(NSTimeInterval)maxDownloadRetryTime {
+  @synchronized(self) {
+    _maxDownloadRetryTime = maxDownloadRetryTime;
+    _maxDownloadRetryInterval =
+        [FIRStorageUtils computeRetryIntervalFromRetryTime:maxDownloadRetryTime];
+  }
+}
+
+- (NSTimeInterval)maxUploadRetryTime {
+  @synchronized(self) {
+    return _maxUploadRetryTime;
+  }
+}
+
+- (void)setMaxOperationRetryTime:(NSTimeInterval)maxOperationRetryTime {
+  @synchronized(self) {
+    _maxOperationRetryTime = maxOperationRetryTime;
+    _maxOperationRetryInterval =
+        [FIRStorageUtils computeRetryIntervalFromRetryTime:maxOperationRetryTime];
+  }
+}
+
+- (NSTimeInterval)maxOperationRetryTime {
+  @synchronized(self) {
+    return _maxOperationRetryTime;
+  }
+}
+
 #pragma mark - Public methods
 
 - (FIRStorageReference *)reference {
+  [self ensureConfigured];
+
   FIRStoragePath *path = [[FIRStoragePath alloc] initWithBucket:_storageBucket object:nil];
   return [[FIRStorageReference alloc] initWithStorage:self path:path];
 }
 
 - (FIRStorageReference *)referenceForURL:(NSString *)string {
+  [self ensureConfigured];
+
   FIRStoragePath *path = [FIRStoragePath pathFromString:string];
 
   // If no default bucket exists (empty string), accept anything.
@@ -237,11 +307,35 @@ static GTMSessionFetcherRetryBlock _retryWhenOffline;
 }
 
 - (dispatch_queue_t)callbackQueue {
+  [self ensureConfigured];
   return _fetcherServiceForApp.callbackQueue;
 }
 
 - (void)setCallbackQueue:(dispatch_queue_t)callbackQueue {
+  [self ensureConfigured];
   _fetcherServiceForApp.callbackQueue = callbackQueue;
+}
+
+- (void)useEmulatorWithHost:(NSString *)host port:(NSInteger)port {
+  if (host.length == 0) {
+    [NSException raise:NSInvalidArgumentException format:@"Cannot connect to nil or empty host."];
+  }
+
+  if (port < 0) {
+    [NSException raise:NSInvalidArgumentException
+                format:@"Port must be greater than or equal to zero."];
+  }
+
+  if (_fetcherServiceForApp != nil) {
+    [NSException raise:NSInternalInconsistencyException
+                format:@"Cannot connect to emulator after Storage SDK initialization. "
+                       @"Call useEmulator(host:port:) before creating a Storage "
+                       @"reference or trying to load data."];
+  }
+
+  _scheme = @"http";
+  _host = host;
+  _port = @(port);
 }
 
 #pragma mark - Background tasks
@@ -259,4 +353,14 @@ static GTMSessionFetcherRetryBlock _retryWhenOffline;
   [NSException raise:NSGenericException format:@"getDownloadTasks not implemented"];
   return nil;
 }
+
+- (void)ensureConfigured {
+  if (!_fetcherServiceForApp) {
+    _fetcherServiceForApp = [FIRStorage fetcherServiceForApp:_app
+                                                      bucket:_storageBucket
+                                                        auth:_auth
+                                                    appCheck:_appCheck];
+  }
+}
+
 @end
