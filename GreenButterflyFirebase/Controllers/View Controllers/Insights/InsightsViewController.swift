@@ -72,7 +72,7 @@ extension InsightsViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "balloon", for: indexPath) as! MyCell
         cell.imageViewCell.image = UIImage(named: "balloon")
-        cell.imageViewCell.setImageColor(color: UIColor.lightGreen!)
+        cell.imageViewCell.setImageColor(color: UIColor.darkGreen!)
         return cell
     }
     
