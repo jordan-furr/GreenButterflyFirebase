@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CtU-qs-oDr">
-                                <rect key="frame" x="0.0" y="152" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="146" width="414" height="60"/>
                                 <color key="backgroundColor" name="loginDarkGreen"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="u8v-v0-eVn"/>
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="balloons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="IYM-qF-aUK">
-                                <rect key="frame" x="12" y="296" width="203" height="80"/>
+                                <rect key="frame" x="12" y="270" width="203" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="AaV-Rv-Xmh"/>
                                 </constraints>
@@ -37,32 +37,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've successfully prevented:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWl-rE-5at">
-                                <rect key="frame" x="0.0" y="118" width="404" height="24"/>
+                                <rect key="frame" x="0.0" y="112" width="404" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="OFQ-Ae-5yv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" name="loginDarkGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="from being released into our atmosphere!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxR-eX-S6V">
-                                <rect key="frame" x="10" y="222" width="404" height="24"/>
+                                <rect key="frame" x="10" y="216" width="404" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="Cjj-Vo-nbC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" name="loginDarkGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="balloons could be filled with that much co2!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjy-lZ-4rO">
-                                <rect key="frame" x="220" y="300" width="174" height="72"/>
+                                <rect key="frame" x="220" y="274" width="174" height="72"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" name="loginGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Oc0-fb-nwP">
-                                <rect key="frame" x="10" y="461" width="394" height="332"/>
-                                <color key="backgroundColor" red="0.83153529115728764" green="0.92701848214827776" blue="0.98225730376717935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="10" y="410" width="394" height="383"/>
+                                <color key="backgroundColor" red="0.85490346897639324" green="0.94925379902982643" blue="0.96772590357595711" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="8" id="TIJ-tY-wJi">
                                     <size key="itemSize" width="67" height="81"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -97,9 +97,9 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what that many balloons looks like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tg-GT-tO6">
-                                <rect key="frame" x="4" y="438.5" width="406" height="14.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is what that many balloons looks like:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Tg-GT-tO6">
+                                <rect key="frame" x="4" y="385" width="406" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <color key="textColor" name="loginGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -115,16 +115,16 @@
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="Oc0-fb-nwP" secondAttribute="trailing" constant="10" id="6v5-mT-ekE"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="TWl-rE-5at" secondAttribute="trailing" constant="10" id="ARn-m2-IcM"/>
                             <constraint firstItem="CtU-qs-oDr" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" id="AYw-ae-2ED"/>
-                            <constraint firstItem="TWl-rE-5at" firstAttribute="top" secondItem="Xcw-tb-TKX" secondAttribute="top" constant="30" id="Ade-4n-5Bs"/>
+                            <constraint firstItem="TWl-rE-5at" firstAttribute="top" secondItem="Xcw-tb-TKX" secondAttribute="top" constant="24" id="Ade-4n-5Bs"/>
                             <constraint firstItem="UxR-eX-S6V" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="10" id="BmT-cm-nbS"/>
                             <constraint firstItem="UxR-eX-S6V" firstAttribute="trailing" secondItem="CtU-qs-oDr" secondAttribute="trailing" id="ETf-34-tfW"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="6Tg-GT-tO6" secondAttribute="trailing" constant="4" id="GgF-Z0-SHi"/>
                             <constraint firstItem="Oc0-fb-nwP" firstAttribute="top" secondItem="6Tg-GT-tO6" secondAttribute="bottom" constant="8" id="Vs8-Nr-TfC"/>
                             <constraint firstItem="Vjy-lZ-4rO" firstAttribute="centerY" secondItem="IYM-qF-aUK" secondAttribute="centerY" id="c2M-ql-cco"/>
-                            <constraint firstItem="IYM-qF-aUK" firstAttribute="top" secondItem="UxR-eX-S6V" secondAttribute="bottom" constant="50" id="cUU-6o-k0A"/>
+                            <constraint firstItem="IYM-qF-aUK" firstAttribute="top" secondItem="UxR-eX-S6V" secondAttribute="bottom" constant="30" id="cUU-6o-k0A"/>
                             <constraint firstItem="IYM-qF-aUK" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="12" id="et0-Ij-66E"/>
                             <constraint firstItem="6Tg-GT-tO6" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="4" id="mSr-wG-Ff1"/>
-                            <constraint firstItem="Oc0-fb-nwP" firstAttribute="top" secondItem="IYM-qF-aUK" secondAttribute="bottom" constant="85" id="pag-7p-qaU"/>
+                            <constraint firstItem="Oc0-fb-nwP" firstAttribute="top" secondItem="IYM-qF-aUK" secondAttribute="bottom" constant="60" id="pag-7p-qaU"/>
                             <constraint firstItem="CtU-qs-oDr" firstAttribute="top" secondItem="TWl-rE-5at" secondAttribute="bottom" constant="10" id="uA6-1Q-Ro3"/>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="CtU-qs-oDr" secondAttribute="trailing" id="uFU-pq-vGh"/>
                             <constraint firstItem="Oc0-fb-nwP" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="10" id="wow-Na-YcS"/>
@@ -143,11 +143,11 @@
             </objects>
             <point key="canvasLocation" x="913.04347826086962" y="135.9375"/>
         </scene>
-        <!--View Insights-->
+        <!--Insights-->
         <scene sceneID="6QV-Lu-4YU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="spi-5l-FkI" customClass="LightNavBarViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="View Insights" image="lightning" selectedImage="lightning" id="TUl-Jb-Ktg"/>
+                    <tabBarItem key="tabBarItem" title="Insights" image="lightning" selectedImage="lightning" id="TUl-Jb-Ktg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iH2-0h-mv3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
