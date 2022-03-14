@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ModalDismissed: class {
+protocol ModalDismissed: AnyObject {
     func modaldismissed()
 }
 class HabitDetailViewController: UIViewController {
