@@ -73,43 +73,67 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eov-PD-4db">
-                                <rect key="frame" x="41.5" y="222" width="331" height="178"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="eov-PD-4db">
+                                <rect key="frame" x="41.5" y="222" width="331" height="241"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Kz-Aw-ZuU">
-                                        <rect key="frame" x="0.0" y="0.0" width="331" height="46"/>
-                                        <color key="backgroundColor" name="loginGreen"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="ZJt-2e-nKW"/>
-                                        </constraints>
-                                        <color key="textColor" name="butterflyGreen"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0L-8g-yZf">
-                                        <rect key="frame" x="0.0" y="66" width="331" height="46"/>
-                                        <color key="backgroundColor" name="loginGreen"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="jMZ-KU-ajH"/>
-                                        </constraints>
-                                        <color key="textColor" name="butterflyGreen"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEh-Mh-5Tn">
-                                        <rect key="frame" x="0.0" y="132" width="331" height="46"/>
-                                        <color key="backgroundColor" name="loginGreen"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="ls9-ak-Exc"/>
-                                        </constraints>
-                                        <color key="textColor" name="butterflyGreen"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n8t-Do-eav">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="71"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dC-7n-k2C">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="17"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" name="loginGreen"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Kz-Aw-ZuU">
+                                                <rect key="frame" x="0.0" y="37" width="331" height="34"/>
+                                                <color key="backgroundColor" name="loginGreen"/>
+                                                <color key="textColor" name="butterflyGreen"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yHE-NW-jXz">
+                                        <rect key="frame" x="0.0" y="85" width="331" height="71"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrs-fb-PFI">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="17"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <color key="textColor" name="loginGreen"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h0L-8g-yZf">
+                                                <rect key="frame" x="0.0" y="17" width="331" height="54"/>
+                                                <color key="backgroundColor" name="loginGreen"/>
+                                                <color key="textColor" name="butterflyGreen"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bgt-Ct-Yk8">
+                                        <rect key="frame" x="0.0" y="170" width="331" height="71"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zS-HO-C9P">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" name="loginGreen"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEh-Mh-5Tn">
+                                                <rect key="frame" x="0.0" y="17" width="331" height="54"/>
+                                                <color key="backgroundColor" name="loginGreen"/>
+                                                <color key="textColor" name="butterflyGreen"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGe-lQ-n0t">
-                                <rect key="frame" x="124" y="460" width="166" height="46"/>
+                                <rect key="frame" x="124" y="523" width="166" height="46"/>
                                 <color key="backgroundColor" name="cell"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="B8T-3I-FHG"/>
@@ -126,7 +150,7 @@
                                 <rect key="frame" x="20" y="40" width="374" height="55"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubB-ic-3W1">
-                                <rect key="frame" x="20" y="405" width="374" height="30"/>
+                                <rect key="frame" x="20" y="468" width="374" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                 <state key="normal" title="forgot password?">
                                     <color key="titleColor" name="loginDarkGreen"/>
@@ -350,7 +374,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wfp-PD-9Le"/>
+        <segue reference="iaT-ra-Ins"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bigNET" width="100" height="100"/>
