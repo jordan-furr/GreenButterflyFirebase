@@ -123,6 +123,8 @@ class AuthentificationViewController: UIViewController {
     }
     
     @IBAction func signupTapped(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
         loginMode = false
         confirmStack.isHidden = false
         forgotbutton.isHidden = true
@@ -131,6 +133,8 @@ class AuthentificationViewController: UIViewController {
         actionButton.setTitle("SIGN UP", for: .normal)
     }
     @IBAction func loginTapped(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
         loginMode = true
         forgotbutton.isHidden = false
         confirmStack.isHidden = true
@@ -183,8 +187,6 @@ class AuthentificationViewController: UIViewController {
     }
     
     @objc fileprivate func animateButton(sender:UIButton){
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
         self.animateView(sender)
     }
     
