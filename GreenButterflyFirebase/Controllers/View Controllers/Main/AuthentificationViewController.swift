@@ -15,7 +15,8 @@ class AuthentificationViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var actionButton: UIButton!
-    
+    @IBOutlet weak var confirmStack: UIStackView!
+
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var titleImageView: UIImageView!
@@ -25,7 +26,6 @@ class AuthentificationViewController: UIViewController {
     
     //MARK: PROPERTIES
     var loginMode = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -33,6 +33,10 @@ class AuthentificationViewController: UIViewController {
     
     //MARK: IB ACTIONS
     @IBAction func actionTapped(_ sender: Any) {
+        
+        
+        
+        
         self.view.endEditing(true)
         guard let email = emailTextField.text, let password = passwordTextField.text, let confirm = confirmTextField.text else {return}
         
@@ -41,13 +45,9 @@ class AuthentificationViewController: UIViewController {
             if email != "" {
                 FirebaseController.shared.login(email: email, password: password) { (success) in
                     if success {
-                        self.loginButton.isHidden = true
-                                   self.signupButton.isHidden = true
-                                   self.actionButton.isHidden = true
-                                   self.emailTextField.isHidden = true
-                                   self.passwordTextField.isHidden = true
-                        self.forgotbutton.isHidden = true
-                    //    ButterflyGradient.setUpButterflyView(view: self.view)
+                        self.view.isHidden = true
+                        let generator = UINotificationFeedbackGenerator()
+                        generator.notificationOccurred(.success)
                         UserController.shared.fetchCurrentUser { (result) in
                             switch result {
                             case .failure(let error):
@@ -66,6 +66,8 @@ class AuthentificationViewController: UIViewController {
                         self.setupViews()
                     }
                 }
+            } else {
+                self.presentEmptyAlertView()
             }
         } else {
             //SIGNING UP
@@ -88,14 +90,10 @@ class AuthentificationViewController: UIViewController {
             if email != "" && password == confirm && password.count >= 6 {
                 FirebaseController.shared.signup(email: email, password: password) { (success, error) in
                     if success {
-                        self.loginButton.isHidden = true
-                        self.signupButton.isHidden = true
-                        self.actionButton.isHidden = true
-                        self.emailTextField.isHidden = true
-                        self.passwordTextField.isHidden = true
-                        self.confirmTextField.isHidden = true
-                        self.titleImageView.isHidden = true
-                     //   ButterflyGradient.setUpButterflyView(view: self.view)
+                        self.view.isHidden = true
+                        let generator = UINotificationFeedbackGenerator()
+                        generator.notificationOccurred(.success)
+                        //   ButterflyGradient.setUpButterflyView(view: self.view)
                         print("signing user up")
                         
                         var emptyEnabled: [Bool] = []
@@ -125,18 +123,22 @@ class AuthentificationViewController: UIViewController {
     }
     
     @IBAction func signupTapped(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
         loginMode = false
-        confirmTextField.isHidden = false
+        confirmStack.isHidden = false
         forgotbutton.isHidden = true
         loginButton.setTitleColor(.darkGreen, for: .normal)
-        signupButton.setTitleColor(.lightGreen, for: .normal)
+        signupButton.setTitleColor(.white, for: .normal)
         actionButton.setTitle("SIGN UP", for: .normal)
     }
     @IBAction func loginTapped(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
         loginMode = true
-        confirmTextField.isHidden = true
         forgotbutton.isHidden = false
-        loginButton.setTitleColor(.lightGreen, for: .normal)
+        confirmStack.isHidden = true
+        loginButton.setTitleColor(.white, for: .normal)
         signupButton.setTitleColor(.darkGreen, for: .normal)
         actionButton.setTitle("LOGIN", for: .normal)
     }
@@ -148,24 +150,19 @@ class AuthentificationViewController: UIViewController {
     
     //MARK: HELPERS
     func setupViews(){
-        actionButton.addCornerRadius()
         loginTapped(self)
+        actionButton.addCornerRadius()
         emailTextField.addDoneButtonOnKeyboard()
         passwordTextField.addDoneButtonOnKeyboard()
         confirmTextField.addDoneButtonOnKeyboard()
         emailTextField.autocorrectionType = .yes
         passwordTextField.autocorrectionType = .no
         confirmTextField.autocorrectionType = .no
-        loginButton.isHidden = false
-        signupButton.isHidden = false
-        actionButton.isHidden = false
-        emailTextField.isHidden = false
-        passwordTextField.isHidden = false
-        titleImageView.isHidden = false
-        forgotbutton.isHidden = false
         setNeedsStatusBarAppearanceUpdate()
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         actionButton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)
+        signupButton.addTarget(self, action: #selector(self.animateButton(sender:)), for: .touchUpInside)
         
         
     }
@@ -174,24 +171,10 @@ class AuthentificationViewController: UIViewController {
         super.viewWillAppear(true)
         setNeedsStatusBarAppearanceUpdate()
     }
-              
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    func presentSignupAlertView() {
-           let alertController = UIAlertController(title: "Error", message: "Couldn't create account", preferredStyle: .alert)
-           let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-           alertController.addAction(defaultAction)
-           present(alertController, animated: true, completion: nil)
-       }
-       
-       func presentLoginAlertView() {
-           let alertController = UIAlertController(title: "Error", message: "Email/password is incorrect", preferredStyle: .alert)
-           let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-           alertController.addAction(defaultAction)
-           present(alertController, animated: true, completion: nil)
-       }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -204,19 +187,41 @@ class AuthentificationViewController: UIViewController {
     }
     
     @objc fileprivate func animateButton(sender:UIButton){
-        print("tapped")
         self.animateView(sender)
     }
     
     fileprivate func animateView(_ viewToAnimate:UIView){
-        UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: .curveEaseIn, animations: {
-            viewToAnimate.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        UIView.animate(withDuration: 0.12, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.4, options: .curveEaseIn, animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 0.94, y: 0.94)
             
         }) { (_) in
-            print("animation complete")
-            UIView.animate(withDuration: 0.15, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 2, options: .curveEaseIn, animations: {
+            //return from animation
+            UIView.animate(withDuration: 0.12, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.4, options: .curveEaseIn, animations: {
                 viewToAnimate.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil)
         }
+    }
+    
+    
+    
+    //ALERTS
+    func presentSignupAlertView() {
+        let alertController = UIAlertController(title: "Error", message: "Couldn't create account", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    func presentEmptyAlertView() {
+        let alertController = UIAlertController(title: "Missing Information", message: "Please enter login credentials", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func presentLoginAlertView() {
+        let alertController = UIAlertController(title: "Error", message: "Email/password is incorrect", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        present(alertController, animated: true, completion: nil)
     }
 }

@@ -20,6 +20,14 @@ class HabitListTableViewController: UITableViewController {
         counts = HabitController.shared.enabledCounts
         setNeedsStatusBarAppearanceUpdate()
         tableView.reloadData()
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            self.navigationController?.navigationBar.isTranslucent = true
+            appearance.backgroundColor = UIColor(named: "butterflyGreen")
+            appearance.shadowColor = .clear    //removing navigationbar 1 px bottom border.
+            UINavigationBar.appearance().standardAppearance = appearance
+        }
     }
     
     override func viewDidLoad() {
