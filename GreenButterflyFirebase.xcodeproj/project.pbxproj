@@ -16,6 +16,8 @@
 		C54949C52489F7A300B469F6 /* LightNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54949C42489F7A300B469F6 /* LightNavBarViewController.swift */; };
 		C54949C7248AECD900B469F6 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54949C6248AECD900B469F6 /* ForgotPassViewController.swift */; };
 		C5880E822478800B001038AC /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5880E812478800B001038AC /* HabitTableViewCell.swift */; };
+		C592268227E27AA500B3D752 /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C592268127E2794200B3D752 /* Leaderboard.storyboard */; };
+		C592268927E280F600B3D752 /* LeaderBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C592268827E280F600B3D752 /* LeaderBoardViewController.swift */; };
 		C5E09A7C24770B030073069A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7B24770B030073069A /* AppDelegate.swift */; };
 		C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E09A7D24770B030073069A /* SceneDelegate.swift */; };
 		C5E09A8324770B030073069A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5E09A8124770B030073069A /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		C54949C42489F7A300B469F6 /* LightNavBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightNavBarViewController.swift; sourceTree = "<group>"; };
 		C54949C6248AECD900B469F6 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		C5880E812478800B001038AC /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
+		C592268127E2794200B3D752 /* Leaderboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Leaderboard.storyboard; path = /Users/jordanfurr/Downloads/gbutterfly/GreenButterflyFirebase/GreenButterflyFirebase/Views/Leaderboard.storyboard; sourceTree = "<absolute>"; };
+		C592268827E280F600B3D752 /* LeaderBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardViewController.swift; sourceTree = "<group>"; };
 		C5E09A7824770B030073069A /* GreenButterflyFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreenButterflyFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E09A7B24770B030073069A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5E09A7D24770B030073069A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,9 +117,24 @@
 			isa = PBXGroup;
 			children = (
 				C5406566247B36420021B44E /* InsightsViewController.swift */,
-				C53B101C247EB5B200E22124 /* ExtraViewController.swift */,
 			);
 			path = Insights;
+			sourceTree = "<group>";
+		};
+		C592268327E2804C00B3D752 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				C53B101C247EB5B200E22124 /* ExtraViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		C592268527E2806300B3D752 /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				C592268827E280F600B3D752 /* LeaderBoardViewController.swift */,
+			);
+			path = Leaderboard;
 			sourceTree = "<group>";
 		};
 		C5E09A6F24770B020073069A = {
@@ -165,6 +184,7 @@
 		C5E09AA8247717090073069A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C592268127E2794200B3D752 /* Leaderboard.storyboard */,
 				C5E09A8124770B030073069A /* Main.storyboard */,
 				C5E09AA024770F170073069A /* Insights.storyboard */,
 				C5E09AA6247712030073069A /* HabitTracking.storyboard */,
@@ -198,6 +218,8 @@
 		C5E09AAD24771DA80073069A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C592268527E2806300B3D752 /* Leaderboard */,
+				C592268327E2804C00B3D752 /* More */,
 				C5E09AB224772AF50073069A /* HabitTracking */,
 				C5E09AB124772AEB0073069A /* Main */,
 				C5406568247B36470021B44E /* Insights */,
@@ -306,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C592268227E27AA500B3D752 /* Leaderboard.storyboard in Resources */,
 				C5E09AB524772C5B0073069A /* GoogleService-Info.plist in Resources */,
 				C5E09A8824770B0A0073069A /* LaunchScreen.storyboard in Resources */,
 				C5E09A8524770B0A0073069A /* Assets.xcassets in Resources */,
@@ -388,6 +411,7 @@
 				C5E09A7E24770B030073069A /* SceneDelegate.swift in Sources */,
 				C5E09AC2247774B10073069A /* HabitController.swift in Sources */,
 				C5406565247A32C00021B44E /* Badge.swift in Sources */,
+				C592268927E280F600B3D752 /* LeaderBoardViewController.swift in Sources */,
 				C54949C52489F7A300B469F6 /* LightNavBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

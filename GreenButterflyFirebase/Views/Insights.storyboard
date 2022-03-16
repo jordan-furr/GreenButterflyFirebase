@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="spi-5l-FkI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="spi-5l-FkI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -104,6 +105,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xcw-tb-TKX"/>
                         <color key="backgroundColor" name="butterflyGreen"/>
                         <constraints>
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="bottom" secondItem="Oc0-fb-nwP" secondAttribute="bottom" constant="20" id="1dS-mx-tGz"/>
@@ -129,7 +131,6 @@
                             <constraint firstItem="Xcw-tb-TKX" firstAttribute="trailing" secondItem="CtU-qs-oDr" secondAttribute="trailing" id="uFU-pq-vGh"/>
                             <constraint firstItem="Oc0-fb-nwP" firstAttribute="leading" secondItem="Xcw-tb-TKX" secondAttribute="leading" constant="10" id="wow-Na-YcS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Xcw-tb-TKX"/>
                     </view>
                     <navigationItem key="navigationItem" title="Insights" id="gQ8-Vf-x4F"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

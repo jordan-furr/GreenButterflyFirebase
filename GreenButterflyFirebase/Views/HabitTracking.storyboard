@@ -63,13 +63,7 @@
                             <outlet property="delegate" destination="0DE-Lx-Uo6" id="YRE-ix-MLG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Wu8-6u-uSl">
-                        <barButtonItem key="rightBarButtonItem" image="xmark" catalog="system" id="9rJ-P1-cQv">
-                            <connections>
-                                <action selector="donetapped:" destination="0DE-Lx-Uo6" id="2aF-Pd-DUq"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Wu8-6u-uSl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUW-GG-Igd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +158,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Green Butterfly" id="KM6-q4-5mc">
                         <barButtonItem key="rightBarButtonItem" image="line.horizontal.3.decrease" catalog="system" id="30e-eM-IZc">
-                            <color key="tintColor" name="loginDarkGreen"/>
+                            <color key="tintColor" name="cell"/>
                             <connections>
                                 <segue destination="0DE-Lx-Uo6" kind="show" identifier="addHabits" id="Wx4-Qm-BfW"/>
                             </connections>
@@ -372,9 +366,11 @@
     <resources>
         <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <image name="net" width="25" height="25"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="butterflyGreen">
             <color red="0.070588235294117646" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cell">
+            <color red="0.25882352941176473" green="0.70196078431372544" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="customYellow">
             <color red="0.8901960784313725" green="1" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
