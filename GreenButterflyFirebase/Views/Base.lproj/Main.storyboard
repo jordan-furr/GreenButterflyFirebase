@@ -377,7 +377,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zo4-wa-cwH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1475" y="814"/>
+            <point key="canvasLocation" x="1696" y="814"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="vcP-Vn-EgY">
@@ -387,7 +387,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6gs-oZ-k87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="814"/>
+            <point key="canvasLocation" x="1476" y="858"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
