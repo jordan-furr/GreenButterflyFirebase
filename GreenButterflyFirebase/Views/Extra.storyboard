@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tcb-Ko-AXD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tcb-Ko-AXD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,38 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f1-Ve-Wxx">
-                                <rect key="frame" x="20" y="139" width="374" height="107.5"/>
-                                <string key="text">Carbon footprints measure how much carbon dioxide (co2) we produce. Greenhouse gases like co2 contribute to global warming and although transportation, home energy, and corporations are the largest contributors to GHG, the small eco friendly actions we make help set back global warming. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why track your Footprint?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzF-2u-kLZ">
+                                <rect key="frame" x="18" y="104" width="376" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" name="cell"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is a carbon footprint? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzF-2u-kLZ">
-                                <rect key="frame" x="20" y="100" width="374" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" name="loginDarkGreen"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f1-Ve-Wxx">
+                                <rect key="frame" x="18" y="141" width="381" height="210.5"/>
+                                <string key="text">A Carbon footprint measures how much carbon dioxide (co2) is produced by a person or a group. co2 is a Greenhouse gas that contributes to global warming. Although transportation, energy, and corporations are the largest contributors to GHG production, the eco friendly actions make an impact on setting back global warming. Foodwaste alone is a huge contributer to warming and your efforts should be tangible and presented to you in a way that showcases all the co2 production you have offset!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="loginGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-bf-PgY">
-                                <rect key="frame" x="20" y="261.5" width="374" height="129"/>
-                                <string key="text">Green Butterfly helps users visualize how their "small" eco-friendly actions compound and make a difference. GB does this by allowing users to track &amp; tally their efforts while providing insights about energy saved!</string>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" name="loginDarkGreen"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green Butterfly helps you visualize how your &quot;small&quot; eco-friendly actions aren't that small after all. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-bf-PgY">
+                                <rect key="frame" x="18" y="381.5" width="376" height="79"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" name="cell"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgq-3j-vF8">
-                                <rect key="frame" x="20" y="402.5" width="374" height="90"/>
+                                <rect key="frame" x="18" y="468.5" width="381" height="95.5"/>
                                 <string key="text">In order to provide these insights, action estimates are based on estimates of co2 saved from a year of continuously adopting these eco friendly practices. More info about how these estimates are computed can be found in the detail view of every action.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" name="cell"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="loginGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAv-GS-r87">
-                                <rect key="frame" x="274" y="506.5" width="120" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAv-GS-r87">
+                                <rect key="frame" x="214" y="588" width="180" height="44"/>
                                 <color key="backgroundColor" name="customYellow"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="RaH-MT-HRy"/>
+                                    <constraint firstAttribute="width" constant="180" id="RaH-MT-HRy"/>
+                                    <constraint firstAttribute="height" constant="44" id="SzW-jr-crO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="share GB">
@@ -57,11 +58,12 @@
                                     <action selector="share" destination="6o8-Q2-qVA" eventType="touchUpInside" id="JzT-29-81c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elE-53-eQF">
-                                <rect key="frame" x="274" y="545.5" width="120" height="27"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="elE-53-eQF">
+                                <rect key="frame" x="214" y="648" width="180" height="44"/>
                                 <color key="backgroundColor" name="loginGreen"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="T8S-F2-hdn"/>
+                                    <constraint firstAttribute="width" constant="180" id="T8S-F2-hdn"/>
+                                    <constraint firstAttribute="height" constant="44" id="gl3-rl-Qfc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                                 <state key="normal" title="log out">
@@ -72,26 +74,26 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="04i-EC-j3m"/>
                         <color key="backgroundColor" name="butterflyGreen"/>
                         <constraints>
-                            <constraint firstItem="elE-53-eQF" firstAttribute="top" secondItem="LAv-GS-r87" secondAttribute="bottom" constant="12" id="0Uh-OZ-sY5"/>
-                            <constraint firstItem="LAv-GS-r87" firstAttribute="top" secondItem="cgq-3j-vF8" secondAttribute="bottom" constant="14" id="6PC-sy-GXZ"/>
-                            <constraint firstItem="3f1-Ve-Wxx" firstAttribute="top" secondItem="XzF-2u-kLZ" secondAttribute="bottom" constant="10" id="8T9-GE-XeR"/>
-                            <constraint firstItem="cgq-3j-vF8" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="20" id="EGe-Jz-Tnk"/>
-                            <constraint firstItem="DdT-bf-PgY" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="20" id="HI1-wn-oH2"/>
-                            <constraint firstItem="XzF-2u-kLZ" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="20" id="M2U-tg-fTB"/>
-                            <constraint firstItem="3f1-Ve-Wxx" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="20" id="N9z-qb-Qbl"/>
-                            <constraint firstItem="04i-EC-j3m" firstAttribute="trailing" secondItem="3f1-Ve-Wxx" secondAttribute="trailing" constant="20" id="Qr9-3t-Uks"/>
+                            <constraint firstItem="elE-53-eQF" firstAttribute="top" secondItem="LAv-GS-r87" secondAttribute="bottom" constant="16" id="0Uh-OZ-sY5"/>
+                            <constraint firstItem="LAv-GS-r87" firstAttribute="top" secondItem="cgq-3j-vF8" secondAttribute="bottom" constant="24" id="6PC-sy-GXZ"/>
+                            <constraint firstItem="3f1-Ve-Wxx" firstAttribute="top" secondItem="XzF-2u-kLZ" secondAttribute="bottom" constant="8" id="8T9-GE-XeR"/>
+                            <constraint firstItem="cgq-3j-vF8" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="18" id="EGe-Jz-Tnk"/>
+                            <constraint firstItem="DdT-bf-PgY" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="18" id="HI1-wn-oH2"/>
+                            <constraint firstItem="XzF-2u-kLZ" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="18" id="M2U-tg-fTB"/>
+                            <constraint firstItem="3f1-Ve-Wxx" firstAttribute="leading" secondItem="04i-EC-j3m" secondAttribute="leading" constant="18" id="N9z-qb-Qbl"/>
+                            <constraint firstItem="04i-EC-j3m" firstAttribute="trailing" secondItem="3f1-Ve-Wxx" secondAttribute="trailing" constant="15" id="Qr9-3t-Uks"/>
                             <constraint firstItem="04i-EC-j3m" firstAttribute="trailing" secondItem="LAv-GS-r87" secondAttribute="trailing" constant="20" id="W4R-HY-WcG"/>
                             <constraint firstItem="04i-EC-j3m" firstAttribute="trailing" secondItem="XzF-2u-kLZ" secondAttribute="trailing" constant="20" id="fLU-Ak-bqY"/>
                             <constraint firstAttribute="trailing" secondItem="DdT-bf-PgY" secondAttribute="trailing" constant="20" id="jkR-sg-hor"/>
-                            <constraint firstItem="XzF-2u-kLZ" firstAttribute="top" secondItem="04i-EC-j3m" secondAttribute="top" constant="12" id="onQ-sf-N9w"/>
-                            <constraint firstItem="04i-EC-j3m" firstAttribute="trailing" secondItem="cgq-3j-vF8" secondAttribute="trailing" constant="20" id="p6G-G9-Tge"/>
-                            <constraint firstItem="cgq-3j-vF8" firstAttribute="top" secondItem="DdT-bf-PgY" secondAttribute="bottom" constant="12" id="qe6-W7-5NE"/>
+                            <constraint firstItem="XzF-2u-kLZ" firstAttribute="top" secondItem="04i-EC-j3m" secondAttribute="top" constant="16" id="onQ-sf-N9w"/>
+                            <constraint firstItem="04i-EC-j3m" firstAttribute="trailing" secondItem="cgq-3j-vF8" secondAttribute="trailing" constant="15" id="p6G-G9-Tge"/>
+                            <constraint firstItem="cgq-3j-vF8" firstAttribute="top" secondItem="DdT-bf-PgY" secondAttribute="bottom" constant="8" id="qe6-W7-5NE"/>
                             <constraint firstItem="elE-53-eQF" firstAttribute="trailing" secondItem="LAv-GS-r87" secondAttribute="trailing" id="t1L-gE-2oG"/>
-                            <constraint firstItem="DdT-bf-PgY" firstAttribute="top" secondItem="3f1-Ve-Wxx" secondAttribute="bottom" constant="15" id="t8U-jH-s7w"/>
+                            <constraint firstItem="DdT-bf-PgY" firstAttribute="top" secondItem="3f1-Ve-Wxx" secondAttribute="bottom" constant="30" id="t8U-jH-s7w"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="04i-EC-j3m"/>
                     </view>
                     <navigationItem key="navigationItem" id="ox8-JB-mh5"/>
                     <connections>
@@ -126,7 +128,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <namedColor name="butterflyGreen">
             <color red="0.070588235294117646" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -135,9 +137,6 @@
         </namedColor>
         <namedColor name="customYellow">
             <color red="0.8901960784313725" green="1" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="loginDarkGreen">
-            <color red="0.20784313725490197" green="0.52941176470588236" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="loginGreen">
             <color red="0.91764705882352937" green="0.9882352941176471" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
