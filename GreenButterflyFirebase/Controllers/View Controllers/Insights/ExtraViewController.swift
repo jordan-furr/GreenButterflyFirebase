@@ -30,12 +30,13 @@ class ExtraViewController: UIViewController {
     }
     
     @IBAction func logouttapped(_ sender: Any) {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
+        
         let alertController = UIAlertController(title: "Logout Now", message: "Are you sure you want to log out?", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "Go ahead", style: .default, handler: { action in
             
             UserController.shared.signoutCurrentUser()
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
             
             
             let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "login") as! AuthentificationViewController

@@ -25,11 +25,6 @@ class AddHabitsTableViewController: UITableViewController {
         self.navigationItem.titleView = imageView
     }
     
-    //MARK: IB FUNCTIONS
-    @IBAction func donetapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-    }
-    
     // MARK: - DATA SOURCE
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return habits.count
@@ -65,6 +60,6 @@ class AddHabitsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 68.0
+        return 74.0
     }
 }
