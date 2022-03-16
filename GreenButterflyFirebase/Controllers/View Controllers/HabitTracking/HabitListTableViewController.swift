@@ -77,7 +77,7 @@ class HabitListTableViewController: UITableViewController {
        }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 111.0
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/jordanfurr/Downloads/gbutterfly/GreenButterflyFirebase/GreenButterflyFirebase/Views/Leaderboard.storyboard">
+   </FileRef>
+   <FileRef
       location = "group:GreenButterflyFirebase.xcodeproj">
    </FileRef>
    <FileRef
