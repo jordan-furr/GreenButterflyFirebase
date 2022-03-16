@@ -15,6 +15,8 @@ class AuthentificationViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var confirmPasswordLabel: UILabel!
+    
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -127,16 +129,18 @@ class AuthentificationViewController: UIViewController {
     @IBAction func signupTapped(_ sender: Any) {
         loginMode = false
         confirmTextField.isHidden = false
+        confirmPasswordLabel.isHidden = false
         forgotbutton.isHidden = true
         loginButton.setTitleColor(.darkGreen, for: .normal)
-        signupButton.setTitleColor(.lightGreen, for: .normal)
+        signupButton.setTitleColor(.white, for: .normal)
         actionButton.setTitle("SIGN UP", for: .normal)
     }
     @IBAction func loginTapped(_ sender: Any) {
         loginMode = true
         confirmTextField.isHidden = true
         forgotbutton.isHidden = false
-        loginButton.setTitleColor(.lightGreen, for: .normal)
+        confirmPasswordLabel.isHidden = true
+        loginButton.setTitleColor(.white, for: .normal)
         signupButton.setTitleColor(.darkGreen, for: .normal)
         actionButton.setTitle("LOGIN", for: .normal)
     }
