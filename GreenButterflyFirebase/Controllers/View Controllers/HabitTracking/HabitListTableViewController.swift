@@ -96,6 +96,8 @@ class HabitListTableViewController: UITableViewController {
 extension HabitListTableViewController: HabitTableViewCellDelegate{
     func tappedButton(for cell: HabitTableViewCell) {
         guard let habit = cell.habit else {return}
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
         let newCount = HabitController.shared.incrementHabitCounter(habit: habit)
         cell.setHabitAndCount(habit: habit, count: newCount)
         print("tapped")
