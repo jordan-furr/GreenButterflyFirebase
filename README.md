@@ -1,5 +1,7 @@
 # GreenButterflyFirebase
 
+Native iOS application 
+
 Track your efforts to see the compound impact on your environment protection!
 
 Green Butterfly helps users visualize how their "small" eco-friendly actions compound 
