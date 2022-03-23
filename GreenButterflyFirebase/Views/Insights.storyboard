@@ -144,11 +144,11 @@
             </objects>
             <point key="canvasLocation" x="913.04347826086962" y="135.9375"/>
         </scene>
-        <!--Insights-->
+        <!--Impact-->
         <scene sceneID="6QV-Lu-4YU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="spi-5l-FkI" customClass="LightNavBarViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Insights" image="lightning" selectedImage="lightning" id="TUl-Jb-Ktg"/>
+                    <tabBarItem key="tabBarItem" title="Impact" image="lightning" selectedImage="lightning" id="TUl-Jb-Ktg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iH2-0h-mv3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

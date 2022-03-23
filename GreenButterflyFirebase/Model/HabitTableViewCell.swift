@@ -66,12 +66,12 @@ class HabitTableViewCell: UITableViewCell {
     }
     
     @objc fileprivate func animateNumber(sender:UIButton){
-        self.animateView(sender)
+        self.animateView(co2label)
     }
     
     fileprivate func animateView(_ viewToAnimate:UIView){
-        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
-            viewToAnimate.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        UIView.animate(withDuration: 0.18, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.9, options: .curveEaseIn, animations: {
+            viewToAnimate.transform = CGAffineTransform(scaleX: 1.25, y: 1.25)
             
         }) { (_) in
             print("animation complete")
