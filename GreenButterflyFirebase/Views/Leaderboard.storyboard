@@ -25,11 +25,11 @@
             </objects>
             <point key="canvasLocation" x="3047.826086956522" y="941.51785714285711"/>
         </scene>
-        <!--LeaderBoard-->
+        <!--Leaders-->
         <scene sceneID="VIo-zZ-nca">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NZD-VE-cSa" customClass="LightNavBarViewController" customModule="GreenButterflyFirebase" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="LeaderBoard" image="leader" id="aED-3J-h9S"/>
+                    <tabBarItem key="tabBarItem" title="Leaders" image="leader" id="aED-3J-h9S"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aw2-P4-bvF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

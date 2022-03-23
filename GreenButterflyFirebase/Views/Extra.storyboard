@@ -105,11 +105,11 @@
             </objects>
             <point key="canvasLocation" x="945" y="102"/>
         </scene>
-        <!--More-->
+        <!--Share-->
         <scene sceneID="jld-uD-6rZ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tcb-Ko-AXD" customClass="LightNavBarViewController" customModule="GreenButterflyFirebase" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="More" image="paperplane.fill" catalog="system" selectedImage="paperplane.fill" id="XYt-1y-U0Y"/>
+                    <tabBarItem key="tabBarItem" title="Share" image="paperplane.fill" catalog="system" selectedImage="paperplane.fill" id="XYt-1y-U0Y"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MKO-fR-xUa">
